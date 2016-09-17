@@ -1,0 +1,6 @@
+version: '2'
+services:
+  dnk:
+    build: .
+    volumes: 
+      - .:/src/app/dnk
