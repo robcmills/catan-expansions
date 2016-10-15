@@ -56,7 +56,7 @@ function updateDOM() {
 	document.querySelector('#resource').innerHTML = game.resources[game.round]
 	if (game.areResourcesVisible) {
 		game.resources[game.round] = '--' + game.resources[game.round] + '--'
-		document.querySelector('#resources').innerHTML = game.resources
+		document.querySelector('#resources').innerHTML = game.resources.join(' ')
 	} else {
 		document.querySelector('#resources').innerHTML = ''
 	}
