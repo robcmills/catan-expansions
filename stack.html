@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>stack</title>
+		<meta charset="utf-8">
+		<meta name="author" description="robcmills">
+		<meta name="description" description="Robert Carter Mills">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+	<style>
+		html, body {
+		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+	</style>
+	<body>
+		<p>Round: <b id="round"/></b></p>
+		<p>Resource: <b id="resource"></b></p>
+		<button onclick="previous()">Previous</button>
+		<button onclick="next()">Next</button>
+		<p>
+			<button onclick="showResources()">Show Resources</button>
+			<button onclick="hideResources()">Hide Resources</button>
+			<p id="resources" />
+		</p>
+		<p>Stack length: 36</p>
+		<button onclick="regenerate()">Regenerate</button>
+	</body>
+	<script type="text/javascript" src="stack.js"></script>
+</html>
