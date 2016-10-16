@@ -31,8 +31,11 @@
 			<p>Monopoly card can not be used for gold</p>
 
 		<h3>The Dragon 🐉</h3>
-			<p>For every 7 gold that is produced by gold hexes, the dragon attacks the player with the most victory points. This attack occurs immediately after resource production roll. The victim of the dragon attack must assign a number to each of his settlements and cities and roll a die to determine which one is attacked. A settlement attacked by the dragon is completely destroyed and removed from the board. If more than one player is tied for most victory points, include current gold and resources in the count.</p>
-			<p>If you are playing with phases (described below) then during the first phase (Build) do not advance the dragon gold counter. It only takes effect during phase 2 and 3.</p>
+			<p>For every 7 gold that is produced by gold hexes, the dragon attacks the player with the most victory points. If more than one player is tied for most victory points, include knights, ships, current gold and resources in the count.</p>
+			<p>Dragon attacks occurs immediately after every player has gathered their resources from the production roll.</p>
+			<p>The victim of the dragon attack must assign a number to each of his settlements and cities and roll a die to determine which one is attacked.</p>
+			<p>A settlement attacked by the dragon is completely destroyed and removed from the board. A city is downgraded to a settlement, and castles are downgraded to cities.</p>
+			<p>If the building being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled, one at a time. The first roll represents the player, the second the dragon. The higher number wins. Ties are re-rolled.</p>
 
 		<h3>Ships ⛵</h3>
 			<p>Players who have built a settlement or city on the coast may build <b>1 ship per turn</b></p>
@@ -40,13 +43,13 @@
 			<p>Ship Costs:</p>
 			<ul>
 				<li>Ship: 1 wood, 1 wool</li>
-				<li>War Ship: 2 wood, 1 wool, 2 ore</li>
-				<li>Cargo Ship: 2 wood, 2 wool</li>
+				<li>War Ship: 1 wood, 1 wool, 1 ore</li>
+				<li>Cargo Ship: 2 wood, 1 wool</li>
 			</ul>
 			<p>Ship Types:</p>
 			<ul>
-				<li>War Ship: +2 attack, +2 defense</li>
-				<li>Cargo Ship: +3 movement, ability to carry up to 3 knights, +1 trade</li>
+				<li>War Ship: +2 attack, +2 defense (limit 1)</li>
+				<li>Cargo Ship: +3 movement, ability to carry up to 3 knights, +1 trade (limit 3)</li>
 			</ul>
 			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal settlements. Ships occupy the center of sea hexes, not corners like settlements do. Place them as you would resource number tokens.</p>
 			<p>On a players turn, each ship may perform <b>2 actions.</b> Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
@@ -66,7 +69,7 @@
 			</ul>
 			<p><b>Ship benefits:</b> Players who have built ships also may:</p>
 			<ul>
-				<li><b>Defend:</b> When a ship is attacking a coastal settlement, if the defender has a ship on an adjacent sea hex, that ship is defending that coastal settlement, and the attacker must first attack the defending ship before attacking the coastal settlement. During attack phase, a newly built ship may defend on the same turn. Ships can not defend coastal settlements from knight attacks. Defending does not count as an action.</li>
+				<li><b>Defend:</b> When a ship is attacking a coastal settlement, war or cargo ship, if the defender has a ship on an adjacent sea hex, the attacker must first attack the defending ship. A newly built ship may defend on the same turn. Ships can not defend coastal settlements from knight attacks. Defending does not count as an action.</li>
 				<li><b>Use port trades:</b> Players may use any trade benefits of ports that their ship occupies</li>
 				<li><b>Build:</b> Players may build a new settlement (or knight if playing with knight module) on any coastal hex that is adjacent to one of their ships (respecting distance rule)</li>
 				<li><b>Largest Navy:</b> The first player to build 3 ships receives the Largest Navy card that is worth 2 victory points. Like Largest Army, this may be stolen if another player builds a larger Navy, or the size of their fleet is reduced by attack.</li>
@@ -75,7 +78,17 @@
 		<h3>Knights</h3>
 			<p>Before the game begins, remove all knight cards from the dev card deck. During the trade and build phase of a player's turn, he may build <b>1 knight</b> per turn</p>
 			<p>If playing with ships, players may build 2 knights or 2 ships or 1 knight and 1 ship per turn</p>
-			<p>Building a knight costs 1 ore and 1 wool</p>
+			<p>Knight Costs:</p>
+			<ul>
+				<li>Knight: 1 ore, 1 wool</li>
+				<li>Archer: 1 ore, 1 wool, 1 wood</li>
+				<li>Cavalry: 1 ore, 1 wool, 1 wheat</li>
+			</ul>
+			<p>Knight Types:</p>
+			<ul>
+				<li>Archer: +1 attack range</li>
+				<li>Cavalry: +2 movement</li>
+			</ul>
 			<p>Newly built Knights are placed on any hex adjacent to any of the player's settlements. Knights occupy the center of hexes, not corners like settlements do. Place them as you would resource number tokens.</p>
 			<p>On a players turn, each Knight may perform <b>2 actions.</b> Once the player has resolved a Knight's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all Knights to their upright position.</p>
 			<p>Building a knight is considered an action, so a player may build and move, or build and attack (if in attack phase) but may not build, move, and attack with the same knight on the same turn.</p>
@@ -102,8 +115,8 @@
 
 		<h3>Castles</h3>
 			<p>Cities may be upgraded to a castle.</p>
-			<p>Castles are built with high walls that are easily defended, thus making them immune to attack by another player's knights (unless they are breached by rolling a 6?).</p>
-			<p>Castles are also immune to dragon attacks?</p>
+			<p>Castles are built with high walls that are easily defended, thus making them immune to attack by another player's knights.</p>
+			<p>Castles are not immune to dragon attacks</p>
 			<p>Castles produce 3 resources</p>
 			<p>Castles cost 1 ore, 1 wheat, 1 sheep, 1 wood, 1 brick</p>
 
@@ -115,12 +128,16 @@
 			<p>Roll the dice to determine initial placement and turn order for the first round. Place a "first" marker in front of the player to go first. Turns are executed to the left, counter-clockwise around the table until play returns to the first player. After every player has taken a turn, the "first" marker is transfered to left, and that player goes first for the next round, and the former first player becomes the last to take his turn in the next round.</p>
 			<p>Resource production rolls occur at the beginning of each players turn.</p>
 
+		<h3>Dice Stack</h3>
+			<p>Replace the dice with a dice stack for a guaranteed distribution of all resources:</p>
+			<p><a href="http://robcmills.net/stack">robcmills.net/stack</a></p>
+
 		<h3>Game Phases</h3>
 			<p>If you play with knights and ships and elect to grant them destructive powers, this can greatly lengthen the game. To remedy this, and also to keep the game to a reasonable length, you may elect to play the game with three phases:</p>
 			<ul>
 				<li><b>Phase 1 - Build:</b>	During this phase, players may only build. No attack actions are allowed.</li>
 				<li><b>Phase 2 - Attack:</b> During this phase attack actions are allowed and turn order is modified:
-					<p><b>Attack phase turn order:</b> Calculate each player's score by summing their victory points, number of resources and gold, and number of knights and ships. The player with the lowest score goes first, highest last.</p>
+					<p><b>Attack phase turn order:</b> Calculate each player's score by summing their victory points (including knights and ships). The player with the lowest score goes first, highest last.</p>
 				</li>
 			</ul>
 			<p>The number of rounds in each phase is equal to the number of players. In a four player game, each phase lasts 4 rounds. In a 5 player game each phase lasts 5 rounds. Implement a counter to keep track. At the end of the last round, the player with the most victory points wins. If a tie exists declare more than one winner.</p>
@@ -132,7 +149,7 @@
 				<li>Largest Army/Navy: 2 points</li>
 				<li>Largest Metropolis: 2 points - largest metropolis is counted as most points from buildings that are adjacent or joined by roads</li>
 				<li>Longest Road: 2 points</li>
-				<li>Explorer: 1 point per island settled that is not settled on initial placement</li>
+				<li>Colonist: 1 point per island settled that is not settled on initial placement</li>
 				<li>Harbor Master: 2 points</li>
 			</ul>
 
