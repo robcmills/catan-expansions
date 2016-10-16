@@ -24,7 +24,7 @@ function load() {
 
 function generate() {
 	console.log('generate')
-	var resources = [
+	var stack = [
 		2,
 		3,3,
 		4,4,4,
@@ -37,11 +37,11 @@ function generate() {
 		11,11,
 		12,
 	]
-	shuffle(resources)
+	shuffle(stack)
 	return {
-		areResourcesVisible: false,
+		isStackVisible: false,
 		round: 0,
-		resources: resources,
+		stack: stack,
 	}
 }
 
@@ -53,12 +53,12 @@ function regenerate() {
 function updateDOM() {
 	var game = load()
 	document.querySelector('#round').innerHTML = game.round
-	document.querySelector('#resource').innerHTML = game.resources[game.round]
-	if (game.areResourcesVisible) {
-		game.resources[game.round] = '--' + game.resources[game.round] + '--'
-		document.querySelector('#resources').innerHTML = game.resources.join(' ')
+	document.querySelector('#roll').innerHTML = game.stack[game.round]
+	if (game.isStackVisible) {
+		game.stack[game.round] = '--' + game.stack[game.round] + '--'
+		document.querySelector('#stack').innerHTML = game.stack.join(' ')
 	} else {
-		document.querySelector('#resources').innerHTML = ''
+		document.querySelector('#stack').innerHTML = ''
 	}
 }
 
@@ -83,11 +83,11 @@ function set(key, value) {
 	updateDOM()
 }
 
-function showResources() {
-	set('areResourcesVisible', true)
+function showStack() {
+	set('isStackVisible', true)
 }
-function hideResources() {
-	set('areResourcesVisible', false)
+function hideStack() {
+	set('isStackVisible', false)
 }
 
 if (!load()) {
