@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Catan Expansions 0.5</title>
+		<title>Catan Conquest 0.5</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
 		<meta name="description" description="Robert Carter Mills">
@@ -14,36 +14,36 @@
 		}
 	</style>
 	<body>
-		<h1>Catan Expansions 🌅 0.5</h1>
+		<h1>Catan Conquest 🌅 0.6</h1>
 			<p>This is a total conversion modification to the game of Catan. All rules of the base game apply with the following new rules:</p>
 
-		<h3>Contents</h3>
-			<ol>
-				<li><a href="#placement">Placement</a></li>
-				<li><a href="#modified-start">Modified Start</a></li>
-				<li><a href="#gold">Gold</a></li>
-				<li><a href="#dragon">The Dragon</a></li>
-				<li><a href="#ships">Ships</a></li>
-				<li><a href="#knights">Knights</a></li>
-				<li><a href="#castles">Castles</a></li>
-				<li><a href="#walls">Walls</a></li>
-				<li><a href="#robber">No Robber</a></li>
-				<li><a href="#stack">Dice Stack</a></li>
-				<li><a href="#phases">Phases</a></li>
-				<li><a href="#victory">Victory Points</a></li>
-				<li><a href="#board">Board Setup</a></li>
-				<li><a href="#costs">Building Costs</a></li>
-			</ol>
+		<ol>
+			<li><a href="#placement">Placement</a></li>
+			<li><a href="#modified-start">Modified Start</a></li>
+			<li><a href="#gold">Gold</a></li>
+			<li><a href="#fish-shoals">Fish Shoals</a></li>
+			<li><a href="#dragon">The Dragon</a></li>
+			<li><a href="#ships">Ships</a></li>
+			<li><a href="#knights">Knights</a></li>
+			<li><a href="#castles">Castles</a></li>
+			<li><a href="#walls">Walls</a></li>
+			<li><a href="#robber">No Robber</a></li>
+			<li><a href="#stack">Dice Stack</a></li>
+			<li><a href="#phases">Phases</a></li>
+			<li><a href="#victory">Victory Points</a></li>
+			<li><a href="#board">Board Setup</a></li>
+			<li><a href="#costs">Building Costs</a></li>
+		</ol>
 
 		<h3 id="placement">Modified Placement</h3>
 			<p>Settlements are placed in the center of hexes, not at the corners like in base Catan.</p>
 			<p>Settlements receive resources from all adjacent hexes (if that resource number is rolled)</p>
-			<p>No distance rule. Players may build settlements on hexes immediately adjacent to already settled hexes, both by same / enemy players.</p>
-			<p>No roads. Roads are replaced by walls. See Walls section below.</p>
+			<p>No distance rule. Players may build settlements on hexes immediately adjacent to already settled hexes, by same or enemy players.</p>
+			<p>No roads. Roads are replaced by walls. See <a href="#walls">Walls</a> section below.</p>
 
 		<h3 id="modified-start">Modified Start</h3>
-			<p>Roll to determine who goes first. Players begin by choosing a port and placing one of their ships on that sea hex. Then place one knight on the resource hex adjacent to the port. Then players may place a settlement on the hex occupied by that knight. Optionally, the knight may execute a movement into any adjacent hex and the player may build either before of after the movement, but must always place their settlement on the same hex occupied by the knight.</p>
-			<p>Once all players have "landed" their ships and placed a knight and a settlement, draw 1 resource for every hex with a settlement, and 1 resource for all adjacent hexes.</p>
+			<p>Roll to determine who goes first. In order, players begin by choosing a port and placing one of their ships on that sea hex. Then place one knight on the resource hex adjacent to the port. Then players may place a settlement on the hex occupied by that knight. Optionally, the knight may execute a movement into any adjacent hex and the player may build after the movement.</p>
+			<p>Once all players have "landed" their ships and placed a knight and a settlement, draw 1 resource for the hex with the starting settlement, and 1 resource for all adjacent hexes to that settlement.</p>
 
 		<h3 id="gold">Gold 💰</h3>
 			<p>Gold hexes are added to the board and operate much the same as they do in the Explorers and Pirates Expansion:</p>
@@ -55,12 +55,27 @@
 			<p>In a 4 player game, with a base Catan board, Gold hexes replace 1 wheat, 1 sheep and 1 wood hex resulting in a balanced 3 hexes per resource plus 1 desert board configuration</p>
 			<p>Monopoly card can not be used for gold</p>
 
+		<h3 id="fish-shoals">Fish Shoals 🐟</h3>
+			<p>Fish shoal sea hexes are added to the board:</p>
+			<ul>
+				<li>Fish shoal sea hexes produce 1 fish each time their resource number is rolled during a production round</li>
+				<li>1 fish may be traded to the bank for any 1 resource</li>
+				<li>Fish may be traded with other players</li>
+			</ul>
+			<p>Monopoly card can not be used for fish.</p>
+			<p>During a 7 production roll (year of plenty for all), each fish shoal produces 1 fish for each ship that occupies it.</p>
+
 		<h3 id="dragon">The Dragon 🐉</h3>
 			<p>For every 7 gold that is produced by gold hexes, the dragon attacks the player with the most victory points. If more than one player is tied for most victory points, include knights, ships, current gold and resources in the count.</p>
 			<p>Dragon attacks occurs immediately after every player has gathered their resources from the production roll.</p>
 			<p>The victim of the dragon attack must assign a number to each of his settlements and cities and roll a die to determine which one is attacked.</p>
 			<p>A settlement attacked by the dragon is completely destroyed and removed from the board. A city is downgraded to a settlement, and castles are downgraded to cities.</p>
 			<p>If the building being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled, one at a time. The first roll represents the player, the second the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.</p>
+
+		<h3 id="storms">Storms</h3>
+			<p>Whenever the production roll results in a 12, a violent storm occurs and sinks a ship belonging to the player with the most points.</p>
+			<p>Storms occur immediately after every player has gathered their resources from the production roll.</p>
+			<p>The victim of the storm must assign a number to each of his ships and roll a die to determine which one is sunk.</p>
 
 		<h3 id="ships">Ships ⛵</h3>
 			<p>Players who have built a settlement or city on the coast may build <b>2 ships or 2 knights or 1 knight and 1 ship</b> per turn</p>
@@ -72,29 +87,29 @@
 			</ul>
 			<p>Ship Types:</p>
 			<ul>
-				<li>War Ship: +1 attack, +1 defense (limit 1)</li>
+				<li>War Ship: +1 attack, +1 defense, +1 range (limit 1)</li>
 				<li>Cargo Ship: +3 movement, ability to carry up to 3 knights, +1 trade (limit 3). Cargo ships can not attack or defend other ships or coastal settlements. (they can defend themselves like normal ships)</li>
 			</ul>
-			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal settlements. Ships occupy the center of sea hexes, not corners like settlements do. Place them as you would resource number tokens.</p>
+			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal settlements. Ships occupy the center of sea hexes.</p>
 			<p>On a players turn, each ship may perform <b>2 actions.</b> Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
 			<p>Each action must be unique. A player may not move the same ship twice or attack with the same ship twice.</p>
 			<p>Ship actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his ship to a nearby port, and then use that port before building.</p>
 			<p>Ship actions include the following:</p>
 			<ul>
 				<li><b>Movement:</b> Ships can sail <b>up to 4</b> sea hexes per movement. (Multiple ships may occupy the same sea hex and ships may sail through sea hexes occupied by another player's ship)</li>
-				<li><b>Attack:</b> Ships can attack another player's ships or coastal settlements if they both occupy the same sea hex. Both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll. A tie must be re-rolled. The results of an attack:
+				<li><b>Attack:</b> Ships can attack another player's ships if they both occupy the same sea hex. Ships have cannons, and are able to attack knights and settlements on coastal hexes as well. War ships have more powerful cannons (+1 range) and can attack inland hexes adjacent to sea hexes. Conversely, only archers can attack a ship from a coastal hex. To resolve an attack, both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
 					<ul>
 						<li>If ship to ship attack, victor sinks loser's ship and removes it from the board</li>
 						<li>If ship to coastal settlement attack (no defending ships - see below), victor occupies loser's settlement (removes it from the board and replaces it with his own)</li>
 						<li>If the defender wins no action is taken (advantage to attacker)</li>
 					</ul>
 				</li>
-				<li><b>Breach a Sea Wall</b> see Walls section below</li>
-				<li><b>Fish</b> Roll one die and if the result is 1, collect one fish. 1 Fish may be exchanged for any 1 resource.</li>
+				<li><b>Breach a Sea Wall</b> see <a href="#walls">Walls</a> section below</li>
+				<li><b>Fish</b> Roll one die and if the result is 1 or 2, collect one fish. 1 Fish may be exchanged for any 1 resource.</li>
 			</ul>
 			<p><b>Ship benefits:</b> Players who have built ships also may:</p>
 			<ul>
-				<li><b>Defend:</b> When a ship is attacking a coastal settlement, if the defender has a ship on an adjacent sea hex, the attacker must first attack the defending ship. Similarly, regular ships may defend war ships and cargo ships if they are on the same sea hex. A newly built ship may defend on the same turn. Ships can not defend coastal settlements from knight attacks. Defending does not count as an action. For a ship to be eligible to defend it must be within 4 hexes (adjacent to the defender) of the attacking ship. See Defending with Ships diagram.</li>
+				<li><b>Defend:</b> When a ship is attacking a coastal settlement, if the defender has a ship on an adjacent sea hex, the attacker must first attack the defending ship. Similarly, regular ships may defend war ships and cargo ships if they are on the same sea hex. A newly built ship may defend on the same turn. Ships can not defend coastal settlements from knight attacks. Defending does not count as an action.</li>
 				<li><b>Use port trades:</b> Players may use any trade benefits of ports that their ship occupies. (cargo ships get +1)</li>
 				<li><b>Build:</b> Players may build a new settlement (or knight if playing with knight module) on any coastal hex that is adjacent to one of their ships.</li>
 				<li><b>Largest Navy:</b> The first player to build 3 ships receives the Largest Navy card that is worth 2 victory points. Like Largest Army, this may be stolen if another player builds a larger Navy, or the size of their fleet is reduced by attack.</li>
@@ -120,35 +135,34 @@
 			<p>Knight actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his knight to a nearby hex, and then build a settlement there.</p>
 			<p>Knight actions include the following:</p>
 			<ul>
-				<li><b>Movement</b> Knights can move <b>1 hex</b> per movement (multiple knights may occupy the same hex and knights may move through hexes occupied by another player's knights)</li>
-				<li><b>Attack</b> Knights can attack another player's knights or settlements if they both occupy the same hex. Both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
+				<li><b>Movement</b> Knights can move <b>1 hex</b> per movement. Multiple knights may occupy the same hex. Knights may move through hexes occupied by another player's knights, however may not move through hexes settled by another player. Knights may move onto an opponents settled hex (to attack) but that ends movement regardless of movement range.</li>
+				<li><b>Attack</b> Knights can attack another player's knights or settlements if they both occupy the same hex (except for archers, which can attack adjacent hexes). Both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
 					<ul>
 						<li>If knight to knight attack, victor kills loser's knight and removes it from the board</li>
 						<li>If knight to settlement attack (no defending knights - see below), victor occupies loser's settlement (removes it from the board and replaces it with his own)</li>
 						<li>If the defender wins no action is taken (advantage to attacker)</li>
 					</ul>
 				</li>
-				<li><b>Breach a Wall</b> see Walls section below</li>
-				<li><b>Hunt</b> Roll one die and if the result is 1, collect one meat. 1 Meat may be exchanged for any 1 resource.</li>
+				<li><b>Breach a Wall</b> see <a href="#walls">Walls</a> section below</li>
+				<li><b>Hunt</b> Roll one die and if the result is 1 or 2, collect one meat. 1 Meat may be exchanged for any 1 resource.</li>
 
 			</ul>
 			<p><b>Knight benefits:</b> Players who have built knights also may:</p>
 			<ul>
-				<li><b>Defend:</b> When a knight is attacking a settlement, if the defender has a knight on the hex, that knight is defending that settlement, and the attacker must first attack the defending knight before attacking the settlement. Similarly, knights may defend archers and cavalry. During attack phase, a newly built knight may defend on the same turn. Knights can defend a settlement from a ship attack. Defending does not count as an action.</li>
-				<li><b>Build:</b> Players may build a new settlement (or ship if playing with ship module) on any hex that is occupied by one of their knights.</li>
-				<li><b>Largest Army:</b> This rule applies the same as base Catan. The first player to build 3 knights get Largest Army which is worth 2 victory points. Another player may steal if he builds a larger army, or a player's army is reduced by attack.</li>
+				<li><b>Defend:</b> When a knight is attacking a settlement, if the defender has a knight on the hex, that knight is defending that settlement, and the attacker must first attack the defending knight before attacking the settlement. Similarly, knights may defend archers and cavalry. Archers, because of their +1 attack range, may defend settlements on adjacent hexes. During attack phase, a newly built knight may defend on the same turn. Defending does not count as an action.</li>
+				<li><b>Build:</b> Players may build a new settlement on any unsettled hex that is occupied by one of their knights.</li>
+				<li><b>Largest Army:</b> The first player to build 3 knights get Largest Army which is worth 2 victory points. Another player may steal if he builds a larger army, or a player's army is reduced by attack.</li>
 			</ul>
 
 		<h3 id="castles">Castles</h3>
 			<p>Cities may be upgraded to a castle.</p>
 			<p>Castles produce 3 resources</p>
-			<p>Castles cost 1 ore, 1 wheat, 1 sheep, 1 wood, 1 brick</p>
 
 		<h3 id="walls">Walls</h3>
 			<p>Walls are a great way to defend your settlements from attack, however they are not guaranteed to protect you.</p>
 			<p>Walls may be built on any edge of a player's settled or occupied hexes</p>
       <p>Once per a player's turn, he may deconstruct an existing wall and rebuild it in a new location at no cost</p>
-      <p>Knights may not attack or move through opponent walls, however a player's own knights may move freely through his own walls</p>
+      <p>Knights may not attack or move through opponent walls, however a player's own knights may move freely or attack through his own walls</p>
       <p><b>Breaching a Wall</b>
 	      <ul>
 		      <li>Players may attempt to breach an opponent's wall if he has a knight occupying an adjacent hex.</li>
@@ -181,11 +195,10 @@
 			<p>To encourage a variety of strategies, victory points can be earned several ways:</p>
 			<ul>
 				<li>Building: 1 point per settlement, 2 per city, 3 per castle</li>
-				<li>Armies and Navies: 1 point per ship, 1 point per knight</li>
+				<li>Armies and Navies: 1 point per ship, 2 points per war/cargo ship, 1 point per knight, 2 points per archer/cavalry</li>
 				<li>Largest Army/Navy: 2 points</li>
-				<li>Largest Metropolis: 3 points - largest metropolis is counted as most points from buildings that are adjacent</li>
+				<li>Largest Metropolis: 2 points - largest metropolis is counted as most points from buildings that are adjacent</li>
 				<li>Colonist: 2 points per island settled that is not settled on initial placement</li>
-				<li>Harbor Master: 2 points - most points from settled port hexes</li>
 			</ul>
 
 		<h3 id="board">Board Setup</h3>
@@ -194,18 +207,19 @@
 		<h3 id="costs">Building Costs</h3>
 			<ul>
 				<li>Dev Card: 1 ore, 1 sheep, 1 wheat</li>
+				<li>--</li>
 				<li>Wall: 2 brick</li>
-				<li>Settlement: 1 brick, 1 wheat, 1 wood</li>
-				<li>City: 2 ore, 2 wheat</li>
-				<li>Castle: 1 brick, 1 ore, 1 wheat, 1 wood, 1 sheep</li>
+				<li>Settlement: 1 brick, 1 wheat, 1 wood (+1 defense)</li>
+				<li>City: 2 ore, 2 wheat (+2 defense)</li>
+				<li>Castle: 1 brick, 1 ore, 1 wheat, 1 wood, 1 sheep (+3 defense)</li>
 				<li>--</li>
-				<li>Knight: 1 ore, 1 sheep</li>
-				<li>Archer: 1 ore, 1 wood, 1 sheep</li>
-				<li>Cavalry: 1 ore, 1 sheep, 1 wheat</li>
+				<li>Knight: 1 ore, 1 sheep (1 movement)</li>
+				<li>Archer: 1 ore, 1 wood, 1 sheep (+1 attack range)</li>
+				<li>Cavalry: 1 ore, 1 sheep, 1 wheat (3 movement)</li>
 				<li>--</li>
-				<li>Ship: 1 wood, 1 sheep</li>
-				<li>War Ship: 1 brick, 1 ore, 1 wood</li>
-				<li>Cargo Ship: 2 wood, 1 sheep</li>
+				<li>Ship: 1 wood, 1 sheep (4 movement)</li>
+				<li>War Ship: 1 brick, 1 ore, 1 wood (+1 attack, +1 defense, +1 attack range)</li>
+				<li>Cargo Ship: 2 wood, 1 sheep (7 movement, 3 transport capacity, +1 trade)</li>
 				<li>--</li>
 			</ul>
 			<p>Distribution: 5 brick, 8 ore, 6 wheat, 7 wood, 7 sheep</p>
