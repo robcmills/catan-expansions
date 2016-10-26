@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>⚔ Catan Conquest 0.5</title>
+		<title>⚔ Catan Conquest 0.62</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
 		<meta name="description" description="Robert Carter Mills">
@@ -18,7 +18,7 @@
 		}
 	</style>
 	<body>
-		<h1>Catan Conquest ⚔ 0.6</h1>
+		<h1>Catan Conquest ⚔ 0.62</h1>
 			<img id="banner" src="http://i.imgur.com/NpzgP6z.jpg">
 			<p>This is a total conversion modification to the game of Catan. All rules of the base game apply with the following new rules:</p>
 
@@ -28,6 +28,8 @@
 			<li><a href="#gold">Gold</a></li>
 			<li><a href="#fish-shoals">Fish Shoals</a></li>
 			<li><a href="#dragon">The Dragon</a></li>
+			<li><a href="#storms">Storms</a></li>
+			<li><a href="#disease">Disease</a></li>
 			<li><a href="#ships">Ships</a></li>
 			<li><a href="#knights">Knights</a></li>
 			<li><a href="#castles">Castles</a></li>
@@ -35,7 +37,9 @@
 			<li><a href="#robber">No Robber</a></li>
 			<li><a href="#stack">Dice Stack</a></li>
 			<li><a href="#phases">Phases</a></li>
-			<li><a href="#victory">Victory Points</a></li>
+			<li><a href="#rewards">Rewards</a></li>
+			<li><a href="#cards">New Dev Cards</a></li>
+			<li><a href="#points">Points</a></li>
 			<li><a href="#board">Board Setup</a></li>
 			<li><a href="#costs">Building Costs</a></li>
 		</ol>
@@ -68,10 +72,10 @@
 				<li>Fish may be traded with other players</li>
 			</ul>
 			<p>Monopoly card can not be used for fish.</p>
-			<p>During a 7 production roll (year of plenty for all), each fish shoal produces 1 fish for each ship that occupies it.</p>
+			<p>During a 7 production roll (year of plenty for all), each fish shoal produces only 1 fish for each player that occupies it (regardless of how many ships are present).</p>
 
 		<h3 id="dragon">The Dragon 🐉</h3>
-			<p>For every 7 gold that is produced by gold hexes, the dragon attacks the player with the most victory points. If more than one player is tied for most victory points, include knights, ships, current gold and resources in the count.</p>
+			<p>For every 7 gold that is produced by gold hexes, the dragon attacks the player with the most points. If more than one player is tied for most points, include knights, ships, current gold and resources in the count.</p>
 			<p>Dragon attacks occurs immediately after every player has gathered their resources from the production roll.</p>
 			<p>The victim of the dragon attack must assign a number to each of his settlements and cities and roll a die to determine which one is attacked.</p>
 			<p>A settlement attacked by the dragon is completely destroyed and removed from the board. A city is downgraded to a settlement, and castles are downgraded to cities.</p>
@@ -80,7 +84,12 @@
 		<h3 id="storms">Storms ⚡</h3>
 			<p>Whenever the production roll results in a 12, a violent storm occurs and sinks a ship belonging to the player with the most points.</p>
 			<p>Storms occur immediately after every player has gathered their resources from the production roll.</p>
-			<p>The victim of the storm must assign a number to each of his ships and roll a die to determine which one is sunk.</p>
+			<p>The victim of the storm must assign a number to each of his ships (including war and cargo ships) and roll a die to determine which one is sunk.</p>
+
+		<h3 id="disease">Disease ☣</h3>
+			<p>Whenever the production roll results in a 2, disease kills a knight belonging to the player with the most points.</p>
+			<p>Disease occurs immediately after every player has gathered their resources from the production roll.</p>
+			<p>The victim of disease must assign a number to each of his knights (including cavalry and archers) and roll a die to determine which one perishes.</p>
 
 		<h3 id="ships">Ships ⛵</h3>
 			<p>Players who have built a settlement or city on the coast may build <b>2 ships or 2 knights or 1 knight and 1 ship</b> per turn</p>
@@ -92,8 +101,16 @@
 			</ul>
 			<p>Ship Types:</p>
 			<ul>
-				<li>War Ship: +1 attack, +1 defense, +1 range (limit 1)</li>
-				<li>Cargo Ship: +3 movement, ability to carry up to 3 knights, +1 trade (limit 3). Cargo ships can not attack or defend other ships or coastal settlements. (they can defend themselves like normal ships)</li>
+				<li>War Ship: +1 attack, +1 defense, +1 attack range (limit 1)</li>
+				<li>Cargo Ship: +3 movement, +3 transport, +1 trade, -attack, -defend (limit 3)<br>
+					Cargo ships can transport up to 3 knights of any type.<br>
+					Cargo ships can not attack or defend other ships or coastal settlements, but they can defend themselves like normal ships.
+					<p><b>Loading and unloading cargo ships:</b><br>
+						Loading knights onto a cargo ship is considered 1 movement that counts against each knight’s movement range. This means normal knights can only be loaded onto a cargo ship and transported to a different part of the board, but then can not be unloaded on the same turn.<br>
+						Cavalry, on the other hand, may continue their movement after being transported by a cargo ship (granted they still have movement points left).<br>
+						Archers have a movement range of 1, so like knights they can only be loaded and transported, but because they have an attack range of +1 they could then attack a coastal hex, or enemy ships in the same or adjacent hexes. This makes the combination of a cargo ship loaded with 3 archers a powerful weapon.
+					</p>
+				</li>
 			</ul>
 			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal settlements. Ships occupy the center of sea hexes.</p>
 			<p>On a players turn, each ship may perform <b>2 actions.</b> Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
@@ -117,7 +134,6 @@
 				<li><b>Defend:</b> When a ship is attacking a coastal settlement, if the defender has a ship on an adjacent sea hex, the attacker must first attack the defending ship. Similarly, regular ships may defend war ships and cargo ships if they are on the same sea hex. A newly built ship may defend on the same turn. Ships can not defend coastal settlements from knight attacks. Defending does not count as an action.</li>
 				<li><b>Use port trades:</b> Players may use any trade benefits of ports that their ship occupies. (cargo ships get +1)</li>
 				<li><b>Build:</b> Players may build a new settlement (or knight if playing with knight module) on any coastal hex that is adjacent to one of their ships.</li>
-				<li><b>Largest Navy:</b> The first player to build 3 ships receives the Largest Navy card that is worth 2 victory points. Like Largest Army, this may be stolen if another player builds a larger Navy, or the size of their fleet is reduced by attack.</li>
 			</ul>
 
 		<h3 id="knights">Knights ⚔</h3>
@@ -156,7 +172,6 @@
 			<ul>
 				<li><b>Defend:</b> When a knight is attacking a settlement, if the defender has a knight on the hex, that knight is defending that settlement, and the attacker must first attack the defending knight before attacking the settlement. Similarly, knights may defend archers and cavalry. Archers, because of their +1 attack range, may defend settlements on adjacent hexes. During attack phase, a newly built knight may defend on the same turn. Defending does not count as an action.</li>
 				<li><b>Build:</b> Players may build a new settlement on any unsettled hex that is occupied by one of their knights.</li>
-				<li><b>Largest Army:</b> The first player to build 3 knights get Largest Army which is worth 2 victory points. Another player may steal if he builds a larger army, or a player's army is reduced by attack.</li>
 			</ul>
 
 		<h3 id="castles">Castles 🏰</h3>
@@ -191,19 +206,28 @@
 			<ul>
 				<li><b>Phase 1 - Build:</b>	During this phase no attack actions are allowed.</li>
 				<li><b>Phase 2 - Attack:</b> During this phase attack actions are allowed and turn order is modified:
-					<p><b>Attack phase turn order:</b> At the start of each round, calculate each player's score by summing their victory points (including knights and ships). The player with the lowest score goes first, highest last. Recalculate at the start of each round.</p>
+					<p><b>Attack phase turn order:</b> At the start of each round, calculate each player's score by summing their points (including knights and ships). The player with the lowest score goes first, highest last. Recalculate at the start of each round.</p>
 				</li>
 			</ul>
-			<p>Each phase lasts 3 rounds. Implement a counter to keep track. At the end of the last round, the player with the most victory points wins. If a tie exists declare more than one winner.</p>
+			<p>Each phase lasts 3 rounds. Implement a counter to keep track. At the end of the last round, the player with the most points wins. If a tie exists declare more than one winner.</p>
 
-		<h3 id="victory">Victory Points</h3>
-			<p>To encourage a variety of strategies, victory points can be earned several ways:</p>
+		<h3 id="rewards">Rewards</h3>
 			<ul>
-				<li>Building: 1 point per settlement, 2 per city, 3 per castle</li>
+				<li>If any player does not receive resources on a production roll, he may draw one gold.</li>
+				<li>At the end of each round, the player with the least points may draw one free dev card.</li>
+			</ul>
+
+		<h3 id="cards">New Dev Cards</h3>
+			<ul>
+				<li><b>Loaded Dice:</b> Player may choose the outcome of the resource production roll.</li>
+			</ul>
+
+		<h3 id="points">Points</h3>
+			<p>Points are calculated as follows:</p>
+			<ul>
+				<li>Building: 1 point per wall, 1 point per settlement, 2 per city, 3 per castle</li>
 				<li>Armies and Navies: 1 point per ship, 2 points per war/cargo ship, 1 point per knight, 2 points per archer/cavalry</li>
-				<li>Largest Army/Navy: 2 points</li>
-				<li>Largest Metropolis: 2 points - largest metropolis is counted as most points from buildings that are adjacent</li>
-				<li>Colonist: 2 points per island settled that is not settled on initial placement</li>
+				<li>Colonist: 2 points per island settled (at least one settlement) that is not settled on initial placement (in addition to normal building points). (If your last colony on a foreign island is attacked and taken over by an opponent, you no longer receive those 2 points. However conversely, if your home island settlements are all conquered by opponents, and you still have existing colonies, you retain your colonist points.)</li>
 			</ul>
 
 		<h3 id="board">Board Setup</h3>
