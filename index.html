@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>⚔ Catan Conquest 0.63</title>
+		<title>⚔ Conquest 0.8</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
 		<meta name="description" description="Robert Carter Mills">
@@ -18,91 +18,67 @@
 		}
 	</style>
 	<body>
-		<h1>Catan Conquest ⚔ 0.63</h1>
-			<img id="banner" src="http://i.imgur.com/NpzgP6z.jpg">
-			<p>This is a total conversion modification to the game of Catan. All rules of the base game apply with the following new rules:</p>
+		<h1>Conquest ⚔ v0.8</h1>
+			<p>For the glory of your country! New islands have been discovered across the Emerald Sea and you have been ordered by your King to claim land for your country. However, you are not the only one who hopes to discover riches on foreign soil. Gather your knights and set sail. Conquest is a game of colonization and medieval combat.</p>
 
 		<ol>
-			<li><a href="#placement">Placement</a></li>
-			<li><a href="#modified-start">Modified Start</a></li>
+			<li><a href="#setup">Setup</a></li>
+			<li><a href="#starting">Starting</a></li>
 			<li><a href="#gold">Gold</a></li>
-			<li><a href="#fish-shoals">Fish Shoals</a></li>
-			<li><a href="#dragon">The Dragon</a></li>
-			<li><a href="#storms">Storms</a></li>
-			<li><a href="#disease">Disease</a></li>
+			<li><a href="#hexes">Hexes</a></li>
 			<li><a href="#ships">Ships</a></li>
 			<li><a href="#knights">Knights</a></li>
-			<li><a href="#castles">Castles</a></li>
 			<li><a href="#walls">Walls</a></li>
-			<li><a href="#robber">No Robber</a></li>
 			<li><a href="#stack">Dice Stack</a></li>
 			<li><a href="#phases">Phases</a></li>
 			<li><a href="#rewards">Rewards</a></li>
-			<li><a href="#cards">New Dev Cards</a></li>
+			<li><a href="#cards">Cards</a></li>
 			<li><a href="#points">Points</a></li>
 			<li><a href="#victory">Victory Tokens</a></li>
-			<li><a href="#board">Board Setup</a></li>
 			<li><a href="#costs">Building Costs</a></li>
 		</ol>
 
-		<h3 id="placement">Modified Placement</h3>
-			<p>Settlements are placed in the center of hexes, not at the corners like in base Catan.</p>
-			<p>Settlements receive resources from all adjacent hexes (if that resource number is rolled)</p>
-			<p>No distance rule. Players may build settlements on hexes immediately adjacent to already settled hexes, by same or enemy players.</p>
-			<p>No roads. Roads are replaced by walls. See <a href="#walls">Walls</a> section below.</p>
+		<h3 id="setup">Setup</h3>
+			<p>Build the map according to the following diagram:</p>
+			<p>Todo</p>
 
-		<h3 id="modified-start">Modified Start</h3>
-			<p>Roll to determine who goes first. In order, players begin by choosing a port and placing one of their ships on that sea hex. Then place one knight on the resource hex adjacent to the port. Then players may place a settlement on the hex occupied by that knight. Optionally, the knight may execute a movement into any adjacent hex and the player may build after the movement.</p>
-			<p>Once all players have "landed" their ships and placed a knight and a settlement, draw 1 resource for the hex with the starting settlement, and 1 resource for all adjacent hexes to that settlement.</p>
+		<h3 id="starting">Starting Actions</h3>
+			<p>
+				Each player rolls 2 dice. Highest roll goes first.<br>
+				The first player begins by choosing a port and placing one of his ships on that sea hex.<br>
+				Then he places one knight on the terrain hex adjacent to the port.<br>
+				Then he may place a settlement on the hex occupied by that knight.<br>
+				Optionally, the knight may execute a movement into any adjacent hex and build after the movement.<br>
+				This ends the first players turn, and play rotates to the <b>right</b>.<br>
+				Each player executes their starting actions in turn.<br>
+				When all players have finished their starting actions the player who started last, is the first player to start the game and execute a normal turn.<br>
+				Play then proceeds to the <b>left</b> for the remainder of the game.
+			</p>
 
 		<h3 id="gold">Gold 💰</h3>
-			<p>Gold hexes are added to the board:</p>
+			<p>
+				Gold is the primary currency of the game. You will use gold to build settlements, knights and ships.<br>
+				<b>The Gold Roll:</b> At the beginning of each player's turn, he must roll 1 die and then collect that many gold.
+			</p>
+
+		<h3 id="hexes">Hexes</h3>
 			<ul>
-				<li>Gold hexes produce 1 gold each time their resource number is rolled during a production round</li>
-				<li>1 gold may be traded to the bank for any 1 resource</li>
-				<li>Gold may be traded with other players</li>
+				<li>Mountains</li>
+				<li>Forrest</li>
+				<li>Plains</li>
+				<li>Desert</li>
+				<li>Jungle</li>
+				<li>Sea</li>
+				<li>Reef</li>
 			</ul>
-			<p>Monopoly card can not be used for gold</p>
-
-		<h3 id="fish-shoals">Fish Shoals 🐟</h3>
-			<p>Fish shoal sea hexes are added to the board:</p>
-			<ul>
-				<li>Fish shoal sea hexes produce 1 fish each time their resource number is rolled during a production round</li>
-				<li>2 fish may be traded to the bank for any 1 resource</li>
-				<li>Fish may be traded with other players</li>
-			</ul>
-			<p>Monopoly card can not be used for fish.</p>
-			<p>During a 7 production roll (year of plenty for all), each fish shoal produces only 1 fish for each player that occupies it (regardless of how many ships are present).</p>
-
-		<h3 id="dragon">The Dragon 🐉</h3>
-			<p>For every 7 gold that is produced by gold hexes, the dragon attacks the player with the most points. If more than one player is tied for most points, include knights, ships, current gold and resources in the count.</p>
-			<p>Dragon attacks occurs immediately after every player has gathered their resources from the production roll.</p>
-			<p>The victim of the dragon attack must assign a number to each of his settlements and cities and roll a die to determine which one is attacked.</p>
-			<p>A settlement attacked by the dragon is completely destroyed and removed from the board. A city is downgraded to a settlement, and castles are downgraded to cities.</p>
-			<p>If the building being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled, one at a time. The first roll represents the player, the second the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.</p>
-
-		<h3 id="storms">Storms ⚡</h3>
-			<p>Whenever the production roll results in a 12, a violent storm occurs and sinks a ship belonging to the player with the most points.</p>
-			<p>Storms occur immediately after every player has gathered their resources from the production roll.</p>
-			<p>The victim of the storm must assign a number to each of his ships (including galleys and cargo ships) and roll a die to determine which one is sunk.</p>
-
-		<h3 id="disease">Disease ☣</h3>
-			<p>Whenever the production roll results in a 2, disease kills a knight belonging to the player with the most points.</p>
-			<p>Disease occurs immediately after every player has gathered their resources from the production roll.</p>
-			<p>The victim of disease must assign a number to each of his knights (including cavalry and archers) and roll a die to determine which one perishes.</p>
 
 		<h3 id="ships">Ships ⛵</h3>
 			<p>Players who have built a settlement or city on the coast may build <b>2 ships or 2 knights or 1 knight and 1 ship</b> per turn</p>
-			<p>Ship Costs:</p>
-			<ul>
-				<li>Ship: 1 wood, 1 sheep</li>
-				<li>Galley: 1 wood, 1 sheep, 1 ore</li>
-				<li>Cargo Ship: 2 wood, 1 sheep</li>
-			</ul>
 			<p>Ship Types:</p>
 			<ul>
+				<li>Ship: 4 movement</li>
 				<li>Galley: +1 attack, +1 defense, +1 attack range (limit 1)</li>
-				<li>Cargo Ship: +3 movement, +3 transport, +1 trade, -attack, -defend (limit 3)<br>
+				<li>Cargo Ship: +2 movement, +3 transport, +1 trade, -attack, -defend (limit 3)<br>
 					Cargo ships can transport up to 3 knights of any type.<br>
 					Cargo ships can not attack or defend other ships or coastal settlements, but they can defend themselves like normal ships.
 					<p><b>Loading and unloading cargo ships:</b><br>
@@ -113,7 +89,7 @@
 				</li>
 			</ul>
 			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal settlements. Ships occupy the center of sea hexes.</p>
-			<p>On a players turn, each ship may perform <b>2 actions.</b> Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
+			<p>On a players turn, each ship is limited to <b>2 actions.</b> Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
 			<p>Each action must be unique. A player may not move the same ship twice or attack with the same ship twice.</p>
 			<p>Ship actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his ship to a nearby port, and then use that port before building.</p>
 			<p>Ship actions include the following:</p>
@@ -127,7 +103,7 @@
 					</ul>
 				</li>
 				<li><b>Breach a Sea Wall</b> see <a href="#walls">Walls</a> section below</li>
-				<li><b>Fish</b> Roll one die and if the result is 1 or 2, collect 1 fish. 2 Fish may be exchanged for any 1 resource.</li>
+				<li><b>Fish</b> Roll one die and if the result is 1 or 2, collect 1 fish. 2 Fish may be exchanged for 1 gold.</li>
 			</ul>
 			<p><b>Ship benefits:</b> Players who have built ships also may:</p>
 			<ul>
@@ -137,26 +113,20 @@
 			</ul>
 
 		<h3 id="knights">Knights ⚔</h3>
-			<p>Before the game begins, remove all knight cards from the dev card deck.</p>
 			<p>Players may build <b>2 knights or 2 ships or 1 knight and 1 ship</b> per turn</p>
-			<p>Knight Costs:</p>
-			<ul>
-				<li>Knight: 1 ore, 1 sheep</li>
-				<li>Archer: 1 ore, 1 sheep, 1 wood</li>
-				<li>Cavalry: 1 ore, 1 sheep, 1 wheat</li>
-			</ul>
 			<p>Knight Types:</p>
 			<ul>
+				<li>Knight</li>
 				<li>Archer: +1 attack range</li>
 				<li>Cavalry: +2 movement</li>
 			</ul>
 			<p>Newly built Knights are placed on any hex settled by the player.</p>
-			<p>On a players turn, each Knight may perform <b>2 actions.</b> Once the player has resolved a Knight's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all Knights to their upright position.</p>
+			<p>On a players turn, each Knight is limited to <b>2 actions.</b> Once the player has resolved a Knight's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all Knights to their upright position.</p>
 			<p>Each action must be unique. A player may not move the same knight twice or attack with the same knight twice.</p>
 			<p>Knight actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his knight to a nearby hex, and then build a settlement there.</p>
 			<p>Knight actions include the following:</p>
 			<ul>
-				<li><b>Movement</b> Knights can move <b>1 hex</b> per movement. Multiple knights may occupy the same hex. Knights may move through hexes occupied by another player's knights, however may not move through hexes settled by another player. Knights may move onto an opponents settled hex (to attack) but that ends movement regardless of movement range.</li>
+				<li><b>Movement</b> Knights can move <b>1 hex</b> per movement (except cavalry which can move 3). Multiple knights may occupy the same hex. Knights may move through hexes occupied by another player's knights, however may not move through hexes settled by another player. Knights may move onto an opponents settled hex (to attack) but that ends movement regardless of movement range.</li>
 				<li><b>Attack</b> Knights can attack another player's knights or settlements if they both occupy the same hex (except for archers, which can attack adjacent hexes). Both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
 					<ul>
 						<li>When a knight is defeated in battle the victor captures him and places the piece in an area near the player designated as his prison. Captured knights are counted towards the General Victory Tokens condition.</li>
@@ -174,10 +144,6 @@
 				<li><b>Build:</b> Players may build a new settlement on any unsettled hex that is occupied by one of their knights.</li>
 			</ul>
 
-		<h3 id="castles">Castles 🏰</h3>
-			<p>Cities may be upgraded to a castle.</p>
-			<p>Castles produce 3 resources</p>
-
 		<h3 id="walls">Walls</h3>
 			<p>Walls are a great way to defend your settlements from attack, however they are not guaranteed to protect you.</p>
 			<p>Walls may be built on any edge of a player's settled or occupied hexes</p>
@@ -194,37 +160,37 @@
 		    </ul>
 		   </p>
 
-		<h3 id="robber">No Robber</h3>
-			<p>The robber is removed from the game entirely. If a 7 is rolled for resource production, this results in a modified "year of plenty" for all players. Each player may collect 1 resource per settlement, 2 resources per city, and 3 per castle they have built. Players must choose which resources to collect from the adjacent resources to each settlement/city/castle. Fish shoals produce 1 fish for each player that occupies it with at least one ship.</p>
-			<p>There is no penalty for having more than 7 cards at any time</p>
-
-		<h3 id="stack">Dice Stack (optional)</h3>
-			<p>Replace the dice with a dice stack for a guaranteed distribution of all resources:</p>
-			<p><a href="http://robcmills.net/stack">robcmills.net/stack</a></p>
-
 		<h3 id="phases">Game Phases</h3>
 			<ul>
 				<li><b>Phase 1 - Build:</b>	During this phase no attack actions are allowed.</li>
-				<li><b>Phase 2 - Attack:</b> During this phase attack actions are allowed and turn order is modified:
-					<p><b>Attack phase turn order:</b> At the start of each round, calculate each player's score by summing their points (including knights and ships). The player with the lowest score goes first, highest last. Recalculate at the start of each round.</p>
+				<li><b>Phase 2 - Battle:</b> During this phase attack actions are allowed and turn order is modified:
+					<p><b>Battle phase turn order:</b> At the start of each round, recalculate each player's points. The player with the least points goes first, highest last.</p>
 				</li>
 			</ul>
 			<p>Each phase lasts 3 rounds. Implement a counter to keep track.</p>
 
 		<h3 id="rewards">Rewards</h3>
 			<ul>
-				<li>If any player does not receive resources on a production roll, he may draw one gold.</li>
-				<li>At the end of each round, the player with the least points may draw one free dev card.</li>
+				<li>At the end of each round, the player with the least points may draw one free card.</li>
 			</ul>
 
-		<h3 id="cards">New Dev Cards</h3>
-			<ul>
-				<li><b>Loaded Dice:</b> Player may choose the outcome of the resource production roll.</li>
-				<li><b>Relic:</b> You have acquired a rare religious relic of supernatural power. Grant this valuable item to the knight of your choice and add 1 to all his battle rolls for the remainder of the game. When hunting a 3 also results in a successful hunt. (place a chit underneath the knight to mark this ability)</li>
-				<li><b>Liquid Fire:</b> Your alchemist has discovered an incendiary formula that can be used in naval warfare to great effect because it ignites upon contact with water. Grant this valuable weapon to the ship of your choice and add 1 to all its battle rolls for the remainder of the game. (place a chit underneath the ship to mark this ability)</li>
+		<h3 id="cards">Cards</h3>
+			<p>Cards may be purchased for 3 gold and can have some interesting effects on the game:</p>
+			<ol>
+				<li><b>Relic:</b> You have acquired a rare religious relic of supernatural power. Grant this valuable item to the knight of your choice and add 1 to all his battle rolls (attack and defense) for the remainder of the game. When hunting a 3 also results in a successful hunt. (place a chit underneath the knight to mark this ability)</li>
+				<li><b>Liquid Fire:</b> Your alchemist has discovered an incendiary formula that can be used in naval warfare to great effect because it ignites upon contact with water. Grant this valuable weapon to the ship of your choice and add 1 to all its battle rolls (attack and defense) for the remainder of the game. (place a chit underneath the ship to mark this ability)</li>
 				<li><b>Gemstones:</b> You unearth a deposit of rare minerals that fetch a high price at market. Collect 4 gold pieces.</li>
-				<li><b>Robin Hood Robbers:</b> A band of benevolent pirates steals from the leader and gives to the loser. The player with the most points must give half his resources to the player with the least points. Resolve this action immediately.</li>
-			</ul>
+				<li><b>Robin Hood Robbers:</b> A band of benevolent pirates steals from the leader and gives to the loser. The player with the most points must give half his gold to the player with the least points. Resolve this action immediately.</li>
+				<li><b>Dragon Attack:</b>
+					A dragon attacks the player with the most points.<br>
+					Assign a number to each of his settlements (including cities and castles) and roll a die to determine which one is attacked.<br>
+					A settlement attacked by the dragon is completely destroyed and removed from the board. A city is downgraded to a settlement, and castles are downgraded to cities.<br>
+					If the settlement being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled, one at a time. The first roll represents the player, the second the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.<br>
+					Resolve this action immediately.
+				</li>
+				<li><b>Storms:</b> A violent storm occurs and sinks a ship belonging to the player with the most points. The victim of the storm must assign a number to each of his ships (including galleys and cargo ships) and roll a die to determine which one is sunk. Resolve this action immediately.</li>
+				<li><b>Disease:</b> A mysterious sickness strikes a knight belonging to the player with the most points. The victim of disease must assign a number to each of his knights (including cavalry and archers) and roll a die to determine which one perishes. Resolve this action immediately.</li>
+			</ol>
 
 		<h3 id="points">Points</h3>
 			<p>Points are used during the game, but do not determine the winner. For victory conditions, see the <a href="#victory">Victory Tokens</a> section.</p>
@@ -238,16 +204,14 @@
 			<ul>
 				<li><b>Conqueror</b>: 1 token for each settlement that you conquer from another player. 2 tokens for cities, 3 for castles</li>
 				<li><b>Siege</b>: 1 token for each wall breached</li>
-				<li><b>Fortress</b>: 1 token for completely enclosing one or more settlements with walls.</li>
+				<li><b>Fortress</b>: 1 token for completely enclosing one or more hexes with walls.</li>
 				<li><b>Great Wall</b>: 1 token for building a wall of length 5 or more</li>
-				<li><b>Attacker</b>: 1 token for each battle in which you emerge victorious as the attacker. This means clearing a hex of more than 1 enemy.</li>
+				<li><b>Attacker</b>: 1 token for each battle in which you emerge victorious as the attacker.</li>
 				<li><b>Defender</b>: 1 token for each battle in which you successfully survive an attacking enemy with a larger force.</li>
 				<li><b>Traveler</b>: 1 token for each ship that moves more than 6 sea hexes away from its home port and 1 token for each knight that travels more than 3 hexes away from its home settlement </li>
-				<li><b>Trader</b>: 1 token for trading at least 1 resource with every player on one turn</li>
 				<li><b>Armada</b>: 1 token for a standing navy of 5 or more ships (once per player)</li>
 				<li><b>Legion</b>: 1 token for a standing army of 5 or more knights (once per player)</li>
 				<li><b>Metropolis</b>: 1 token for building 3 or more settlements on adjacent hexes</li>
-				<li><b>Balance</b>: At the end of each round the leader must give 1 of his tokens to the player with the least points. If the leader has none, draw from supply.</li>
 			</ul>
 			<p>At the end of the game:</p>
 			<ul>
@@ -257,28 +221,24 @@
 				<li><b>Builder:</b> 3 tokens for the player with the highest score</li>
 			</ul>
 
-		<h3 id="board">Board Setup</h3>
-			<p>Todo: setup diagrams</p>
-
 		<h3 id="costs">Building Costs</h3>
 			<ul>
-				<li>Dev Card: 1 ore, 1 sheep, 1 wheat</li>
+				<li>Dev Card: 3 gold</li>
 				<li>--</li>
-				<li>Wall: 2 brick (limit 15)</li>
-				<li>Settlement: 1 brick, 1 wheat, 1 wood (+1 defense) (limit 5)</li>
-				<li>City: 2 ore, 2 wheat (+2 defense) (limit 3)</li>
-				<li>Castle: 1 brick, 1 ore, 1 wheat, 1 wood, 1 sheep (+3 defense) (limit 1)</li>
+				<li>Wall: 2 gold (limit 15)</li>
+				<li>Settlement: 3 gold (+1 defense) (limit 5)</li>
+				<li>City: 4 gold (+2 defense) (limit 3)</li>
+				<li>Castle: 5 gold (+3 defense) (limit 1)</li>
 				<li>--</li>
-				<li>Knight: 1 ore, 1 sheep (1 movement)</li>
-				<li>Archer: 1 ore, 1 wood, 1 sheep (+1 attack range)</li>
-				<li>Cavalry: 1 ore, 1 sheep, 1 wheat (3 movement)</li>
+				<li>Knight: 2 gold (1 movement)</li>
+				<li>Archer: 3 gold (+1 attack range)</li>
+				<li>Cavalry: 4 gold (+1 attack, 3 movement)</li>
 				<li>--</li>
-				<li>Ship: 1 wood, 1 sheep (4 movement)</li>
-				<li>Cargo Ship: 2 wood, 1 sheep (7 movement, 3 transport capacity, +1 trade) (limit 3)</li>
-				<li>Galley: 1 brick, 1 ore, 1 wood (+1 attack, +1 defense, +1 attack range) (limit 1)</li>
+				<li>Ship: 2 gold (4 movement)</li>
+				<li>Cargo Ship: 3 gold (6 movement, 3 transport capacity, +1 trade) (limit 3)</li>
+				<li>Galley: 4 gold (+1 attack, +1 defense, +1 attack range) (limit 1)</li>
 				<li>--</li>
 			</ul>
-			<p>Distribution: 5 brick, 8 ore, 6 wheat, 7 wood, 7 sheep</p>
 
 	</body>
 </html>
