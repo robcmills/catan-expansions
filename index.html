@@ -61,9 +61,9 @@
 		<h3 id="starting">Starting Actions</h3>
 			<p>
 				Each player rolls 2 dice. Highest roll goes first.<br>
-				The first player begins by choosing a port and placing one of his ships on that sea hex.<br>
-				Then he places one knight on the terrain hex adjacent to the port.<br>
-				Then he may place a camp on the hex occupied by that knight.<br>
+				<b>Landfall:</b> The first player begins by landing his ship on any island. Choose any coastal sea hex and place one ship (at no cost).<br>
+				<b>Disembark:</b> Then place one knight on any terrain hex adjacent to the ship.<br>
+				<b>Camp:</b> Then place a camp on the hex occupied by the knight.<br>
 				Optionally, the knight may execute a movement into any adjacent hex and build after the movement.<br>
 				This ends the first players turn, and play rotates to the <b>right</b>.<br>
 				Each player executes their starting actions in turn.<br>
@@ -81,40 +81,43 @@
 			<p>The geography of the map is important to consider in developing your military tactics and strategies:</p>
 			<ul>
 				<li><b>Mountains:</b> Steep, rocky and treacherous, mountain hexes can not be occupied or built on.</li>
-				<li><b>Forrest:</b> The dense trees provide excellent cover against archer attacks from range. Does not affect close attacks (same hex). Additionally, forrests are habitat to deer, elk, and other big game. Hunter's are more likely to have successful hunts (roll a 1, 2 or 3).</li>
-				<li><b>Plains:</b> The open, rolling grasslands are ideal for horses. Extend cavalry movement to 4. Additionally there is no cover from hails of arrows. Increase archers attack rolls to +1.</li>
-				<li><b>Desert: The deep sands and hot sun make travel difficult. Cavalry movement is reduced to 1.</b></li>
+				<li><b>Forrest:</b> The dense trees provide excellent cover against archer attacks from range. Archers can not attack troops in the forrest from adjacent hexes. Does not affect close attacks (same hex).<br>
+				Forrests are habitat to deer, elk, and other big game. Hunter's are more likely to have successful hunts (roll a 1, 2 or 3).</li>
+				<li><b>Plains:</b> The open, rolling grasslands are ideal for horses. Extend cavalry movement to 4.<br>
+				There is no cover from hails of arrows. Increase archers attack rolls +1.</li>
+				<li><b>Desert:</b> The deep sands and hot sun make travel difficult. Cavalry movement is reduced to 1.<br>
+				Hunting may not be performed in desert hexes.</li>
 				<li><b>Sea:</b> The open ocean! Be wary of storms.</li>
 				<li><b>Reef:</b> Warm, shallow waters and coral attract fish. Ships fishing in reef hexes are more likely to catch fish (roll a 1, 2 or 3)</li>
 			</ul>
 
 		<h3 id="ships">Ships ⛵</h3>
-			<p>Players who have built a settlement or city on the coast may build <b>2 ships or 2 knights or 1 knight and 1 ship</b> per turn</p>
-			<p>Ship Types:</p>
 			<ul>
 				<li>Ship: 4 movement</li>
 				<li>Galley: +1 attack, +1 defense (limit 1)</li>
-				<li>Cargo Ship: +2 movement, +3 transport, +1 trade, -attack, -defend (limit 3)<br>
-					Cargo ships can transport up to 3 knights of any type.<br>
-					Cargo ships can not attack or defend other ships or coastal settlements, but they can defend themselves like normal ships.
-					<p><b>Loading and unloading cargo ships:</b><br>
-						Loading knights onto a cargo ship is considered 1 movement that counts against each knight’s movement range. This means normal knights can only be loaded onto a cargo ship and transported to a different part of the board, but then can not be unloaded on the same turn.<br>
-						Cavalry, on the other hand, may continue their movement after being transported by a cargo ship (granted they still have movement points left).<br>
-						Archers have a movement range of 1, so like knights they can only be loaded and transported, but because they have an attack range of +1 they could then attack a coastal hex, or enemy ships in the same or adjacent hexes. This makes the combination of a cargo ship loaded with 3 archers a powerful weapon.
+				<li>Freighter: +2 movement, +3 transport, -attack, -defend (limit 3)<br>
+					Freighters can transport up to 3 knights of any type.<br>
+					Freighters can not attack or defend other ships or coastal buildings, but they can defend themselves like normal ships.
+					<p><b>Loading and unloading freighters:</b><br>
+						Loading knights onto a freighters is considered 1 movement that counts against each knight’s movement range. This means normal knights can only be loaded onto a freighter and transported to a different part of the board, but then can not be unloaded on the same turn.<br>
+						Cavalry, on the other hand, may continue their movement after being transported by a freighter (granted they still have movement points left).<br>
+						Archers have a movement range of 1, so like knights they can only be loaded and transported, but because they have an attack range of +1 they could then attack a coastal hex, or enemy ships in the same or adjacent hexes. This makes the combination of a freighter loaded with 3 archers a powerful weapon.
 					</p>
 				</li>
 			</ul>
-			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal settlements. Ships occupy the center of sea hexes.</p>
-			<p>On a players turn, each ship is limited to <b>2 actions.</b> Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
+			<p>On a player's turn he may build <b>2 knights or 2 ships or 1 knight and 1 ship</b></p>
+			<p> In order to build a ship, players must have a soldier, camp, fort or castle on the coast.</p>
+			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal buildings. Ships occupy the center of sea hexes.</p>
+			<p>On a players turn, each ship is limited to <b>2 actions</b> (and each player is limited to taking actions with a max of 6 units total per turn). Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
 			<p>Each action must be unique. A player may not move the same ship twice or attack with the same ship twice.</p>
-			<p>Ship actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his ship to a nearby port, and then use that port before building.</p>
+			<p>Ship actions can occur at any point in a player's turn.</p>
 			<p>Ship actions include the following:</p>
 			<ul>
 				<li><b>Movement:</b> Ships can sail <b>up to 4</b> sea hexes per movement. (Multiple ships may occupy the same sea hex and ships may sail through sea hexes occupied by another player's ship)</li>
-				<li><b>Attack:</b> Ships can attack another player's ships if they both occupy the same sea hex. Ships are able to attack knights and settlements on coastal hexes as well. Conversely, only archers can attack a ship from a coastal hex. To resolve an attack, both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
+				<li><b>Attack:</b> Ships can attack another player's ships if they both occupy the same sea hex. Ships are able to attack knights and buildings on coastal hexes as well. Conversely, only archers can attack a ship from a coastal hex. To resolve an attack, both players involved roll one die and the higher die wins the battle. A tie must be re-rolled. The results of an attack:
 					<ul>
-						<li>If ship to ship attack, victor sinks loser's ship, removes it from the board, and places it in an area near him designated as his ship graveyard. Sunken ships are counted toward the General Victory Token condition.</li>
-						<li>If ship to coastal settlement attack (no defending ships - see below), victor occupies loser's settlement (removes it from the board and replaces it with his own)</li>
+						<li>If ship to ship attack, victor sinks loser's ship, removes it from the board, and places it in an area near him designated as his ship graveyard. Sunken ships are counted toward the Admiral Victory Token condition.</li>
+						<li>If ship to coastal building attack (no defending ships - see below), victor occupies loser's building (removes it from the board and replaces it with his own)</li>
 						<li>If the defender wins no action is taken (advantage to attacker)</li>
 					</ul>
 				</li>
@@ -123,54 +126,52 @@
 			</ul>
 			<p><b>Ship benefits:</b> Players who have built ships also may:</p>
 			<ul>
-				<li><b>Defend:</b> When a ship is attacking a coastal settlement, if the defender has a ship on an adjacent sea hex, the attacker must first attack the defending ship. Similarly, regular ships may defend galleys and cargo ships if they are on the same sea hex. A newly built ship may defend on the same turn. Ships can not defend coastal settlements from knight attacks. Defending does not count as an action.</li>
-				<li><b>Use port trades:</b> Players may use any trade benefits of ports that their ship occupies. (cargo ships get +1)</li>
-				<li><b>Build:</b> Players may build a new settlement (or knight if playing with knight module) on any coastal hex that is adjacent to one of their ships.</li>
+				<li><b>Defend:</b> When a ship is attacking a coastal building, if the defender has a ship on an adjacent sea hex, the attacker must first attack the defending ship. Similarly, regular ships may defend galleys and freighters if they are on the same sea hex. A newly built ship may defend on the same turn. Ships can not defend coastal building from knight attacks. Defending does not count as an action.</li>
+				<li><b>Build:</b> Players may build on any coastal hex that is adjacent to one of their ships.</li>
 			</ul>
 
 		<h3 id="knights">Knights ⚔</h3>
-			<p>Players may build <b>2 knights or 2 ships or 1 knight and 1 ship</b> per turn</p>
-			<p>Knight Types:</p>
 			<ul>
 				<li>Knight</li>
 				<li>Archer: +1 attack range</li>
 				<li>Cavalry: +2 movement</li>
 			</ul>
-			<p>Newly built Knights are placed on any hex settled by the player.</p>
-			<p>On a players turn, each Knight is limited to <b>2 actions.</b> Once the player has resolved a Knight's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all Knights to their upright position.</p>
+			<p>On a player's turn he may build <b>2 knights or 2 ships or 1 knight and 1 ship</b></p>
+			<p>Newly built Knights are placed on any hex with a camp, fort or castle belonging to the player.</p>
+			<p>On a players turn, each knight is limited to <b>2 actions</b> (and each player is limited to taking actions with a max of 6 units total per turn). Once the player has resolved a knight's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all knights to their upright position.</p>
 			<p>Each action must be unique. A player may not move the same knight twice or attack with the same knight twice.</p>
-			<p>Knight actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his knight to a nearby hex, and then build a settlement there.</p>
+			<p>Knight actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his knight to a nearby hex, and then build a camp there.</p>
 			<p>Knight actions include the following:</p>
 			<ul>
-				<li><b>Movement</b> Knights can move <b>1 hex</b> per movement (except cavalry which can move 3). Multiple knights may occupy the same hex. Knights may move through hexes occupied by another player's knights, however may not move through hexes settled by another player. Knights may move onto an opponents settled hex (to attack) but that ends movement regardless of movement range.</li>
-				<li><b>Attack</b> Knights can attack another player's knights or settlements if they both occupy the same hex (except for archers, which can attack adjacent hexes). Both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
+				<li><b>Movement</b> Knights can move <b>1 hex</b> per movement (except cavalry which can move 3). Multiple knights may occupy the same hex. Knights may move through hexes occupied by another player's knights, however they may not move through another player's camp, fort or castle hexes. Knights may move onto an opponents hex with a building (to attack) but that ends movement regardless of movement range.</li>
+				<li><b>Attack</b> Knights can attack another player's knights or buildings if they both occupy the same hex (except for archers, which can attack adjacent hexes). Both players involved roll one die and the higher die wins the battle. A tie must be re-rolled. The results of an attack:
 					<ul>
 						<li>When a knight is defeated in battle the victor captures him and places the piece in an area near the player designated as his prison. Captured knights are counted towards the General Victory Tokens condition.</li>
-						<li>If knight to settlement attack (no defending knights - see below), victor occupies loser's settlement (removes it from the board and replaces it with his own)</li>
+						<li>If knight to building attack (no defending knights - see below), victor occupies loser's building (removes it from the board and replaces it with his own)</li>
 						<li>If the defender wins no action is taken (advantage to attacker)</li>
 					</ul>
 				</li>
 				<li><b>Breach a Wall</b> see <a href="#walls">Walls</a> section below</li>
-				<li><b>Hunt</b> Roll one die and if the result is 1 or 2, collect 1 meat. 2 Meat may be exchanged for any 1 resource.</li>
+				<li><b>Hunt</b> Roll one die and if the result is 1 or 2, collect 1 meat. 2 Meat may be exchanged for 1 gold.</li>
 
 			</ul>
 			<p><b>Knight benefits:</b> Players who have built knights also may:</p>
 			<ul>
-				<li><b>Defend:</b> When a knight is attacking a settlement, if the defender has a knight on the hex, that knight is defending that settlement, and the attacker must first attack the defending knight before attacking the settlement. Similarly, knights may defend archers and cavalry. Archers, because of their +1 attack range, may defend settlements on adjacent hexes. During attack phase, a newly built knight may defend on the same turn. Defending does not count as an action.</li>
-				<li><b>Build:</b> Players may build a new settlement on any unsettled hex that is occupied by one of their knights.</li>
+				<li><b>Defend:</b> When a knight is attacking a building, if the defender has a knight on the hex, that knight is defending that building, and the attacker must first attack the defending knight before attacking the building. Similarly, knights may defend archers and cavalry. Archers, because of their +1 attack range, may defend settlements on adjacent hexes. During attack phase, a newly built knight may defend on the same turn. Defending does not count as an action.</li>
+				<li><b>Build:</b> Players may build on any hex that is occupied by one of their knights and that has no opponent buildings.</li>
 			</ul>
 
 		<h3 id="walls">Walls</h3>
-			<p>Walls are a great way to defend your settlements from attack, however they are not guaranteed to protect you.</p>
-			<p>Walls may be built on any edge of a player's settled or occupied hexes</p>
+			<p>Walls are a great way to defend yourself from attack, however they are not guaranteed to protect you.</p>
+			<p>Walls may be built on any edge of a player's occupied or built hexes</p>
       <p>Once per a player's turn, he may deconstruct an existing wall and rebuild it in a new location at no cost</p>
       <p>Knights may not attack or move through opponent walls, however a player's own knights may move freely or attack through his own walls</p>
       <p><b>Breaching a Wall</b>
 	      <ul>
 		      <li>Players may attempt to breach an opponent's wall if he has a knight occupying an adjacent hex.</li>
 		      <li>To breach, roll one die and if the result is a 6, the breach is succesful</li>
-		      <li>Upon successful breach of a wall, it is removed from the board and the player may then attack the newly exposed hex if it is occupied or settled</li>
-		      <li>Breaching counts as a knight action</li>
+		      <li>Upon successful breach of a wall, it is removed from the board and the player may then attack the newly exposed hex.</li>
+		      <li>Breaching counts as a knight action.</li>
 		      <li>Breaching may be attempted more than once if the player has more than one knight on adjacent hexes who have not exhausted their actions.</li>
 		      <li>Ships may attempt to breach coastal walls</li>
 		    </ul>
@@ -199,42 +200,43 @@
 				<li><b>Gemstones:</b> You unearth a deposit of rare minerals that fetch a high price at market. Collect 6 gold pieces.</li>
 				<li><b>Dragon Attack:</b>
 					A dragon attacks the player with the most points.<br>
-					Assign a number to each of his settlements (including cities and castles) and roll a die to determine which one is attacked.<br>
-					A settlement attacked by the dragon is completely destroyed and removed from the board. A city is downgraded to a settlement, and castles are downgraded to cities.<br>
-					If the settlement being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled, one at a time. The first roll represents the player, the second the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.<br>
+					Assign a number to each of his buildings (including forts and castles) and roll a die to determine which one is attacked.<br>
+					An encampment attacked by the dragon is completely destroyed and removed from the board. A fort is downgraded to a camp, and castles are downgraded to forts.<br>
+					If the building being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled, one at a time. The first roll represents the player, the second the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.<br>
 					Resolve this action immediately.
 				</li>
-				<li><b>Tempest:</b> A violent storm occurs and sinks a ship belonging to the player with the most points. The victim of the storm must assign a number to each of his ships (including galleys and cargo ships) and roll a die to determine which one is sunk. Resolve this action immediately.</li>
+				<li><b>Tempest:</b> A violent storm occurs and sinks a ship belonging to the player with the most points. The victim of the storm must assign a number to each of his ships (including galleys and freighters) and roll a die to determine which one is sunk. Resolve this action immediately.</li>
 				<li><b>Disease:</b> A mysterious sickness strikes a knight belonging to the player with the most points. The victim of disease must assign a number to each of his knights (including cavalry and archers) and roll a die to determine which one perishes. Resolve this action immediately.</li>
 			</ol>
 
 		<h3 id="points">Points</h3>
-			<p>Points are used during the game, but do not determine the winner. For victory conditions, see the <a href="#victory">Victory Tokens</a> section.</p>
+			<p>Points are used during the game, but do not determine the winner. For victory conditions, see the <a href="#victory">Victory Tokens</a> section. Points are the same as building costs.</p>
 			<ul>
-				<li>Building: 1 point per wall, 1 point per settlement, 2 per city, 3 per castle</li>
-				<li>Armies and Navies: 1 point per ship, 2 points per galley/cargo ship, 1 point per knight, 2 points per archer/cavalry</li>
+				<li>Building: 1 point per wall, 2 per encampment, 3 per fort, 4 per castle</li>
+				<li>Armies and Navies: 1 point per ship, 2 per freighter, 3 per galley, 1 per knight, 2 per archer, 3 per cavalry</li>
 			</ul>
 
 		<h3 id="victory">Victory Tokens</h3>
-			<p>At the end of the game, the victor is the player with the most victory tokens.</p>
+			<p>At the end of the game, the winner is the player with the most victory tokens.</p>
 			<ul>
-				<li><b>Conqueror</b>: 1 token for each settlement that you conquer from another player. 2 tokens for cities, 3 for castles</li>
+				<li><b>Conqueror</b>: 1 token for each encampment that you conquer from another player. 2 tokens for forts, 3 for castles</li>
 				<li><b>Siege</b>: 1 token for each wall breached</li>
 				<li><b>Citadel</b>: 1 token for completely enclosing one or more hexes with walls.</li>
+				<li><b>Castle</b>: 1 token for building a castle</li>
 				<li><b>Great Wall</b>: 1 token for building a wall of length 5 or more</li>
 				<li><b>Attacker</b>: 1 token for each battle in which you emerge victorious as the attacker.</li>
 				<li><b>Defender</b>: 1 token for each battle in which you successfully survive an attacking enemy with a larger force.</li>
-				<li><b>Traveler</b>: 1 token for each ship that moves more than 6 sea hexes away from its home port and 1 token for each knight that travels more than 3 hexes away from its home settlement </li>
-				<li><b>Armada</b>: 1 token for a standing navy of 5 or more ships (once per player)</li>
-				<li><b>Legion</b>: 1 token for a standing army of 5 or more knights (once per player)</li>
-				<li><b>Metropolis</b>: 1 token for building 3 or more settlements on adjacent hexes</li>
+				<li><b>Armada</b>: 1 token for a standing navy of 6 or more ships (once per player)</li>
+				<li><b>Legion</b>: 1 token for a standing army of 6 or more knights (once per player)</li>
+				<li><b>Warfare</b>: 1 token for executing 6 attack actions in one turn</li>
 			</ul>
 			<p>At the end of the game:</p>
 			<ul>
-				<li><b>Monarch:</b> 3 tokens for each island that you have settled and no other player has settled or occupied.</li>
-				<li><b>General:</b> 3 tokens for the player with the most sunken ships and prisoners. If a tie exists both players receive tokens.</li>
-				<li><b>Colonist:</b> 3 tokens for each island that you have settled that is not the starting island. These settlements must still belong to the player at the end of the game.</li>
-				<li><b>Builder:</b> 3 tokens for the player with the highest score</li>
+				<li><b>Monarch:</b> 3 tokens for each island that you have built on and no other player has existing buildings on or currently is occupying.</li>
+				<li><b>General:</b> 3 tokens for the player with the most prisoners. If a tie exists both players receive tokens.</li>
+				<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships. If a tie exists both players receive tokens.</li>
+				<li><b>Colonist:</b> 3 tokens for each island that you have built on that is not the starting island. These buildings must still belong to the player at the end of the game.</li>
+				<li><b>Builder:</b> 3 tokens for the player with the most points from building.</li>
 			</ul>
 
 		<h3 id="costs">Unit Costs and Stats</h3>
@@ -251,7 +253,7 @@
 
 				<div class="stats-row">
 					<div class="stats-column">Knight</div> <!-- Unit -->
-					<div class="stats-column">2</div> <!-- Cost -->
+					<div class="stats-column">1</div> <!-- Cost -->
 					<div class="stats-column">2/turn</div> <!-- Limit -->
 					<div class="stats-column">0</div> <!-- Attack  Roll -->
 					<div class="stats-column">0</div> <!-- Attack  Range -->
@@ -260,7 +262,7 @@
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Archer</div> <!-- Unit -->
-					<div class="stats-column">3</div> <!-- Cost -->
+					<div class="stats-column">2</div> <!-- Cost -->
 					<div class="stats-column">2/turn</div> <!-- Limit -->
 					<div class="stats-column">0</div> <!-- Attack  Roll -->
 					<div class="stats-column">+1</div> <!-- Attack  Range -->
@@ -269,7 +271,7 @@
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Cavalry</div> <!-- Unit -->
-					<div class="stats-column">4</div> <!-- Cost -->
+					<div class="stats-column">3</div> <!-- Cost -->
 					<div class="stats-column">2/turn</div> <!-- Limit -->
 					<div class="stats-column">+1</div> <!-- Attack  Roll -->
 					<div class="stats-column">0</div> <!-- Attack  Range -->
@@ -289,7 +291,7 @@
 
 				<div class="stats-row">
 					<div class="stats-column">Ship</div> <!-- Unit -->
-					<div class="stats-column">2</div> <!-- Cost -->
+					<div class="stats-column">1</div> <!-- Cost -->
 					<div class="stats-column">2/turn</div> <!-- Limit -->
 					<div class="stats-column">0</div> <!-- Attack  Roll -->
 					<div class="stats-column">0</div> <!-- Attack  Range -->
@@ -298,7 +300,7 @@
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Freighter</div> <!-- Unit -->
-					<div class="stats-column">3</div> <!-- Cost -->
+					<div class="stats-column">2</div> <!-- Cost -->
 					<div class="stats-column">3</div> <!-- Limit -->
 					<div class="stats-column">NA</div> <!-- Attack  Roll -->
 					<div class="stats-column">NA</div> <!-- Attack  Range -->
@@ -307,7 +309,7 @@
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Galley</div> <!-- Unit -->
-					<div class="stats-column">4</div> <!-- Cost -->
+					<div class="stats-column">3</div> <!-- Cost -->
 					<div class="stats-column">1</div> <!-- Limit -->
 					<div class="stats-column">+2</div> <!-- Attack  Roll -->
 					<div class="stats-column">0</div> <!-- Attack  Range -->
@@ -327,7 +329,7 @@
 
 				<div class="stats-row">
 					<div class="stats-column">Wall</div>
-					<div class="stats-column">2</div>
+					<div class="stats-column">1</div>
 					<div class="stats-column">∞</div>
 					<div class="stats-column"></div>
 					<div class="stats-column"></div>
@@ -336,7 +338,7 @@
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Camp</div>
-					<div class="stats-column">3</div>
+					<div class="stats-column">2</div>
 					<div class="stats-column">5</div>
 					<div class="stats-column"></div>
 					<div class="stats-column"></div>
@@ -345,7 +347,7 @@
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Fort</div>
-					<div class="stats-column">4</div>
+					<div class="stats-column">3</div>
 					<div class="stats-column">3</div>
 					<div class="stats-column"></div>
 					<div class="stats-column"></div>
@@ -354,7 +356,7 @@
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Castle</div>
-					<div class="stats-column">5</div>
+					<div class="stats-column">4</div>
 					<div class="stats-column">1</div>
 					<div class="stats-column"></div>
 					<div class="stats-column"></div>
@@ -374,7 +376,7 @@
 
 				<div class="stats-row">
 					<div class="stats-column">Card</div>
-					<div class="stats-column">3</div>
+					<div class="stats-column">2</div>
 					<div class="stats-column">∞</div>
 					<div class="stats-column"></div>
 					<div class="stats-column"></div>
