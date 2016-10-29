@@ -16,6 +16,23 @@
 			max-width: 800px;
 			width: 100%;
 		}
+		.stats-table {
+			max-width: 100%;
+			overflow: auto;
+			margin: 0 0 2rem;
+		}
+		.stats-row {
+			display: flex;
+		}
+		.stats-row-header {
+			font-weight: bold;
+		}
+		.stats-column {
+			border-bottom: 1px solid lightgrey;
+			border-left: 1px solid lightgrey;
+			flex: 0 0 75px;
+			padding: 2px;
+		}
 	</style>
 	<body>
 		<h1>Conquest ⚔ v0.8</h1>
@@ -29,13 +46,12 @@
 			<li><a href="#ships">Ships</a></li>
 			<li><a href="#knights">Knights</a></li>
 			<li><a href="#walls">Walls</a></li>
-			<li><a href="#stack">Dice Stack</a></li>
 			<li><a href="#phases">Phases</a></li>
 			<li><a href="#rewards">Rewards</a></li>
 			<li><a href="#cards">Cards</a></li>
 			<li><a href="#points">Points</a></li>
 			<li><a href="#victory">Victory Tokens</a></li>
-			<li><a href="#costs">Building Costs</a></li>
+			<li><a href="#costs">Unit Costs and Stats</a></li>
 		</ol>
 
 		<h3 id="setup">Setup</h3>
@@ -47,7 +63,7 @@
 				Each player rolls 2 dice. Highest roll goes first.<br>
 				The first player begins by choosing a port and placing one of his ships on that sea hex.<br>
 				Then he places one knight on the terrain hex adjacent to the port.<br>
-				Then he may place a settlement on the hex occupied by that knight.<br>
+				Then he may place a camp on the hex occupied by that knight.<br>
 				Optionally, the knight may execute a movement into any adjacent hex and build after the movement.<br>
 				This ends the first players turn, and play rotates to the <b>right</b>.<br>
 				Each player executes their starting actions in turn.<br>
@@ -57,19 +73,19 @@
 
 		<h3 id="gold">Gold 💰</h3>
 			<p>
-				Gold is the primary currency of the game. You will use gold to build settlements, knights and ships.<br>
-				<b>The Gold Roll:</b> At the beginning of each player's turn, he must roll 1 die and then collect that many gold.
+				Gold is the primary currency of the game. You will use gold to build castles, knights and ships.<br>
+				At the beginning of each player's turn he receives 5 gold.<br>
 			</p>
 
 		<h3 id="hexes">Hexes</h3>
+			<p>The geography of the map is important to consider in developing your military tactics and strategies:</p>
 			<ul>
-				<li>Mountains</li>
-				<li>Forrest</li>
-				<li>Plains</li>
-				<li>Desert</li>
-				<li>Jungle</li>
-				<li>Sea</li>
-				<li>Reef</li>
+				<li><b>Mountains:</b> Steep, rocky and treacherous, mountain hexes can not be occupied or built on.</li>
+				<li><b>Forrest:</b> The dense trees provide excellent cover against archer attacks from range. Does not affect close attacks (same hex). Additionally, forrests are habitat to deer, elk, and other big game. Hunter's are more likely to have successful hunts (roll a 1, 2 or 3).</li>
+				<li><b>Plains:</b> The open, rolling grasslands are ideal for horses. Extend cavalry movement to 4. Additionally there is no cover from hails of arrows. Increase archers attack rolls to +1.</li>
+				<li><b>Desert: The deep sands and hot sun make travel difficult. Cavalry movement is reduced to 1.</b></li>
+				<li><b>Sea:</b> The open ocean! Be wary of storms.</li>
+				<li><b>Reef:</b> Warm, shallow waters and coral attract fish. Ships fishing in reef hexes are more likely to catch fish (roll a 1, 2 or 3)</li>
 			</ul>
 
 		<h3 id="ships">Ships ⛵</h3>
@@ -77,7 +93,7 @@
 			<p>Ship Types:</p>
 			<ul>
 				<li>Ship: 4 movement</li>
-				<li>Galley: +1 attack, +1 defense, +1 attack range (limit 1)</li>
+				<li>Galley: +1 attack, +1 defense (limit 1)</li>
 				<li>Cargo Ship: +2 movement, +3 transport, +1 trade, -attack, -defend (limit 3)<br>
 					Cargo ships can transport up to 3 knights of any type.<br>
 					Cargo ships can not attack or defend other ships or coastal settlements, but they can defend themselves like normal ships.
@@ -95,7 +111,7 @@
 			<p>Ship actions include the following:</p>
 			<ul>
 				<li><b>Movement:</b> Ships can sail <b>up to 4</b> sea hexes per movement. (Multiple ships may occupy the same sea hex and ships may sail through sea hexes occupied by another player's ship)</li>
-				<li><b>Attack:</b> Ships can attack another player's ships if they both occupy the same sea hex. Ships are able to attack knights and settlements on coastal hexes as well. Galleys have powerful cannons (+1 attack range) and can attack ships on adjacent sea hexes. Conversely, only archers can attack a ship from a coastal hex. To resolve an attack, both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
+				<li><b>Attack:</b> Ships can attack another player's ships if they both occupy the same sea hex. Ships are able to attack knights and settlements on coastal hexes as well. Conversely, only archers can attack a ship from a coastal hex. To resolve an attack, both players involved roll one die and the higher die wins the battle. If attacking a settlement, defender adds 1 to his roll. If attacking a city, defender adds 2 to his roll, castles add 3. A tie must be re-rolled. The results of an attack:
 					<ul>
 						<li>If ship to ship attack, victor sinks loser's ship, removes it from the board, and places it in an area near him designated as his ship graveyard. Sunken ships are counted toward the General Victory Token condition.</li>
 						<li>If ship to coastal settlement attack (no defending ships - see below), victor occupies loser's settlement (removes it from the board and replaces it with his own)</li>
@@ -179,8 +195,8 @@
 			<ol>
 				<li><b>Relic:</b> You have acquired a rare religious relic of supernatural power. Grant this valuable item to the knight of your choice and add 1 to all his battle rolls (attack and defense) for the remainder of the game. When hunting a 3 also results in a successful hunt. (place a chit underneath the knight to mark this ability)</li>
 				<li><b>Liquid Fire:</b> Your alchemist has discovered an incendiary formula that can be used in naval warfare to great effect because it ignites upon contact with water. Grant this valuable weapon to the ship of your choice and add 1 to all its battle rolls (attack and defense) for the remainder of the game. (place a chit underneath the ship to mark this ability)</li>
-				<li><b>Gemstones:</b> You unearth a deposit of rare minerals that fetch a high price at market. Collect 4 gold pieces.</li>
-				<li><b>Robin Hood Robbers:</b> A band of benevolent pirates steals from the leader and gives to the loser. The player with the most points must give half his gold to the player with the least points. Resolve this action immediately.</li>
+				<li><b>Black Powder:</b> Your blacksmith has discovered how to harness the power of black powder by forging a denser metal. You may now build artillery for 2 gold (limit 2). You may build artillery on any occupied hex. Knights may fire the artillery as one of their actions (they must be on the same hex). Artillery has an attack range of +2, and is more effective at breaching walls (a 5 or 6 is a successful breach). Artillery may be moved by any knight.</li>
+				<li><b>Gemstones:</b> You unearth a deposit of rare minerals that fetch a high price at market. Collect 6 gold pieces.</li>
 				<li><b>Dragon Attack:</b>
 					A dragon attacks the player with the most points.<br>
 					Assign a number to each of his settlements (including cities and castles) and roll a die to determine which one is attacked.<br>
@@ -188,7 +204,7 @@
 					If the settlement being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled, one at a time. The first roll represents the player, the second the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.<br>
 					Resolve this action immediately.
 				</li>
-				<li><b>Storms:</b> A violent storm occurs and sinks a ship belonging to the player with the most points. The victim of the storm must assign a number to each of his ships (including galleys and cargo ships) and roll a die to determine which one is sunk. Resolve this action immediately.</li>
+				<li><b>Tempest:</b> A violent storm occurs and sinks a ship belonging to the player with the most points. The victim of the storm must assign a number to each of his ships (including galleys and cargo ships) and roll a die to determine which one is sunk. Resolve this action immediately.</li>
 				<li><b>Disease:</b> A mysterious sickness strikes a knight belonging to the player with the most points. The victim of disease must assign a number to each of his knights (including cavalry and archers) and roll a die to determine which one perishes. Resolve this action immediately.</li>
 			</ol>
 
@@ -204,7 +220,7 @@
 			<ul>
 				<li><b>Conqueror</b>: 1 token for each settlement that you conquer from another player. 2 tokens for cities, 3 for castles</li>
 				<li><b>Siege</b>: 1 token for each wall breached</li>
-				<li><b>Fortress</b>: 1 token for completely enclosing one or more hexes with walls.</li>
+				<li><b>Citadel</b>: 1 token for completely enclosing one or more hexes with walls.</li>
 				<li><b>Great Wall</b>: 1 token for building a wall of length 5 or more</li>
 				<li><b>Attacker</b>: 1 token for each battle in which you emerge victorious as the attacker.</li>
 				<li><b>Defender</b>: 1 token for each battle in which you successfully survive an attacking enemy with a larger force.</li>
@@ -221,24 +237,151 @@
 				<li><b>Builder:</b> 3 tokens for the player with the highest score</li>
 			</ul>
 
-		<h3 id="costs">Building Costs</h3>
-			<ul>
-				<li>Dev Card: 3 gold</li>
-				<li>--</li>
-				<li>Wall: 2 gold (limit 15)</li>
-				<li>Settlement: 3 gold (+1 defense) (limit 5)</li>
-				<li>City: 4 gold (+2 defense) (limit 3)</li>
-				<li>Castle: 5 gold (+3 defense) (limit 1)</li>
-				<li>--</li>
-				<li>Knight: 2 gold (1 movement)</li>
-				<li>Archer: 3 gold (+1 attack range)</li>
-				<li>Cavalry: 4 gold (+1 attack, 3 movement)</li>
-				<li>--</li>
-				<li>Ship: 2 gold (4 movement)</li>
-				<li>Cargo Ship: 3 gold (6 movement, 3 transport capacity, +1 trade) (limit 3)</li>
-				<li>Galley: 4 gold (+1 attack, +1 defense, +1 attack range) (limit 1)</li>
-				<li>--</li>
-			</ul>
+		<h3 id="costs">Unit Costs and Stats</h3>
+			<div class="stats-table">
+				<div class="stats-row stats-row-header">
+					<div class="stats-column">Unit</div>
+					<div class="stats-column">Cost</div>
+					<div class="stats-column">Limit</div>
+					<div class="stats-column">Attack Roll</div>
+					<div class="stats-column">Attack Range</div>
+					<div class="stats-column">Defense Roll</div>
+					<div class="stats-column">Movement Range</div>
+				</div>
+
+				<div class="stats-row">
+					<div class="stats-column">Knight</div> <!-- Unit -->
+					<div class="stats-column">2</div> <!-- Cost -->
+					<div class="stats-column">2/turn</div> <!-- Limit -->
+					<div class="stats-column">0</div> <!-- Attack  Roll -->
+					<div class="stats-column">0</div> <!-- Attack  Range -->
+					<div class="stats-column">0</div> <!-- Defense  Roll -->
+					<div class="stats-column">1</div> <!-- Movement Range -->
+				</div>
+				<div class="stats-row">
+					<div class="stats-column">Archer</div> <!-- Unit -->
+					<div class="stats-column">3</div> <!-- Cost -->
+					<div class="stats-column">2/turn</div> <!-- Limit -->
+					<div class="stats-column">0</div> <!-- Attack  Roll -->
+					<div class="stats-column">+1</div> <!-- Attack  Range -->
+					<div class="stats-column">0</div> <!-- Defense  Roll -->
+					<div class="stats-column">1</div> <!-- Movement Range -->
+				</div>
+				<div class="stats-row">
+					<div class="stats-column">Cavalry</div> <!-- Unit -->
+					<div class="stats-column">4</div> <!-- Cost -->
+					<div class="stats-column">2/turn</div> <!-- Limit -->
+					<div class="stats-column">+1</div> <!-- Attack  Roll -->
+					<div class="stats-column">0</div> <!-- Attack  Range -->
+					<div class="stats-column">0</div> <!-- Defense  Roll -->
+					<div class="stats-column">3</div> <!-- Movement Range -->
+				</div>
+
+				<div class="stats-row">
+					<div class="stats-column">-</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+				</div>
+
+				<div class="stats-row">
+					<div class="stats-column">Ship</div> <!-- Unit -->
+					<div class="stats-column">2</div> <!-- Cost -->
+					<div class="stats-column">2/turn</div> <!-- Limit -->
+					<div class="stats-column">0</div> <!-- Attack  Roll -->
+					<div class="stats-column">0</div> <!-- Attack  Range -->
+					<div class="stats-column">0</div> <!-- Defense  Roll -->
+					<div class="stats-column">4</div> <!-- Movement Range -->
+				</div>
+				<div class="stats-row">
+					<div class="stats-column">Freighter</div> <!-- Unit -->
+					<div class="stats-column">3</div> <!-- Cost -->
+					<div class="stats-column">3</div> <!-- Limit -->
+					<div class="stats-column">NA</div> <!-- Attack  Roll -->
+					<div class="stats-column">NA</div> <!-- Attack  Range -->
+					<div class="stats-column">NA</div> <!-- Defense  Roll -->
+					<div class="stats-column">6</div> <!-- Movement Range -->
+				</div>
+				<div class="stats-row">
+					<div class="stats-column">Galley</div> <!-- Unit -->
+					<div class="stats-column">4</div> <!-- Cost -->
+					<div class="stats-column">1</div> <!-- Limit -->
+					<div class="stats-column">+2</div> <!-- Attack  Roll -->
+					<div class="stats-column">0</div> <!-- Attack  Range -->
+					<div class="stats-column">+2</div> <!-- Defense  Roll -->
+					<div class="stats-column">3</div> <!-- Movement Range -->
+				</div>
+
+				<div class="stats-row">
+					<div class="stats-column">-</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+				</div>
+
+				<div class="stats-row">
+					<div class="stats-column">Wall</div>
+					<div class="stats-column">2</div>
+					<div class="stats-column">∞</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+				</div>
+				<div class="stats-row">
+					<div class="stats-column">Camp</div>
+					<div class="stats-column">3</div>
+					<div class="stats-column">5</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column">+1</div>
+					<div class="stats-column"></div>
+				</div>
+				<div class="stats-row">
+					<div class="stats-column">Fort</div>
+					<div class="stats-column">4</div>
+					<div class="stats-column">3</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column">+2</div>
+					<div class="stats-column"></div>
+				</div>
+				<div class="stats-row">
+					<div class="stats-column">Castle</div>
+					<div class="stats-column">5</div>
+					<div class="stats-column">1</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column">+3</div>
+					<div class="stats-column"></div>
+				</div>
+
+				<div class="stats-row">
+					<div class="stats-column">-</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+				</div>
+
+				<div class="stats-row">
+					<div class="stats-column">Card</div>
+					<div class="stats-column">3</div>
+					<div class="stats-column">∞</div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+					<div class="stats-column"></div>
+				</div>
+			</div>
 
 	</body>
 </html>
