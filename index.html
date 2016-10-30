@@ -123,7 +123,7 @@
 					</ul>
 				</li>
 				<li><b>Breach a Sea Wall</b> see <a href="#walls">Walls</a> section below</li>
-				<li><b>Fish</b> Roll one die and if the result is 1 or 2, collect 1 fish. 2 Fish may be exchanged for 1 gold.</li>
+				<li><b>Fish</b> Roll one die and if the result is 1, collect 1 fish. If the result is a 2, collect 2 fish. 2 Fish may be exchanged for 1 gold.</li>
 			</ul>
 			<p><b>Ship benefits:</b> Players who have built ships also may:</p>
 			<ul>
@@ -153,7 +153,7 @@
 					</ul>
 				</li>
 				<li><b>Breach a Wall</b> see <a href="#walls">Walls</a> section below</li>
-				<li><b>Hunt</b> Roll one die and if the result is 1 or 2, collect 1 meat. 2 Meat may be exchanged for 1 gold.</li>
+				<li><b>Hunt</b> Roll one die and if the result is 1, collect 1 meat. If the result is a 2, collect 2 meat. 2 Meat may be exchanged for 1 gold.</li>
 
 			</ul>
 			<p><b>Knight benefits:</b> Players who have built knights also may:</p>
@@ -199,20 +199,31 @@
 			<p>Cards may be purchased for 2 gold and have some interesting effects on the game. Roll 2 dice to determine which card is drawn. Resolve its effects immediately.</p>
 			<ol start="2">
 				<!--2--><li><b>Grace of God:</b> Your devout offerings and devotion have curried you the benevolence of the Gods. Receive 1 victory token.</li>
-				<!--3--><li><b>Forrest Fire:</b> A dry season and lighting strikes start a deadly forrest fire. Randomly choose a forrest hex and destroy any buildings present. Any knights occupying the hex are able to flee to adjacent hexes. Change the hex to a desert.</li>
-				<!--4--><li><b>Disease:</b> A mysterious sickness strikes a knight belonging to the player with the most points. The victim of disease must assign a number to each of his knights (including cavalry and archers) and roll a die to determine which one perishes.</li>
+				<!--3--><li><b>Forrest Fire:</b> A dry season and lighting strikes start a deadly forrest fire. Randomly choose a forrest hex and downgrade any buildings present. Any knights occupying the hex are able to flee to adjacent hexes. Change the hex to a desert.</li>
+				<!--4--><li><b>Kraken Attack:</b>
+					A violent tempest at sea awakens an angry kraken.<br>
+					The kraken attacks the player with the most points.<br>
+					Assign a number to each ship (including freighters and galleys) and roll a die to determine which one is attacked.<br>
+					A ship attacked by the kraken is sunken and removed from the board.<br>
+					However, the player has a chance to fight the kraken. Two dice are rolled. One represents the player, the other the kraken. Add +2 to the kraken roll. The higher number wins. Ties are re-rolled.<br>
+					<b>Slayer:</b> If a ship successfully slays the kraken, the captain becomes a hero, admired and respected by all. Receive 1 victory token, and place it under the ship. For the remainder of the game, that ship may add +1 to all battle rolls (attack and defense).<br>
+					More than one kraken exists in the seas of Conquest, so a slayed kraken does not negate the effects of this card if drawn again.
+				</li>
 				<!--5--><li><b>Gemstones:</b> You unearth a deposit of rare minerals that fetch a high price at market. Collect 6 gold.</li>
 				<!--6--><li><b>Relic:</b> You have acquired a rare religious relic of supernatural power. Grant this valuable item to the knight of your choice and add 1 to all his battle rolls (attack and defense) for the remainder of the game. When hunting a 3 also results in a successful hunt. (place a chit underneath the knight to mark this ability)</li>
 				<!--7--><li><b>Artillery:</b> Your blacksmith has discovered how to harness the power of black powder by forging a denser metal. You may now build artillery for 2 gold (limit 2). You may build artillery on any occupied hex. Knights may fire the artillery as one of their actions (they must be on the same hex). Artillery has an attack range of +2, and is more effective at breaching walls (a 5 or 6 is a successful breach). Artillery may be moved by any knight.</li>
 				<!--8--><li><b>Liquid Fire:</b> Your alchemist has discovered an incendiary formula that can be used in naval warfare to great effect because it ignites upon contact with water. Grant this valuable weapon to the ship of your choice and add 1 to all its battle rolls (attack and defense) for the remainder of the game. (place a chit underneath the ship to mark this ability)</li>
 				<!--9--><li><b>Bountiful Harvest:</b> Your farm produces a surplus this year that you are able to sell at market. Collect 4 gold.</li>
-				<!--10--><li><b>Tempest:</b> A violent storm occurs and sinks a ship belonging to the player with the most points. The victim of the storm must assign a number to each of his ships (including galleys and freighters) and roll a die to determine which one is sunk.</li>
-				<!--11--><li><b>Dragon Attack:</b>
-					A dragon attacks the player with the most points.<br>
-					Assign a number to each of his buildings (including forts and castles) and roll a die to determine which one is attacked.<br>
-					A building attacked by the dragon is completely destroyed and removed from the board.<br>
-					If the building being attacked is defended by one or more knights, then the player has a chance to fight the dragon. Two dice are rolled. One represents the player, the other the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.<br>
+				<!--10--><li><b>Dragon Attack:</b>
+					A volcanic eruption in the mountains awakens a wrathful dragon.<br>
+					The dragon attacks the player with the most points.<br>
+					Assign a number to each of his knights (including archers and cavalry) and roll a die to determine which one is attacked.<br>
+					A knight attacked by the dragon is killed and removed from the board.<br>
+					However, the player has a chance to fight the dragon. Two dice are rolled. One represents the player, the other the dragon. Add +2 to the dragon roll. The higher number wins. Ties are re-rolled.<br>
+					<b>Slayer:</b> If a knight successfully slays the dragon, he becomes a hero, admired and respected by all. Receive 1 victory token, and place it under the knight. For the remainder of the game, that knight may add +1 to all battle rolls (attack and defense).<br>
+					More than one dragon exists in the mountains of Conquest, so a slayed dragon does not negate the effects of this card if drawn again.
 				</li>
+				<!--11--><li><b>Tidal Wave:</b> Seismic activity off the coast generates a massive wave that sweeps inland, destroying everything in its path. Randomly choose a coastal hex and convert it to a reef. Any knights present are able to flee to adjacent hexes, but any buildings are destroyed.</li>
 				<!--12--><li><b>Wrath of God:</b> Your sins have not gone unnoticed by the Gods. Lose 1 victory token. If you have no victory tokens, no action is taken.</li>
 			</ol>
 
@@ -225,31 +236,42 @@
 			</ul>
 
 		<h3 id="victory">Victory Tokens</h3>
-			<p>At the end of the game, the winner is the player with the most victory tokens.</p>
-			<ul>
+			<p>
+				At the end of the game, the winner is the player with the most victory tokens.<br>
+				This incentivizes more exciting gameplay. Conquest is all about combat, and does not reward defensive or isolationist strategies.	The following Victory Token Conditions should be the core components of your military strategic and tactical decisions throughout the game:
+			</p>
+
+			<p><b>Anytime - Multiple possible</b></p>
+			<ol>
 				<li><b>Conqueror:</b> 2 tokens for each encampment that you conquer from another player. 3 tokens for forts, 4 for castles</li>
 				<li><b>Siege:</b> 1 token for each wall breached</li>
+				<li><b>Attacker:</b> 1 token for each battle in which you emerge victorious as the attacker. A battle is considered successful if the attacker clears a hex of all enemy units.</li>
+				<li><b>Defender:</b> 1 token for each battle in which you successfully survive an attacking enemy with a larger force (counted by cost).</li>
+				<li><b>Warfare:</b> 1 token each time a player executes 6 attack actions in one turn</li>
+				<li><b>Division:</b> 1 token each time a player engages in combat on two separate hexes (not adjacent) on the same turn</li>
+				<li><b>Flank:</b> 1 token each time a player attacks the same hex from more than one adjacent hex</li>
+				<li><b>Traveler:</b> 1 token for each ship that moves 6 or more hexes away from its starting hex and each knight that moves 4 or more hexes away from its home encampment.</li>
+			</ol>
+
+			<p><b>Anytime - Once per game per player</b></p>
+			<ol>
 				<li><b>Citadel:</b> 1 token for completely enclosing one or more hexes with walls. Note that you do not have to build walls on edges bordering mountain hexes.</li>
 				<li><b>Castle:</b> 1 token for building a castle</li>
-				<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more.</li>
-				<li><b>Attacker:</b> 1 token for each battle in which you emerge victorious as the attacker. A battle is considered successful if the attacker clears a hex of all enemy units.</li>
-				<li><b>Defender:</b> 1 token for each battle in which you successfully survive an attacking enemy with a larger force.</li>
-				<li><b>Armada:</b> 1 token for a standing navy of 6 or more ships (once per player)</li>
-				<li><b>Legion:</b> 1 token for a standing army of 6 or more knights (once per player)</li>
-				<li><b>Warfare:</b> 1 token each time a player executes 6 attack actions in one turn</li>
-				<li><b>Flank:</b> 1 token each time a player attacks the same hex from more than one adjacent hex</li>
-				<li><b>Division:</b> 1 token each time a player engages in combat on two separate hexes (not adjacent) on the same turn</li>
-				<li><b>Traveler:</b> 1 token for each ship that moves 6 or more hexes away from its starting hex and each knight that moves 4 or more hexes away from its home encampment.</li>
-			</ul>
-			<p>At the end of the game: (if a tie exists both players receive tokens)</p>
-			<ul>
-				<li><b>Monarch:</b> 3 tokens for each island that you have built on and no other player has existing buildings on or currently is occupying.</li>
+				<li><b>Complex:</b> 1 token for building on 3 or more adjacent hexes</li>
+				<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more</li>
+				<li><b>Armada:</b> 1 token for a standing navy of 6 or more ships</li>
+				<li><b>Legion:</b> 1 token for a standing army of 6 or more knights</li>
+			</ol>
+
+			<p><b>Once at the end (if a tie exists both players receive tokens)</b></p>
+			<ol>
+				<li><b>Gambler:</b> 3 tokens for the player with the most cards.</li>
 				<li><b>General:</b> 3 tokens for the player with the most prisoners.</li>
 				<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships.</li>
-				<li><b>Colonist:</b> 3 tokens for each island that you have built on that is not the starting island. These buildings must still belong to the player at the end of the game.</li>
-				<li><b>Gambler:</b> 3 tokens for the player with the most cards.</li>
+				<li><b>Colonist:</b> 3 tokens for each island that you have built on or occupied that is not the starting island.</li>
+				<li><b>Monarch:</b> 3 tokens for each island that you have existing buildings on or are currently occupying and no other player has existing buildings on or is currently occupying.</li>
 				<li><b>Builder:</b> 3 tokens for the player with the most points from building.</li>
-			</ul>
+			</ol>
 
 		<h3 id="costs">Unit Costs and Stats</h3>
 			<div class="stats-table">
