@@ -91,7 +91,7 @@
 			<p>
 				Each player rolls 2 dice. Highest roll starts first.<br>
 				<b>Landfall:</b> The first player begins by landing his ship on any island. Choose any coastal sea hex and place one caravel ship (at no cost).<br>
-				<b>Disembark:</b> Then place one infantry knight on any terrain hex adjacent to the ship.<br>
+				<b>Disembark:</b> Then place one infantry knight on any terrain hex (except mountains) adjacent to the ship.<br>
 				<b>Camp:</b> Then place an encampment on the hex occupied by the knight.<br>
 				Optionally, the knight may execute a movement to another hex and build after the movement.<br>
 				This ends the first players turn, and play rotates to the <b>right</b>.<br>
@@ -133,7 +133,7 @@
 			<p>Ships:</p>
 			<ul>
 				<li><b>Caravel:</b> A small, maneuverable sailing ship with lateen sails, capable of basic attacking and defending and the most movement range of all naval units. 6 movement</li>
-				<li><b>Galley:</b> Large warship with powerful cannons, but slower and less sea-worthy. (limit 1) 3 movement, +2 attack, +2 defense, 3 attack range* (diminishing accuracy)</li>
+				<li><b>Galley:</b> Large warship with powerful cannons, but slower and less sea-worthy. (limit 1) 3 movement, +1 attack, +2 defense, 3 attack range* (diminishing accuracy)</li>
 				<li><b>Freighter:</b> A large, oar-powered ship primarily for transporting troops. 5 movement, +3 transport, -attack, -defend (limit 3)<br>
 					Freighters can transport up to 3 land units of any type.<br>
 					Freighters can not attack or defend other ships or coastal buildings, but they can defend themselves like normal ships.
@@ -154,7 +154,8 @@
 			<p><b>Building Units:</b>
 				On a player's turn he may only build <b>2 knights or 2 ships or 1 knight and 1 ship.</b> (unless he has built a castle, in which case his production capacity increases to 3)<br>
 				In order to build a ship, players must have an encampment, fort or castle on the coast.<br>
-				Newly built units are placed on any empty hex adjacent to any of the player's developments.
+				Newly built units are placed on any empty hex adjacent to any of the player's developments.<br>
+				If no empty hexes exist adjacent to any development, units may not be built until the player has moved existing units.
 			</p>
 
 			<p><b>Activating Units:</b>
@@ -269,8 +270,8 @@
 
 		<h3 id="phases">Game Phases</h3>
 			<ul>
-				<li><b>Phase 1 - Build:</b>	During this phase no attack actions are allowed.</li>
-				<li><b>Phase 2 - Battle:</b> During this phase attack actions are allowed and turn order is modified:
+				<li><b>Phase 1 - Build:</b>	Players may build units, developments, and maneuver units around the map. No activation tokens are received and players are free to execute 2 actions for each of all their units. Hunting may be performed to gain additional gold, and no attack actions are allowed.</li>
+				<li><b>Phase 2 - Battle:</b> Activation tokens budget takes effect. Attack actions are allowed. Hunting and fishing is no longer allowed. Players may continue building and turn order is modified:
 					<p><b>Battle phase turn order:</b> At the start of each round, recalculate each player's points. The player with the least points goes first, highest last.</p>
 				</li>
 			</ul>
@@ -356,7 +357,7 @@
 					<div class="stats-column">Galley</div> <!-- Unit -->
 					<div class="stats-column">3</div> <!-- Cost -->
 					<div class="stats-column">1</div> <!-- Limit -->
-					<div class="stats-column">+2</div> <!-- Attack  Roll -->
+					<div class="stats-column">+1</div> <!-- Attack  Roll -->
 					<div class="stats-column">3</div> <!-- Attack  Range -->
 					<div class="stats-column">+2</div> <!-- Defense  Roll -->
 					<div class="stats-column">3</div> <!-- Movement Range -->
