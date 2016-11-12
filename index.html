@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>⚔ Conquest 0.9</title>
+		<title>⚔ Conquest 0.91</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
 		<meta name="description" description="Robert Carter Mills">
@@ -35,7 +35,7 @@
 		}
 	</style>
 	<body>
-		<h1>Conquest ⚔ v0.9</h1>
+		<h1>Conquest ⚔ v0.91</h1>
 			<p>For the glory of your country! New islands have been discovered across the Emerald Sea and you have been ordered by your King to claim the land for your country. However, you are not the only one who hopes to discover riches on foreign soil. Gather your knights and set sail. Conquest is a game of colonization and medieval combat.</p>
 
 		<ol>
@@ -45,26 +45,43 @@
 			<li><a href="#gold">Gold</a></li>
 			<li><a href="#hexes">Hexes</a></li>
 			<li><a href="#occupancy">Maximum Occupancy</a></li>
-			<li><a href="#ships">Ships</a></li>
-			<li><a href="#knights">Knights</a></li>
+			<li><a href="#units">Combat Units</a></li>
+			<li><a href="#retaliation">Retaliation</a></li>
 			<li><a href="#tactics">Tactics</a></li>
 			<li><a href="#artillery">Artillery</a></li>
 			<li><a href="#walls">Walls</a></li>
 			<li><a href="#castles">Castles</a></li>
 			<li><a href="#phases">Phases</a></li>
 			<li><a href="#points">Points</a></li>
-			<li><a href="#victory">Victory Tokens</a></li>
 			<li><a href="#stats">Unit Costs and Stats</a></li>
 		</ol>
 
 		<h3 id="objective">Objective</h3>
-			<p>The objective of Conquest is to be the player with the most claimed land at the end of the game. Land is claimed in the following ways:</p>
-			<ul>
-				<li><b>Occupying:</b> The presence of a player's knight on a hex means that hex is occupied by that player.</li>
-				<li><b>Developing:</b> The presence of a player's encampment, fort or castle on a hex means that hex is developed by that player.</li>
-				<li><b>Citadel:</b> Players may claim hexes by surrounding them with walls. Edges bordering mountain hexes do not require a wall to be built.</li>
-			</ul>
-			<p>In addition to claiming land, players may also earn <a href="#victory">Victory Tokens</a> in a variety of ways during the course of the game. At the end of the game, the number of claimed hexes and victory tokens are added to determine the winner.</p>
+			<p>The objective of Conquest is to be the player with the most victory tokens at the end of the game. Victory tokens are claimed in the following ways:</p>
+			<p><b>Anytime - Multiple possible</b></p>
+			<ol>
+				<li><b>Conquer:</b> 1 tokens for each encampment that you sieze from another player. 2 tokens for forts, 3 for castles</li>
+				<li><b>Breach:</b> 1 token for each wall breached</li>
+				<li><b>Battle:</b> 1 token for each knight you capture or ship you sink.</li>
+				<li><b>Rescue:</b> 1 token for each prisoner you free.</li>
+				<li><b>Castle:</b> 1 token for each built castle</li>
+				<li><b>Empire:</b> 1 token for each encampment built on an island other than starting island. 2 tokens for forts, 3 for castles.</li>
+			</ol>
+
+		<p><b>Anytime - Once per game per player</b></p>
+			<ol>
+				<li><b>Citadel:</b> 1 token per hex for completely enclosing one or more hexes with walls. Note that you do not have to build walls on edges bordering mountain hexes.</li>
+				<li><b>Complex:</b> 1 token for building on 3 or more adjacent hexes</li>
+				<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more</li>
+			</ol>
+
+		<p><b>Once at the end (if a tie exists both players receive tokens)</b></p>
+			<ol>
+				<li><b>General:</b> 3 tokens for the player with the most prisoners.</li>
+				<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships.</li>
+				<li><b>Emperor:</b> 3 tokens for the player with the most claimed hexes. Claimed hexes are occupied, developed or enclosed in a Citadel.</li>
+			</ol>
+
 
 		<h3 id="setup">Setup</h3>
 			<p>Build the map according to the following diagrams:</p>
@@ -100,100 +117,134 @@
 				<li><b>Desert:</b> Deep sands and hot sun. Hunting may not be performed in desert hexes.</li>
 				<li>
 					<b>Sea:</b> Sea hexes are where your naval maneuvering and battles will take place.<br>
-					<b>Prevailing Wind Direction:</b> The arrows on some sea hexes represent the direction of prevailing winds. When ships move through a sea hex in the same direction as the prevailing winds (tail wind) they may add +1 to their movement range per hex. In other words, traveling with the wind does not cost any movement points. Conversely, when sailing against prevailing winds (head wind), movement range is reduced by -1 per hex.
-					<br>
-					Ships entering a sea hex to attack enemy ships may add +1 to their battle rolls if entering the hex in the same direction as the prevailing winds.
+					<b>Prevailing Wind Direction:</b> The sea hexes beyond the border of the map are in the deep, open ocean, where strong, prevailing winds can greatly enhance a sea-worthy sailor's ability to travel long distances. When ships move out into the deep sea, they may take advantage of the prevailing winds to travel +6 sea hexes in addition to each ship's normal movement range. Though they must travel in the same direction as the prevailing winds, which are either clockwise or counter-clockwise, to be decided by the player who starts last.
 				</li>
 				<li><b>Reef:</b> Warm, shallow waters and coral attract fish. Ships fishing in reef hexes are more likely to catch fish (roll a 1, 2 or 3)</li>
 			</ul>
 
 		<h3 id="occupancy">Maximum Occupancy</h3>
-			<p>Undeveloped hexes may be occupied by only one unit. Encampments can support 2 units, forts 3, and castles 4.<br>
+			<p>Each hex on the map may be occupied by only one unit or one development.<br>
 			Prisoners do not count toward occupancy.<br>
-			A player may not build knights on a developed hex that is already occupied by its maximum occupancy. He must first move knights off the hex before building additional units.</p>
 			<p>Diagram - todo</p>
 
+		<h3 id="units">Combat Units ⚔</h3>
+			<p>There are two categories of combat units, Knights and Ships, with three types of each:</p>
 
-		<h3 id="ships">Ships ⛵</h3>
-			<p>Types of ships:</p>
+			<p>Ships:</p>
 			<ul>
-				<li><b>Caravel:</b> A small, maneuverable sailing ship with lateen sails, capable of basic attacking and defending. 5 movement</li>
-				<li><b>Galley:</b> Large warship with powerful cannons, but slower and less sea-worthy. (limit 1) 3 movement, +2 attack, +2 defense, 3 attack range (with diminishing accuracy: -1 at range 2, -2 at range 3)</li>
-				<li><b>Freighter:</b> A large, oar-powered ship primarily for transporting troops. 7 movement, +3 transport, -attack, -defend (limit 3)<br>
-					Freighters can transport up to 3 knights of any type.<br>
+				<li><b>Caravel:</b> A small, maneuverable sailing ship with lateen sails, capable of basic attacking and defending and the most movement range of all naval units. 6 movement</li>
+				<li><b>Galley:</b> Large warship with powerful cannons, but slower and less sea-worthy. (limit 1) 3 movement, +2 attack, +2 defense, 3 attack range* (diminishing accuracy)</li>
+				<li><b>Freighter:</b> A large, oar-powered ship primarily for transporting troops. 5 movement, +3 transport, -attack, -defend (limit 3)<br>
+					Freighters can transport up to 3 land units of any type.<br>
 					Freighters can not attack or defend other ships or coastal buildings, but they can defend themselves like normal ships.
 					<p><b>Loading and unloading freighters:</b><br>
-						Loading knights onto a freighters is considered 1 movement that counts against each knight’s movement range.<br>
+						Loading knights onto a freighter is considered 1 movement that counts against each knight’s movement range.<br>
 						Archers loaded onto a freighter can attack coastal hexes or enemy ships. The combination of a freighter loaded with 3 archers is a powerful weapon.
 					</p>
 				</li>
 			</ul>
-			<p><b>Combat Unit Cap:</b> On a player's turn he may only build <b>2 knights or 2 ships or 1 knight and 1 ship</b> (unless he has built a castle, in which case his production capacity increases to 3)</p>
-			<p> In order to build a ship, players must have an encampment, fort or castle on the coast.</p>
-			<p>Newly built ships are placed on any sea hex adjacent to any of the player's coastal buildings.</p>
-			<p>On a players turn, each ship is limited to <b>2 actions</b>. Once the player has resolved a ship's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all ships to their upright position.</p>
-			<p>Each action must be unique. A player may not move the same ship twice or attack with the same ship twice.</p>
-			<p>Ship actions can occur at any point in a player's turn.</p>
-			<p>Ship actions include the following:</p>
+
+			<p>Knights:</p>
 			<ul>
-				<li><b>Movement:</b> Ships can sail across sea hexes. Only during the build phase may ships sail through sea hexes occupied by another player's ships. During the attack phase, passing through a sea hex occupied by another player necessitates a battle.</li>
-				<li><b>Attack:</b> Ships can attack another player's ships if they occupy an adjacent sea hex. Ships are able to attack knights and buildings on coastal hexes as well. Conversely, only archers can attack a ship from a coastal hex.<br>
-				To resolve an attack, both players involved roll one die and the higher die wins the battle. A tie must be re-rolled.<br>
-				<b>Resolving an attack:</b>
-					<ul>
-						<li>If ship to ship attack, victor sinks loser's ship, removes it from the board, and places it in an area near him designated as his ship graveyard. Sunken ships are counted toward the Admiral Victory Token condition.</li>
-						<li>If ship to coastal building attack (no defending ships - see below), victor occupies loser's building (removes it from the board and replaces it with his own)</li>
-						<li>If the defender wins no action is taken (advantage to attacker)</li>
-					</ul>
-				</li>
-				<li><b>Breach a Sea Wall</b> see <a href="#walls">Walls</a> section below</li>
-				<li><b>Fish</b> Roll one die and if the result is 1, collect 1 fish. If the result is a 2, collect 2 fish. 2 Fish may be exchanged for 1 gold.</li>
-			</ul>
-			<p><b>Ship benefits:</b> Players who have built ships also may:</p>
-			<ul>
-				<li><b>Defend:</b> When a ship is attacking a coastal building, if the defender has a ship on an adjacent sea hex, the attacker must first attack the defending ship. Similarly, regular ships may defend galleys and freighters if they are on the same sea hex. A newly built ship may defend on the same turn. Ships can not defend coastal building from knight attacks. Defending does not count as an action.</li>
-				<li><b>Build:</b> Players may build on any coastal hex that is adjacent to one of their ships. Building does not count as an action.</li>
+				<li><b>Infantry:</b> 2 movement</li>
+				<li><b>Archer:</b> 1 movement, 3 attack range* (diminishing accuracy)</li>
+				<li><b>Cavalry:</b> 3 movement, +2 attack</li>
 			</ul>
 
-		<h3 id="knights">Knights ⚔</h3>
-			<p>Types of knights:</p>
+			<p><b>Building Units:</b>
+				On a player's turn he may only build <b>2 knights or 2 ships or 1 knight and 1 ship.</b> (unless he has built a castle, in which case his production capacity increases to 3)<br>
+				In order to build a ship, players must have an encampment, fort or castle on the coast.<br>
+				Newly built units are placed on any empty hex adjacent to any of the player's developments.
+			</p>
+
+			<p><b>Activating Units:</b>
+				At the beginning of each round, every player receives 6 activation tokens. Each player, on his turn, may spend activation tokens to activate units and execute actions with those units.<br>
+				Activating a unit costs the same as building costs, but must be paid in activation tokens.<br>
+				Each activated unit can execute <b>2 actions</b>.<br>
+				Once the player has resolved each unit's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all units to their upright position.<br>
+				Each action must be unique. A player may not move the same ship twice or attack with the same ship twice.<br>
+				Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute both its actions immediately or execute one and forfeit the other. The one exception to this rule is embarking and disembarking from a freighter.
+			</p>
+
+			<p><b>Unit Actions:</b></p>
 			<ul>
-				<li>Infantry: 4 movement</li>
-				<li>Archer: 3 movement, 3 attack range* (with diminishing accuracy: -1 at range 2, -2 at range 3)</li>
-				<li>Cavalry: 5 movement, +2 attack</li>
+				<li>Movement</li>
+				<li>Attack</li>
+				<li>Breach</li>
+				<li>Fish/Hunt</li>
 			</ul>
-			<p>On a player's turn he may build <b>2 knights or 2 ships or 1 knight and 1 ship</b></p>
-			<p>Newly built Knights are placed on any hex with an encampment, fort or castle belonging to the player.</p>
-			<p>On a players turn, each knight is limited to <b>2 actions</b>. Once the player has resolved a knight's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all knights to their upright position.</p>
-			<p>Each action must be unique. A player may not move the same knight twice or attack with the same knight twice.</p>
-			<p>Knight actions can occur at any point in a player's turn. For example, at the beginning of a player's turn, he may move his knight to a nearby hex, and then build a camp there.</p>
-			<p>Knight actions include the following:</p>
-			<ul>
-				<li><b>Movement:</b> Only during the build phase may knights pass through hexes occupied by another player's knights. Knights may pass through hexes occupied by their own units.</li>
-				<li><b>Attack:</b> Knights can attack another player's knights or developments if they occupy adjacent hexes (archers can attack at range). Both players involved roll one die and the higher die wins the battle. A tie must be re-rolled. The results of an attack:
-					<ul>
-						<li>When a knight is defeated in battle the victor captures him and places the piece on his nearest developed hex. This knight is considered a prisoner. If an opponent manages to seize a developed hex with prisoners on it, prisoners belonging to him are immediately freed and can now take actions. Any prisoners belonging to other players become the prisoners of the hex's new owner.</li>
-						<li>If knight to building attack (no defending knights - see below), victor occupies loser's building (removes it from the board and replaces it with his own)</li>
-						<li>If the defender wins no action is taken (advantage to attacker)</li>
-					</ul>
-				</li>
-				<li><b>Breach a Wall:</b> see <a href="#walls">Walls</a> section below</li>
-				<li><b>Hunt:</b> Roll one die and if the result is 1, collect 1 meat. If the result is a 2, collect 2 meat. 2 Meat may be exchanged for 1 gold.</li>
-				<li><b>Fire Artillery:</b> Artillery units must be fired by a knight, and this constitutes a different action than attacking. Thus it is possible for a knight to fire artillery to breach an adjacent wall, and then attack the newly exposed hex.<br>
-				But artillery may also be used to attack knights and ships.</li>
+			<p>
+				<b>Movement:</b> Players may move units through hexes occupied by their own units, but must respect maximum occupancy rule, and only end movement in an empty hex.<br>
+				During the build phase, units may pass through or occupy hexes occupied by another player. However during the attack phase, movement into a hex occupied by another player necessitates a battle.<br>
+				If two units owned by different players occupy the same hex at the start of the battle round, the first owner to execute his turn must either move the unit or initiate an attack.
+			</p>
+			<p>
+				<b>Attack:</b> There are 2 types of attack:<br>
+				<ol>
+					<li><b>Adjacent:</b><br>
+					Units can attack another player if they occupy an adjacent hex.<br>
+					To resolve an adjacent attack, both players involved roll one die and the higher die (after applying any eligible modifiers) wins the battle. A tie must be re-rolled.
+					</li>
+					<li><b>Ranged:</b><br>
+					Archers, Artillery and Galleys are capable of ranged attacks.<br>
+					To resolve a ranged attack, the attacker rolls one die. If the result is 1, 2 or 3 (after applying any eligible modifiers) the attack is successful.
+					</li>
+				</ol>
+			</p>
+
+			<p>
+				<b>Ranged Attack Modifiers:</b>
+				Ranged attacks' accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.<br>
+				For terrain advantage modifiers, namely +1 attack for no cover, simply add one more number as a successful hit. For example, an archer attack aimed at a plains hex at range 1 (adjacent) would be successful on a die roll of 1, 2, 3, or 4.<br>
+			</p>
+
+			<p>
+				<b>Artillery:</b>
+				Artillery units must be fired by a knight on the same hex.<br>
+				Firing artillery expends the knight's attack action.<br>
+				Artillery can be moved by any knight, up to the same movement range as the unit.
+			</p>
+
+			<p>
+				<b>Results of an attack:</b>
+				If the defender wins no action is taken (advantage to attacker)<br>
+				When a knight is defeated in battle the victor captures him and places the piece on his nearest developed hex. This knight is considered a prisoner. Prisoners are counted toward the General Victory Token condition.<br>
+				<b>Rescue:</b> If an opponent manages to seize a developed hex with prisoners on it, prisoners belonging to him are immediately freed and can now take actions. Any prisoners belonging to other players become the prisoners of the hex's new owner.<br>
+				When a ship is defeated in battle the victor sinks the loser's ship, removes it from the board, and places it in an area near him designated as his ship graveyard. Sunken ships are counted toward the Admiral Victory Token condition.<br>
+			</p>
+
+			<p>
+				<b>Breaching a Wall</b> see <a href="#walls">Walls</a> section below
+			</p>
+
+			<p>
+				<b>Hunting and Fishing</b> Roll one die and if the result is 1, collect 1 meat/fish. If the result is a 2, collect 2 meat/fish. 2 meat/fish may be exchanged for 1 gold.</li>
 			</ul>
-			<p><b>Knight benefits:</b> Players who have built knights also may:</p>
-			<ul>
-				<li><b>Defend:</b> Knights may defend other knights. In other words, infantry may defend archers and cavalry. Defending does not count as an action.</li>
-				<li><b>Build:</b> Players may build on any hex that is occupied by one of their knights.</li>
-			</ul>
+
+			<p>
+				<b>Additional Unit Actions:</b> The following actions may be performed by knights and ships and do not count towards each units 2 action limit:
+				<ul>
+					<li><b>Defend:</b> Units may defend other units or developments if they are located on a hex adjacent to both the attacker and the unit they are defending. See diagram.</li>
+					<li><b>Build:</b> Players may build on any hex that is adjacent to one of their units. Building does not count as an action, however a player can not interrupt a unit's movement to build. Building must occur before or after a unit's movement. Also building may not occur during a player's <a href="#retaliation">Retaliation</a></li>
+					<li><b>Seize:</b> If a player moves any of their units to a hex adjacent to an enemy development, then that development is considered "under seige". If any of the defending player's units are defending the development (adjacent to both the development and the attacker), the attacking player must first defeat them before seizing control of the development. If no defending units are present, the attacker may immediately seize control of the development by removing it from the board and replacing it with an equivalent development of their color.</li>
+				</ul>
+			</p>
+
+		<h3 id="retaliation">Retaliation</h3>
+			<p>Especially when playing with 4 or more players, turn order can become over-powered, with the last player being defenseless while 5 other players get a chance to attack him. The activation tokens budget is meant to mitigate this, but Retaliation is meant to solve it.<br>
+			When a player is attacked by the active player, and loses a battle, he may then Retaliate.<br>
+			Retaliation occurs immediately after the active player wins a battle with an activated unit, and has expended all that unit's actions.<br>
+			Then the player who lost the battle receives 1 activation token, and may activate 1 unit of his choice (provided he can afford the activation cost), and execute 2 actions with that unit.<br>
+			The only restriction is that the retaliating player may not build during retaliation.<br>
+			Battles won by a retaliating player do not trigger additional retaliations.
+			</p>
 
 		<h3 id="tactics">Tactics</h3>
 			<p><b>Flanking:</b> The attacker receives +2 advantage for attacking from a flank, +4 for attacking from a rear flank, and +6 for attacking from the rear.</p>
-			<p><b>Forcing a Surrender</b> If the attacker is able to surround a hex (attack from all exposed directions) the defender must immediately surrender and all units are captured</p>
+			<p><b>Surrender:</b> If the attacker is able to surround a hex (attack from all exposed directions) the defender must immediately surrender and all units are captured</p>
 
 		<h3 id="artillery">Artillery</h3>
-			<p>Artillery are basically cannons mounted on small chariots, and are quite effective at breaching walls (roll a 3,4,5 or 6 to breach). Artillery require a knight on the same hex to be used (as an action).<br>
+			<p>Artillery are basically cannons mounted on small chariots. Artillery require a knight on the same hex to be used (as an action).<br>
 			Artillery can be moved by any knight.<br>
 			Note that although artillery are an extremely powerful weapon, they are a double edged sword because an opponent can seize your artillery and then use it against you. If an opponent defeats all knights on the hex where an artillery is located, he may occupy the hex and use the artillery for himself.</p>
 
@@ -233,31 +284,6 @@
 				<li>Navies: 1 point per caravel, 2 per freighter, 3 per galley</li>
 			</ul>
 
-  <h3 id="victory">Victory Tokens</h3>
-		<p>Victory tokens can be earned in the following ways:</p>
-		<p><b>Anytime - Multiple possible</b></p>
-			<ol>
-				<li><b>Conquer:</b> 1 tokens for each encampment that you sieze from another player. 2 tokens for forts, 3 for castles</li>
-				<li><b>Siege:</b> 1 token for each wall breached</li>
-				<li><b>Battle:</b> 1 token for each knight you capture or ship you sink.</li>
-				<li><b>Rescue:</b> 1 token for each prisoner you free.</li>
-				<li><b>Castle:</b> 1 token for each built castle</li>
-			</ol>
-
-		<p><b>Anytime - Once per game per player</b></p>
-			<ol>
-				<li><b>Citadel:</b> 1 token for completely enclosing one or more hexes with walls. Note that you do not have to build walls on edges bordering mountain hexes.</li>
-				<li><b>Complex:</b> 1 token for building on 3 or more adjacent hexes</li>
-				<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more</li>
-			</ol>
-
-		<p><b>Once at the end (if a tie exists both players receive tokens)</b></p>
-			<ol>
-				<li><b>General:</b> 3 tokens for the player with the most prisoners.</li>
-				<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships.</li>
-			</ol>
-
-
 		<h3 id="stats">Unit Costs and Stats</h3>
 			<div class="stats-table">
 				<div class="stats-row stats-row-header">
@@ -277,7 +303,7 @@
 					<div class="stats-column">0</div> <!-- Attack  Roll -->
 					<div class="stats-column">1</div> <!-- Attack  Range -->
 					<div class="stats-column">0</div> <!-- Defense  Roll -->
-					<div class="stats-column">4</div> <!-- Movement Range -->
+					<div class="stats-column">2</div> <!-- Movement Range -->
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Archer</div> <!-- Unit -->
@@ -295,7 +321,7 @@
 					<div class="stats-column">+2</div> <!-- Attack  Roll -->
 					<div class="stats-column">0</div> <!-- Attack  Range -->
 					<div class="stats-column">0</div> <!-- Defense  Roll -->
-					<div class="stats-column">5</div> <!-- Movement Range -->
+					<div class="stats-column">3</div> <!-- Movement Range -->
 				</div>
 
 				<div class="stats-row">
@@ -324,7 +350,7 @@
 					<div class="stats-column">NA</div> <!-- Attack  Roll -->
 					<div class="stats-column">NA</div> <!-- Attack  Range -->
 					<div class="stats-column">NA</div> <!-- Defense  Roll -->
-					<div class="stats-column">7</div> <!-- Movement Range -->
+					<div class="stats-column">4</div> <!-- Movement Range -->
 				</div>
 				<div class="stats-row">
 					<div class="stats-column">Galley</div> <!-- Unit -->
@@ -397,7 +423,7 @@
 					<div class="stats-column">Artillery</div> <!-- Unit -->
 					<div class="stats-column">2</div> <!-- Cost -->
 					<div class="stats-column">1</div> <!-- Limit -->
-					<div class="stats-column">+2</div> <!-- Attack  Roll -->
+					<div class="stats-column"></div> <!-- Attack  Roll -->
 					<div class="stats-column"></div> <!-- Attack  Range -->
 					<div class="stats-column"></div> <!-- Defense  Roll -->
 					<div class="stats-column"></div> <!-- Movement Range -->
