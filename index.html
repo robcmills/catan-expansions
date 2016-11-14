@@ -41,7 +41,7 @@
 		<ol>
 			<li><a href="#objective">Objective</a></li>
 			<li><a href="#setup">Setup</a></li>
-			<li><a href="#starting">Starting</a></li>
+			<li><a href="#phases">Phases</a></li>
 			<li><a href="#gold">Gold</a></li>
 			<li><a href="#hexes">Hexes</a></li>
 			<li><a href="#occupancy">Maximum Occupancy</a></li>
@@ -51,7 +51,6 @@
 			<li><a href="#artillery">Artillery</a></li>
 			<li><a href="#walls">Walls</a></li>
 			<li><a href="#castles">Castles</a></li>
-			<li><a href="#phases">Phases</a></li>
 			<li><a href="#points">Points</a></li>
 			<li><a href="#stats">Unit Costs and Stats</a></li>
 		</ol>
@@ -82,66 +81,95 @@
 				<li><b>Emperor:</b> 3 tokens for the player with the most claimed hexes. Claimed hexes are occupied, developed or enclosed in a Citadel.</li>
 			</ol>
 
-
 		<h3 id="setup">Setup</h3>
-			<p>The size and geography of the map have a great effect on the game experience. Players are encouraged to be creative, and build the map however they like. However the following are some guidelines that help ensure an even distribution and balanced layout, as well as some recommended examples for new players.</p>
-			<p>
-				<b>Random Setup:</b><br>
-				<ol>
-					<li>Build the frame according to the number of players. See diagrams.</li>
-					<li>
-						Gather the correct number of each hex type.<br>
-						<b>3 players:</b> 3 deserts, 6 forrests, 6 reefs, 6 mountains, 12 plains, 10 sea hexes<br>
-					</li>
-					<li>Shuffle all the hexes face down</li>
-					<li>Beginning at one corner of the map, begin drawing random hexes and turning them over to reveal them and place them along the outer-most edge of the map.</li>
-					<li>If a revealed hex is a sea hex, place the next hex inwards toward the center of the map. If the next hex is terrain, continue placing along the outer edge, but if another sea hex is drawn, continue placing inwards toward the center.<li>
-					<li>Repeat this pattern until the outer ring has been filled and then continue on to building inner rings until the map is filled.</li>
-					<li>You may want to make a few adjustments if key hexes get clumped together. Especially forrests and reefs and mountains should be relatively evenly distributed across the map. Feel free to swap a few hexes until it looks balanced.</li>
-				</ol>
-			</p>
-			<p>Todo</p>
+			<ol>
+				<li><b>Build the Map:</b><br>
+					The size and geography of the map have a great effect on the game experience. Players are encouraged to be creative, and build the map however they like. However the following are some guidelines that help ensure an even distribution and balanced layout, as well as some recommended examples for new players.<br>
+					<b>Random Setup:</b>
+					<ol>
+						<li>Build the frame according to the number of players. See diagrams.</li>
+						<li>
+							Gather the correct number of each hex type.<br>
+							<b>2 players:</b>  3 deserts, 9 forrests, 9 mountains, 18 plains, 6 reefs, 16 sea hexes<br>
+							<b>4 players:</b> 154 hexes total
+						</li>
+						<li>Shuffle all the hexes face down</li>
+						<li>Beginning at one corner of the map, begin drawing random hexes and turning them over to reveal them and place them along the outer-most edge of the map.</li>
+						<li>If a revealed hex is a sea hex, place the next hex inwards toward the center of the map. If the next hex is terrain, continue placing along the outer edge, but if another sea hex is drawn, continue placing inwards toward the center.<li>
+						<li>If a mountain, forrest, desert or reef hex is drawn and is to be placed adjacent to a hex of the same type, put that hex aside and draw another until you get a different type of hex. Then place the hexes that were set aside.</li>
+						<li>Repeat this pattern until the outer ring has been filled and then continue on to building inner rings until the map is filled.</li>
+						<li>You may want to make a few adjustments if key hexes get clumped together in the same area of the map. Especially forrests and reefs and mountains should be relatively evenly distributed across the map. Feel free to swap a few hexes until it looks balanced.</li>
+					</ol>
 
-		<h3 id="starting">Starting Actions</h3>
-			<p>
-				Each player rolls 2 dice. Highest roll starts first.<br>
-				<b>Landfall:</b> The first player begins by landing his ship on any island. Choose any coastal sea hex and place one caravel ship (at no cost).<br>
-				<b>Disembark:</b> Then place one infantry knight on any terrain hex (except mountains) adjacent to the ship.<br>
-				<b>Camp:</b> Then place an encampment on the hex occupied by the knight.<br>
-				Optionally, the knight may execute a movement to another hex and build after the movement.<br>
-				This ends the first players turn, and play rotates to the <b>right</b>.<br>
-				Each player executes their starting actions in turn.<br>
-				When all players have finished their starting actions the player who started last, is the first player to start the game and execute a normal turn.<br>
-				Play then proceeds to the <b>left</b>.
-			</p>
+				<li><b>Starting Units:</b> Each player begins the game with the following units:<br>
+					3 soldiers, 2 archers, 1 cavalry<br>
+					3 caravels, 2 freighters, 1 galleon<br>
+					Each player must load his 2 freighters with 3 land units each.
+				</li>
 
-		<h3 id="gold">Gold 💰</h3>
+				<li><b>Prevailing Winds:</b> Determine the direction of prevailing by flipping the Prevailing Winds Token. Place it in the center of the map.</li>
+
+				<li><b>Placement:</b>
+					Each player in turn sequentially places one of any of his ships on any sea hex, until all players have placed all units.<br>
+					Placement Restrictions:
+					<ul>
+						<li>Placing on a hex already occupied by another player is prohibited.</li>
+						<li>Placing on a land hex is prohibited. All land units remain loaded on the freighters.</li>
+						<li>Placing respects maximum occupancy rule. No more than 3 units may occupy the same hex.</li>
+					</ul>
+				</li>
+
+				<li>You are now ready to begin the game. Begin the first round of the Build Phase.</li>
+			</ol>
+
+		<h3 id="phases">Game Phases</h3>
+			<ul>
+				<li><b>Phase 1 - Build:</b>	Players may build developments, additional units, and maneuver units around the map. No attack actions are allowed.</li>
+				<li><b>Phase 2 - Battle:</b> Attack actions are allowed. Players may continue building and turn order is modified:
+					<p><b>Battle phase turn order:</b> At the start of each round, recalculate each player's points. The player with the least points goes first, highest last.</p>
+				</li>
+			</ul>
+			<p>Each phase lasts 2 rounds.</p>
+
+		<h3 id="points">Points</h3>
+			<p>Points are used during the game, but do not determine the winner. Points are the same as building costs.</p>
+			<ul>
+				<li>Building: 2 points per artillery, 1 point per wall, 1 per encampment, 2 per fort, 3 per castle</li>
+				<li>Armies: 1 point per infantry, 2 per archer, 3 per cavalry</li>
+				<li>Navies: 1 point per caravel, 2 per freighter, 3 per galleon</li>
+			</ul>
+
+		<h3 id="gold">Gold</h3>
 			<p>
-				Gold is the primary currency of the game. You will use gold to build castles, knights and ships.<br>
 				At the beginning of each player's turn he receives 6 gold.<br>
+				Gold is used to build developments, combat units, walls and artillery.
+			</p>
+
+		<h3 id="silver">Silver</h3>
+			<p>
+				At the beginning of each player's turn he receives 6 silver.<br>
+				Silver is used to activate units.
 			</p>
 
 		<h3 id="hexes">Hexes</h3>
 			<p>The geography of the map is important to consider in developing your military tactics and strategies:</p>
 			<ul>
 				<li><b>Mountains:</b> Steep, rocky and treacherous, mountain hexes can not be occupied or built on.</li>
-				<li><b>Forrest:</b> The dense trees provide excellent cover against archer attacks from range. Archers attacking troops in the forrest must subtract 1 from their attack rolls.<br>
-				Forrests are habitat to deer, elk, and other big game. Hunter's are more likely to have successful hunts (roll a 1, 2 or 3).</li>
-				<li><b>Plains:</b> The open, rolling grasslands are ideal for horses. Extend cavalry movement +2.<br>
+				<li><b>Forrest:</b> The dense trees provide excellent cover against archer attacks from range. Archers attacking troops in the forrest must subtract 1 from their attack rolls.
+				</li>
+				<li><b>Plains:</b> The open, rolling grasslands are ideal for horses. Extend cavalry movement +1.<br>
 				Plains provide no cover from hails of arrows. Increase archers attack rolls +1.</li>
-				<li><b>Desert:</b> Deep sands and hot sun. Hunting may not be performed in desert hexes.</li>
-				<li>
-					<b>Sea:</b> Sea hexes are where your naval maneuvering and battles will take place.<br>
-					<b>Prevailing Wind Direction:</b> The sea hexes beyond the border of the map are in the deep, open ocean, where strong, prevailing winds can greatly enhance a sea-worthy sailor's ability to travel long distances. When ships move out into the deep sea, they may take advantage of the prevailing winds to travel +6 sea hexes in addition to each ship's normal movement range. Though they must travel in the same direction as the prevailing winds, which are either clockwise or counter-clockwise around the map, to be decided by the player who starts last.<br>
+				<li><b>Desert:</b> Deep sands and a hot sun makes travel difficult. Reduce movement range -1.</li>
+				<li><b>Sea:</b> Sea hexes are where your naval maneuvering and battles will take place.<br>
+					<b>Prevailing Wind Direction:</b> The sea hexes beyond the border of the map are in the deep, open ocean, where strong, prevailing winds can greatly enhance a sea-worthy sailor's ability to travel long distances. When ships move out into the deep sea, they may take advantage of the prevailing winds to travel from one edge of the map to the next adjacent edge in addition to each ship's normal movement range. Player's ships may enter the prevailing winds from any border hex, and exit into any border hex on the next edge of the map. Though they must travel in the same direction as the prevailing winds, which are either clockwise or counter-clockwise around the map. See diagram.<br>
 					Ships may not end their movement in the deep ocean. Ships must use 1 movement to enter prevailing winds and 1 movement to exit. If a ship does not have 2 spare movements it may not use prevailing winds.
 				</li>
-				<li><b>Reef:</b> Warm, shallow waters and coral attract fish. Ships fishing in reef hexes are more likely to catch fish (roll a 1, 2 or 3)</li>
+				<li><b>Reef:</b> Shallow waters and dangerous rocks. Ships passing through reef hexes must proceed slowly and with caution. Reduce movement range -1.</li>
 			</ul>
 
 		<h3 id="occupancy">Maximum Occupancy</h3>
-			<p>Each hex on the map may be occupied by only one unit or one development.<br>
+			<p>Each hex on the map may be occupied by only 3 or less units. Encampments count as 1 unit towards a hex's occupancy. Forts count 2 and castles count 3.<br>
 			Prisoners do not count toward occupancy.<br>
-			<p>Diagram - todo</p>
 
 		<h3 id="units">Combat Units ⚔</h3>
 			<p>There are two categories of combat units, Knights and Ships, with three types of each:</p>
@@ -168,19 +196,21 @@
 			</ul>
 
 			<p><b>Building Units:</b>
+				At the beginning of each round, every player receives 6 gold.<b>
 				On a player's turn he may only build <b>2 knights or 2 ships or 1 knight and 1 ship.</b> (unless he has built a castle, in which case his production capacity increases to 3)<br>
-				In order to build a ship, players must have an encampment, fort or castle on the coast.<br>
-				Newly built units are placed on any empty hex adjacent to any of the player's developments.<br>
-				If no empty hexes exist adjacent to any development, units may not be built until the player has moved existing units.
+				Built land units are placed on any developed hex.<br>
+				Built ships are placed on any sea hex adjacent to a player's coastal development (in order to build ships, players must have an encampment, fort or castle on the coast)<br>
+				Building units must respect maximum occupancy rule.
 			</p>
 
 			<p><b>Activating Units:</b>
-				At the beginning of each round, every player receives 6 activation tokens. Each player, on his turn, may spend activation tokens to activate units and execute actions with those units.<br>
-				Activating a unit costs the same as building costs, but must be paid in activation tokens.<br>
-				Each activated unit can execute <b>2 actions</b>.<br>
+				At the beginning of each round, every player receives 6 silver.<b>
+				Each player, on his turn, may spend silver to activate units and execute actions with those units.<br>
+				Activating a unit costs the same as building costs, but must be paid in silver.<br>
+				Each activated unit can execute <b>3 actions</b>.<br>
 				Once the player has resolved each unit's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all units to their upright position.<br>
 				Each action must be unique. A player may not move the same ship twice or attack with the same ship twice.<br>
-				Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute both its actions immediately or execute one and forfeit the other. The one exception to this rule is embarking and disembarking from a freighter.
+				Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute all its actions immediately or execute some and forfeit the others. The one exception to this rule is embarking and disembarking from a freighter.
 			</p>
 
 			<p><b>Unit Actions:</b></p>
@@ -188,12 +218,11 @@
 				<li>Movement</li>
 				<li>Attack</li>
 				<li>Breach</li>
-				<li>Fish/Hunt</li>
 			</ul>
 			<p>
-				<b>Movement:</b> Players may move units through hexes occupied by their own units, but must respect maximum occupancy rule, and only end movement in an empty hex.<br>
-				During the build phase, units may pass through or occupy hexes occupied by another player. However during the attack phase, movement into a hex occupied by another player necessitates a battle.<br>
-				If two units owned by different players occupy the same hex at the start of the battle round, the first owner to execute his turn must either move the unit or initiate an attack.
+				<b>Movement:</b> Players may move units through hexes occupied by their own units, but must respect maximum occupancy rule, and only end movement in an eligible hex.<br>
+				During the build phase, units may pass through but must not end their movement in hexes occupied by another player.<br>
+				During the attack phase, movement into a hex occupied by another player is allowed, but necessitates a battle.<br>
 			</p>
 			<p>
 				<b>Attack:</b> There are 2 types of attack:<br>
@@ -224,19 +253,15 @@
 
 			<p>
 				<b>Results of an attack:</b>
-				If the defender wins no action is taken (advantage to attacker)<br>
-				When a knight is defeated in battle the victor captures him and places the piece on his nearest developed hex. This knight is considered a prisoner. Prisoners are counted toward the General Victory Token condition.<br>
+				<b>Retreat:</b> If the defender wins, the attacker must retreat his unit to the hex on which it began its movement.<br>
+				<b>Land Victory:</b> If the attacker wins a land battle, the defeated unit is captured. Place the piece on the victor's nearest developed hex. This knight is now considered a prisoner.<br>
 				<b>Rescue:</b> If an opponent manages to seize a developed hex with prisoners on it, prisoners belonging to him are immediately freed and can now take actions. Any prisoners belonging to other players become the prisoners of the hex's new owner.<br>
-				When a ship is defeated in battle the victor sinks the loser's ship, removes it from the board, and places it in an area near him designated as his ship graveyard. Sunken ships are counted toward the Admiral Victory Token condition.<br>
+				<b>Sea Victory:</b> If the attacker wins at sea, the victor sinks the loser's ship. Remove it from the board, and places it in an area near him designated as his ship graveyard.<br>
 			</p>
 
 			<p>
 				<b>Breaching a Wall</b> see <a href="#walls">Walls</a> section below
 			</p>
-
-			<p>
-				<b>Hunting and Fishing</b> Roll one die and if the result is 1, collect 1 meat/fish. If the result is a 2, collect 2 meat/fish. 2 meat/fish may be exchanged for 1 gold.</li>
-			</ul>
 
 			<p>
 				<b>Additional Unit Actions:</b> The following actions may be performed by knights and ships and do not count towards each units 2 action limit:
@@ -248,17 +273,19 @@
 			</p>
 
 		<h3 id="retaliation">Retaliation</h3>
-			<p>Especially when playing with 4 or more players, turn order can become over-powered, with the last player being defenseless while 5 other players get a chance to attack him. The activation tokens budget is meant to mitigate this, but Retaliation is meant to solve it.<br>
+			<p>Especially when playing with 4 or more players, turn order can become over-powered, with the last player being defenseless while 5 other players get a chance to attack him. The silver activation tokens budget is meant to mitigate this, but Retaliation is meant to solve it.<br>
 			When a player is attacked by the active player, and loses a battle, he may then Retaliate.<br>
 			Retaliation occurs immediately after the active player wins a battle with an activated unit, and has expended all that unit's actions.<br>
-			Then the player who lost the battle receives 1 activation token, and may activate 1 unit of his choice (provided he can afford the activation cost), and execute 2 actions with that unit.<br>
+			Then the player who lost the battle receives 1 silver token, and may activate 1 unit of his choice (provided he can afford the activation cost), and execute actions with that unit.<br>
 			The only restriction is that the retaliating player may not build during retaliation.<br>
 			Battles won by a retaliating player do not trigger additional retaliations.
 			</p>
 
 		<h3 id="tactics">Tactics</h3>
-			<p><b>Flanking:</b> The attacker receives +2 advantage for attacking from a flank, +4 for attacking from a rear flank, and +6 for attacking from the rear.</p>
-			<p><b>Surrender:</b> If the attacker is able to surround a hex (attack from all exposed directions) the defender must immediately surrender and all units are captured</p>
+			<p><b>Flanking:</b> The attacker receives +2 advantage for attacking from a flank, +4 for attacking from a rear flank, and +6 for attacking from the rear. See diagram.</p>
+			<p><b>Surrender:</b> If a player is able to surround enemy units, and cut off all escape routes, then the defender must immediately surrender and all units are captured.<br>
+			Ships must be surrounded on all adjacent sea hexes as well as any adjacent land hexes. Coastal hexes are considered an escape route. See diagram.
+			</p>
 
 		<h3 id="artillery">Artillery</h3>
 			<p>Artillery are basically cannons mounted on small chariots. Artillery require a knight on the same hex to be used (as an action).<br>
@@ -273,7 +300,7 @@
       <p><b>Breaching a Wall</b>
 	      <ul>
 		      <li>Players may attempt to breach an opponent's wall if he has a knight occupying an adjacent hex.</li>
-		      <li>To breach, roll one die and if the result is a 5 or 6, the breach is succesful</li>
+		      <li>To breach, roll a number of dice equal to the unit's cost. If the result of any die is a 1, 2 or 3 the breach is successful</li>
 		      <li>Upon successful breach of a wall, it is removed from the board and the player may then attack the newly exposed hex.</li>
 		      <li>Breaching counts as a knight action.</li>
 		      <li>Breaching may be attempted more than once if the player has more than one knight on adjacent hexes who have not exhausted their actions.</li>
@@ -283,23 +310,6 @@
 
 		<h3 id="castles">Castles</h3>
 			<p>Players who have built a castle may increase their production of combat units to 3 per turn.</p>
-
-		<h3 id="phases">Game Phases</h3>
-			<ul>
-				<li><b>Phase 1 - Build:</b>	Players may build units, developments, and maneuver units around the map. No activation tokens are received and players are free to execute 2 actions for each of all their units. Hunting may be performed to gain additional gold, and no attack actions are allowed.</li>
-				<li><b>Phase 2 - Battle:</b> Activation tokens budget takes effect. Attack actions are allowed. Hunting and fishing is no longer allowed. Players may continue building and turn order is modified:
-					<p><b>Battle phase turn order:</b> At the start of each round, recalculate each player's points. The player with the least points goes first, highest last.</p>
-				</li>
-			</ul>
-			<p>Each phase lasts 3 rounds. Implement a counter to keep track.</p>
-
-		<h3 id="points">Points</h3>
-			<p>Points are used during the game, but do not determine the winner. Points are the same as building costs.</p>
-			<ul>
-				<li>Building: 2 points per artillery, 1 point per wall, 1 per encampment, 2 per fort, 3 per castle</li>
-				<li>Armies: 1 point per infantry, 2 per archer, 3 per cavalry</li>
-				<li>Navies: 1 point per caravel, 2 per freighter, 3 per galley</li>
-			</ul>
 
 		<h3 id="stats">Unit Costs and Stats</h3>
 			<div class="stats-table">
