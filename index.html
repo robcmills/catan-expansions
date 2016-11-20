@@ -12,10 +12,22 @@
 		html, body {
 		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		}
-		#banner {
-			max-width: 800px;
-			width: 100%;
+
+		#contents li {
+			margin: 5px 0;
 		}
+
+		.section {
+			display: none;
+		}
+		.section-header {
+			background-color: #e6e6e6;
+		}
+		.section-header:hover {
+			background-color: #d8ecf3;
+			cursor: pointer;
+		}
+
 		.stats-table {
 			max-width: 100%;
 			overflow: auto;
@@ -38,385 +50,453 @@
 		<h1>Conquest ⚔ v0.92</h1>
 			<p>For the glory of your country! New islands have been discovered across the Emerald Sea and you have been ordered by your King to claim the land for your country. However, you are not the only one who hopes to discover riches on foreign soil. Gather your knights and set sail. Conquest is a game of colonization and medieval combat.</p>
 
-		<ol>
-			<li><a href="#objective">Objective</a></li>
-			<li><a href="#setup">Setup</a></li>
-			<li><a href="#phases">Phases</a></li>
-			<li><a href="#gold">Gold</a></li>
-			<li><a href="#hexes">Hexes</a></li>
-			<li><a href="#winds">Prevailing Winds</a></li>
-			<li><a href="#occupancy">Maximum Occupancy</a></li>
-			<li><a href="#units">Combat Units</a></li>
-			<li><a href="#retaliation">Retaliation</a></li>
-			<li><a href="#tactics">Tactics</a></li>
-			<li><a href="#artillery">Artillery</a></li>
-			<li><a href="#walls">Walls</a></li>
-			<li><a href="#castles">Castles</a></li>
-			<li><a href="#stats">Unit Costs and Stats</a></li>
+		<ol id="contents">
 		</ol>
 
-		<h3 id="objective">Objective</h3>
-			<p>The objective of Conquest is to be the player with the most victory tokens at the end of the game. Victory tokens are claimed in the following ways:</p>
-			<p><b>Anytime - Multiple possible</b></p>
-			<ol>
-				<li><b>Conquer:</b> For each development that you sieze from another player collect a number of victory tokens equal to the value of that development.</li>
-				<li><b>Battle:</b> For each combat unit that you defeat in battle collect a number of victory tokens equal to the value of that unit.</li>
-				<li><b>Rescue:</b> For each prisoner that you free collect a number of victory tokens equal to the value of that unit.</li>
-			</ol>
+		<h3 id="objective" class="section-header" onclick="toggle('objective');">
+			<span class="toggler">+</span> Objective
+		</h3>
+			<div class="objective section">
+				<p>The objective of Conquest is to be the player with the most victory tokens at the end of the game. Victory tokens are claimed in the following ways:</p>
+				<p><b>Anytime - Multiple possible</b></p>
+				<ol>
+					<li><b>Conquer:</b> For each development that you sieze from another player collect a number of victory tokens equal to the value of that development.</li>
+					<li><b>Battle:</b> For each combat unit that you defeat in battle collect a number of victory tokens equal to the value of that unit.</li>
+					<li><b>Rescue:</b> For each prisoner that you free collect a number of victory tokens equal to the value of that unit.</li>
+				</ol>
 
-		<p><b>Anytime - Once per game per player</b></p>
-			<ol>
-				<li><b>Citadel:</b> 1 token per hex for completely enclosing one or more hexes with walls. Note that you do not have to build walls on edges bordering mountain hexes.</li>
-				<li><b>Complex:</b> 3 tokens for building a Military Complex, which is defined as building a Castle, Fort, and Encampment on adjacent hexes.</li>
-				<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more</li>
-			</ol>
-
-		<p><b>Once at the end (if a tie exists both players receive tokens)</b></p>
-			<ol>
-				<li><b>General:</b> 3 tokens for the player with the most prisoners.</li>
-				<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships.</li>
-				<li><b>Emperor:</b> 3 tokens for the player with the most claimed hexes. Claimed hexes are occupied, developed or enclosed in a Citadel.</li>
-			</ol>
-
-		<h3 id="setup">Setup</h3>
-			<ol>
-				<li><b>Build the Map:</b><br>
-					The size and geography of the map have a great effect on the game experience. Players are encouraged to be creative, and build the map however they like. However the following are some guidelines that help ensure an even distribution and balanced layout, as well as some recommended examples for new players.<br>
-					<b>Random Setup:</b>
+				<p><b>Anytime - Once per game per player</b></p>
 					<ol>
-						<li>Build the frame according to the number of players. See diagrams.</li>
-						<li>
-							Gather the correct number of each hex type.<br>
-							<b>2 players:</b>  3 deserts, 9 forrests, 9 mountains, 18 plains, 6 reefs, 16 sea hexes<br>
-							<b>4 players:</b> 154 hexes total
-						</li>
-						<li>Shuffle all the hexes face down</li>
-						<li>Beginning at one corner of the map, begin drawing random hexes and turning them over to reveal them and place them along the outer-most edge of the map.</li>
-						<li>If a revealed hex is a sea hex, place the next hex inwards toward the center of the map. If the next hex is terrain, continue placing along the outer edge, but if another sea hex is drawn, continue placing inwards toward the center.<li>
-						<li>If a mountain, forrest, desert or reef hex is drawn and is to be placed adjacent to a hex of the same type, put that hex aside and draw another until you get a different type of hex. Then place the hexes that were set aside.</li>
-						<li>Repeat this pattern until the outer ring has been filled and then continue on to building inner rings until the map is filled.</li>
-						<li>You may want to make a few adjustments if key hexes get clumped together in the same area of the map. Especially forrests and reefs and mountains should be relatively evenly distributed across the map. Feel free to swap a few hexes until it looks balanced.</li>
+						<li><b>Citadel:</b> 1 token per hex for completely enclosing one or more hexes with walls. Note that you do not have to build walls on edges bordering mountain hexes.</li>
+						<li><b>Complex:</b> 3 tokens for building a Military Complex, which is defined as building a Castle, Fort, and Encampment on adjacent hexes.</li>
+						<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more</li>
 					</ol>
 
-				<li><b>Starting Units:</b> Each player begins the game with the following units:<br>
-					3 soldiers, 2 archers, 1 cavalry<br>
-					3 caravels, 2 freighters, 1 galleon<br>
-					Each player must load his 2 freighters with 3 land units each.
-				</li>
+				<p><b>Once at the end (if a tie exists both players receive tokens)</b></p>
+					<ol>
+						<li><b>General:</b> 3 tokens for the player with the most prisoners.</li>
+						<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships.</li>
+						<li><b>Emperor:</b> 3 tokens for the player with the most claimed hexes. Claimed hexes are occupied, developed or enclosed in a Citadel.</li>
+					</ol>
+			</div>
 
-				<li><b>Prevailing Winds:</b> Determine the direction of prevailing by flipping the Prevailing Winds Token. Place it in the center of the map.</li>
-
-				<li>You are now ready to begin the game.</li>
-			</ol>
-
-		<h3 id="phases">Game Phases</h3>
-			<p>The game consists of 3 phases that are 2 rounds each. Each player will have 6 turns to execute their strategies before the game ends.</p>
-			<ul>
-				<li><b>Phase 1 - Placement:</b>
-					Each player in turn sequentially places one of any of his ships on any sea hex, until all players have placed all units.<br>
-					Placement Restrictions:
-					<ul>
-						<li>Placing on a hex already occupied by another player is prohibited.</li>
-						<li>Placing on a land hex is prohibited. All land units remain loaded on the freighters.</li>
-						<li>Placing respects maximum occupancy rule. No more than 3 units may occupy the same hex.</li>
-					</ul>
-				</li>
-				<li><b>Phase 2 - Build:</b>	Players may build developments, additional units, and maneuver units around the map. No attack actions are allowed.</li>
-				<li><b>Phase 3 - Battle:</b> All actions allowed in the build phase are also allowed in the battle phase. Additionally attack actions are allowed.</li>
-			</ul>
-			<p>Each phase lasts 2 rounds.</p>
-
-		<h3 id="gold">Gold</h3>
-			<p>
-				At the beginning of each player's turn he receives 6 gold.<br>
-				Gold is used to build developments, combat units, walls and artillery.
-			</p>
-
-		<h3 id="silver">Silver</h3>
-			<p>
-				At the beginning of each player's turn he receives 6 silver.<br>
-				Silver is used to activate units.
-			</p>
-
-		<h3 id="hexes">Hexes</h3>
-			<p>The geography of the map is important to consider in developing your military tactics and strategies:</p>
-			<ul>
-				<li><b>Mountains:</b> Steep, rocky and treacherous, mountain hexes can not be occupied or built on.</li>
-				<li><b>Plains:</b> This is where all building and land battles will take place.</li>
-				<li><b>Sea:</b> Sea hexes are where your naval maneuvering and battles will take place.</li>
-			</ul>
-
-		<h3 id="winds">Prevailing Winds</h3>
-			<p>The sea beyond the border of the map is the deep, open ocean, where strong, prevailing winds can greatly enhance a sea-worthy sailor's ability to travel long distances.<br>
-			When ships move out into the deep sea, they may take advantage of the prevailing winds to travel from one edge of the map to the next adjacent edge in addition to each ship's normal movement range. Though they must travel in the same direction as the prevailing winds, which are either clockwise or counter-clockwise around the map.<br>
-			Player's ships may enter the prevailing winds from any border sea hex, and exit into any border sea hex on the next edge of the map. See diagram.<br>
-			Ships may not end their movement in the deep ocean. Ships must use 1 movement to enter prevailing winds and 1 movement to exit. If a ship does not have 2 spare movements it may not use prevailing winds.</p>
-
-		<h3 id="occupancy">Maximum Occupancy</h3>
-			<p>Each hex on the map may be occupied by only 3 or less units. Encampments count as 1 unit towards a hex's occupancy. Forts and artillery count 2 and castles count 3.<br>
-			Prisoners do not count toward occupancy.<br>
-
-		<h3 id="units">Combat Units ⚔</h3>
-			<p>There are two categories of combat units, Knights and Ships, with three types of each:</p>
-
-			<p>Ships:</p>
-			<ul>
-				<li><b>Caravel:</b> A small, maneuverable sailing ship with lateen sails, capable of basic attacking and defending and the most movement range of all naval units. 6 movement</li>
-				<li><b>Galley:</b> Large warship with powerful cannons, but slower and less sea-worthy. (limit 1) 4 movement, 3 attack range* (diminishing accuracy)</li>
-				<li><b>Freighter:</b> A large, oar-powered ship primarily for transporting troops. 5 movement, +3 transport, -attack, -defend (limit 3)<br>
-					Freighters can transport up to 3 land units of any type.<br>
-					Freighters can not attack or defend other ships or coastal buildings, but they can defend themselves like normal ships.
-					<p><b>Loading and unloading freighters:</b><br>
-						Loading knights onto a freighter is considered 1 movement that counts against each knight’s movement range<br>
-						If a freighter is adjacent to a developed hex, units can be built directly on the ship. This is way to load units onto your freighters for free.<br>
-						Archers loaded onto a freighter can attack coastal hexes or enemy ships. The combination of a freighter loaded with 3 archers is a powerful weapon.
-					</p>
-				</li>
-			</ul>
-
-			<p>Knights:</p>
-			<ul>
-				<li><b>Infantry:</b> 3 movement</li>
-				<li><b>Archer:</b> 2 movement, 3 attack range* (diminishing accuracy)</li>
-				<li><b>Cavalry:</b> 4 movement</li>
-			</ul>
-
-			<p><b>Building Units:</b>
-				At the beginning of each round, every player receives 6 gold.<br>
-				On a player's turn he may only build <b>2 knights or 2 ships or 1 knight and 1 ship.</b> (unless he has built a castle, in which case his production capacity increases to 3)<br>
-				Built land units are placed on or adjacent to any developed hex.<br>
-				Built ships are placed on any sea hex adjacent to a player's coastal development (in order to build ships, players must have an encampment, fort or castle on the coast)<br>
-				Building units must respect maximum occupancy rule.
-			</p>
-
-			<p><b>Activating Units:</b>
-				At the beginning of each round, every player receives 6 silver.<br>
-				Each player, on his turn, may spend silver to activate units and execute actions with those units.<br>
-				Activating a unit costs the same as building costs, but must be paid in silver.<br>
-				Each activated unit can execute <b>2 actions</b>.<br>
-				Once the player has resolved each unit's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all units to their upright position.<br>
-				Each action must be unique. A player may not attack twice or move twice.<br>
-				Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute all its actions immediately or execute some and forfeit the others. The one exception to this rule is freighters. Units can embark and disembark from a freighter on the same turn movement. Likewise, a freighter may pick up units during its movement.
-			</p>
-
-			<p><b>Unit Actions:</b></p>
-			<ul>
-				<li>Movement</li>
-				<li>Attack</li>
-			</ul>
-			<p>
-				<b>Movement:</b> Players may move units through hexes occupied by their own units, but must respect maximum occupancy rule, and only end movement in an eligible hex (see <a href="occupancy">Maximum Occupancy</a>).<br>
-				During the build phase, units may pass through but not end their movement in hexes occupied by another player.<br>
-				During the attack phase, movement into a hex occupied by another player initiates a battle.<br>
-			</p>
-			<p>
-				<b>Attack:</b> There are 2 types of attack:<br>
+		<h3 id="setup" class="section-header" onclick="toggle('setup');">
+			<span class="toggler">+</span> Setup
+		</h3>
+			<div class="setup section">
 				<ol>
-					<li><b>Close Combat:</b><br>
-					Units can attack opponents in the same or adjacent hexes.<br>
-					To resolve close combat attacks, both players involved roll a number of dice equal to the cost of the unit participating in the battle. Compare only each player's highest die, and the greater value wins the battle. Ties must be re-rolled.
+					<li><b>Build the Map:</b><br>
+						The size and geography of the map have a great effect on the game experience. Players are encouraged to be creative, and build the map however they like. However the following are some guidelines that help ensure an even distribution and balanced layout, as well as some recommended examples for new players.<br>
+						<b>Random Setup:</b>
+						<ol>
+							<li>Build the frame according to the number of players. See diagrams.</li>
+							<li>
+								Gather the correct number of each hex type.<br>
+								<b>2 players:</b>  3 deserts, 9 forrests, 9 mountains, 18 plains, 6 reefs, 16 sea hexes<br>
+								<b>4 players:</b> 154 hexes total
+							</li>
+							<li>Shuffle all the hexes face down</li>
+							<li>Beginning at one corner of the map, begin drawing random hexes and turning them over to reveal them and place them along the outer-most edge of the map.</li>
+							<li>If a revealed hex is a sea hex, place the next hex inwards toward the center of the map. If the next hex is terrain, continue placing along the outer edge, but if another sea hex is drawn, continue placing inwards toward the center.<li>
+							<li>If a mountain, forrest, desert or reef hex is drawn and is to be placed adjacent to a hex of the same type, put that hex aside and draw another until you get a different type of hex. Then place the hexes that were set aside.</li>
+							<li>Repeat this pattern until the outer ring has been filled and then continue on to building inner rings until the map is filled.</li>
+							<li>You may want to make a few adjustments if key hexes get clumped together in the same area of the map. Especially forrests and reefs and mountains should be relatively evenly distributed across the map. Feel free to swap a few hexes until it looks balanced.</li>
+						</ol>
+
+					<li><b>Starting Units:</b> Each player begins the game with the following units:<br>
+						3 soldiers, 2 archers, 1 cavalry<br>
+						3 caravels, 2 freighters, 1 galleon<br>
+						Each player must load his 2 freighters with 3 land units each.
 					</li>
-					<li><b>Ranged:</b><br>
-					Archers, Artillery and Galleys are capable of ranged attacks.<br>
-					To resolve a ranged attack, the attacker rolls a number of dice equal to the cost of the unit. If any die result is 1, 2 or 3 the attack is successful.<br>
-					Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.<br>
-					</li>
+
+					<li><b>Prevailing Winds:</b> Determine the direction of prevailing by flipping the Prevailing Winds Token. Place it in the center of the map.</li>
+
+					<li>You are now ready to begin the game.</li>
 				</ol>
-			</p>
+			</div>
 
-			<p>
-				<b>Artillery:</b>
-				Artillery units must be fired by a knight on the same hex.<br>
-				Firing artillery expends the knight's attack action.<br>
-				Artillery can be moved by any knight, up to the same movement range as the unit.<br>
-				Artillery can be seized by an opponent if no knight is defending it.
-			</p>
-
-			<p>
-				<b>Results of an attack:</b><br>
-				<b>Retreat:</b> If the defender wins, the attacker must retreat any units he moved onto the hex where the battle took place, back to where they began their movement. Units that attacked from adjacent hexes may remain where they are.<br>
-				<b>Land Victory:</b> If the attacker wins a land battle, the defeated unit is captured. Place the piece on the victor's nearest developed hex. This knight is now considered a prisoner.<br>
-				<b>Rescue:</b> If an opponent manages to seize a developed hex with prisoners on it, prisoners belonging to him are immediately freed and can now take actions. Any prisoners belonging to other players become the prisoners of the hex's new owner.<br>
-				<b>Sea Victory:</b> If the attacker wins at sea, the victor sinks the loser's ship. Remove it from the board, and places it in an area near him designated as his ship graveyard.<br>
-				<b>Occupation:</b> The attacker may move his victorious unit onto the hex that was attacked if no enemy units remain.
-			</p>
-
-			<p>
-				<b>Additional Unit Actions:</b> The following actions may be performed by knights and ships and do not count towards each units 2 action limit:
+		<h3 id="phases" class="section-header" onclick="toggle('phases');">
+			<span class="toggler">+</span> Phases
+		</h3>
+			<div class="phases section">
+				<p>The game consists of 3 phases that are 2 rounds each. Each player will have 6 turns to execute their strategies before the game ends.</p>
 				<ul>
-					<li><b>Breach:</b> See <a href="#walls">Walls</a> section below.</li>
-					<li><b>Defend:</b> Weaker units may defend stronger units or developments if they are located on a hex adjacent to both the attacker and the unit they are defending. See diagram.</li>
-					<li><b>Build:</b> Players may build on any hex that is occupied by or adjacent to one of their units or already developed hexes. Building does not count as an action, however a player can not interrupt a unit's movement to build. Building must occur before or after a unit's movement. Building may not occur during a player's <a href="#retaliation">Retaliation</a></li>
-					<li><b>Seize:</b> Players may seize opponent developments and artillery if they are located on or adjacent to any hex occupied by one of their units and it is undefended.<br>
-					If the development is defended, the attacking player must first defeat all defenders.<br>
-					To seize a development, a player removes it from the board and replaces it with an equivalent development of their own color. He may then move the seizing unit onto the hex if he wishes, and it does not violate max occupancy.</li>
-					<li><b>Discharge and Recruit:</b> Once per turn a player may discharge any land unit, remove it from the board, recruit a new unit of the same type, and place it on or adjacent to any developed hex.</li>
+					<li><b>Phase 1 - Placement:</b>
+						Each player in turn sequentially places one of any of his ships on any sea hex, until all players have placed all units.<br>
+						Placement Restrictions:
+						<ul>
+							<li>Placing on a hex already occupied by another player is prohibited.</li>
+							<li>Placing on a land hex is prohibited. All land units remain loaded on the freighters.</li>
+							<li>Placing respects maximum occupancy rule. No more than 3 units may occupy the same hex.</li>
+						</ul>
+					</li>
+					<li><b>Phase 2 - Build:</b>	Players may build developments, additional units, and maneuver units around the map. No attack actions are allowed.</li>
+					<li><b>Phase 3 - Battle:</b> All actions allowed in the build phase are also allowed in the battle phase. Additionally attack actions are allowed.</li>
 				</ul>
-			</p>
+				<p>Each phase lasts 2 rounds.</p>
+			</div>
 
-		<h3 id="retaliation">Retaliation</h3>
-			<p>
-			When a player is attacked by the active player, and loses a battle or a development is seized, he may then Retaliate.<br>
-			Retaliation occurs immediately after the active player's activated unit has expended all its actions.<br>
-			Then the player who lost the battle receives 1 silver token, and may activate 1 unit of his choice (provided he can afford the activation cost), and execute actions with that unit.<br>
-			<b>Restrictions:</b><br>
-			The retaliating player may not build during retaliation.<br>
-			The retaliating player may not seize any developments that were seized by the active player on his current turn.<br>
-			Battles won by a retaliating player do not trigger additional retaliations.<br>
-			</p>
+		<h3 id="gold" class="section-header" onclick="toggle('gold');">
+			<span class="toggler">+</span> Gold
+		</h3>
+			<div class="gold section">
+				<p>
+					At the beginning of each player's turn he receives 6 gold.<br>
+					Gold is used to build developments, combat units, walls and artillery.<br>
+					Players must spend all gold and silver on their turn or forfeit any unused.
+				</p>
+			</div>
 
-		<h3 id="tactics">Tactical Advantages</h3>
-			<ul>
-				<li><b>Flanking:</b> The attacker may add 1 additional die for attacking from a flank, 2 for attacking from a rear flank, and 3 for attacking from the rear.<br>
-				<b>Feint:</b> The 'front' of a hex is determined by the direction of the first attack. Subsequent attacks may utilize Flanking advantage. See diagram.</li>
-				<li><b>Attrition:</b> The attacker may add 2 additional dice for attacking the same hex from the same direction 3 times.</li>
-				<li><b>Surrender:</b> If a player is able to surround enemy units, and cut off all escape routes, then the defender must immediately surrender and all units are captured.<br>
-				Units must be surrounded on all adjacent sea and land hexes.<br>
-				Surrounded units must be unable to move or build in any direction. This means that an adjacent hex occupied by the same player's units at maximum occupancy is not eligible to move into, unless there are available hexes beyond the occupied hex (players can still move through hexes at max occupancy). Thus it is possible for a player's own units to block escape routes.<br>
-				See diagram.
-				</li>
-			</ul>
+		<h3 id="silver" class="section-header" onclick="toggle('silver');">
+			<span class="toggler">+</span> Silver
+		</h3>
+			<div class="silver section">
+				<p>
+					At the beginning of each player's turn he receives 6 silver.<br>
+					Silver is used to activate units.
+				</p>
+			</div>
 
-		<h3 id="artillery">Artillery</h3>
-			<p>Artillery are cannons mounted on small chariots. Artillery require a knight on the same hex to be used (as an action).<br>
-			Artillery can be moved by any knight.<br>
-			Note that although artillery are an extremely powerful weapon, they are a double edged sword because an opponent can seize your artillery and then use it against you. If an opponent defeats all knights on the hex where an artillery is located, he may occupy the hex and use the artillery for himself.</p>
+		<h3 id="hexes" class="section-header" onclick="toggle('hexes');">
+			<span class="toggler">+</span> Hexes
+		</h3>
+			<div class="hexes section">
+				<p>The geography of the map is important to consider in developing your military tactics and strategies:</p>
+				<ul>
+					<li><b>Mountains:</b> Steep, rocky and treacherous, mountain hexes can not be occupied or built on.</li>
+					<li><b>Plains:</b> This is where all building and land battles will take place.</li>
+					<li><b>Sea:</b> Sea hexes are where your naval maneuvering and battles will take place.</li>
+				</ul>
+			</div>
 
-		<h3 id="walls">Walls</h3>
-			<p>Walls are a great way to defend yourself from attack, however they are not guaranteed to protect you.</p>
-			<p>Walls may be built on any edge of a player's occupied or built hexes</p>
-      <p>Once per a player's turn, he may deconstruct an existing wall and rebuild it in a new location at no cost</p>
-      <p>Units may not attack or move through opponent walls, however a player's own knights may move freely or attack through his own walls</p>
-      <p><b>Breaching a Wall</b>
-	      <ul>
-		      <li>Players may attempt to breach an opponent's wall if he has a unit occupying an adjacent hex.</li>
-		      <li>To breach, roll a number of dice equal to the unit's cost. If the result of any die is a 1, 2 or 3 the breach is successful</li>
-		      <li>Attrition also applies to breaching. Upon the third attempt to breach, 2 additional dice may be added.</li>
-		      <li>Upon successful breach of a wall, it is removed from the board.</li>
-		      <li>Breaching does not count as a unit action.</li>
-		      <li>Breaching may be attempted more than once if the player has more than one knight on adjacent hexes who have not exhausted their actions.</li>
-		      <li>Ships may attempt to breach coastal walls</li>
-		    </ul>
-		   </p>
+		<h3 id="winds" class="section-header" onclick="toggle('winds');">
+			<span class="toggler">+</span> Winds
+		</h3>
+			<div class="winds section">
+				<p>The sea beyond the border of the map is the deep, open ocean, where strong, prevailing winds can greatly enhance a sea-worthy sailor's ability to travel long distances.<br>
+				When ships move out into the deep sea, they may take advantage of the prevailing winds to travel from one edge of the map to the next adjacent edge in addition to each ship's normal movement range. Though they must travel in the same direction as the prevailing winds, which are either clockwise or counter-clockwise around the map.<br>
+				Player's ships may enter the prevailing winds from any border sea hex, and exit into any border sea hex on the next edge of the map. See diagram.<br>
+				Ships may not end their movement in the deep ocean. Ships must use 1 movement to enter prevailing winds and 1 movement to exit. If a ship does not have 2 spare movements it may not use prevailing winds.</p>
+			</div>
+		<h3 id="occupancy" class="section-header" onclick="toggle('occupancy');">
+			<span class="toggler">+</span> Occupancy
+		</h3>
+			<div class="occupancy section">
+				<p>Each hex on the map may be occupied by only 3 or less units. Encampments count as 1 	unit towards a hex's occupancy. Forts and artillery count 2 and castles count 3.<br>
+				Prisoners do not count toward occupancy.
+				</p>
+			</div>
 
-		<h3 id="castles">Castles</h3>
-			<p>Players who have built a castle may increase their production of combat units to 3 per turn.</p>
+		<h3 id="units" class="section-header" onclick="toggle('units');">
+			<span class="toggler">+</span> Units
+		</h3>
+			<div class="units section">
+				<p>There are two categories of combat units, Knights and Ships, with three types of each:</p>
 
-		<h3 id="stats">Unit Costs and Stats</h3>
-			<div class="stats-table">
-				<div class="stats-row stats-row-header">
-					<div class="stats-column">Unit</div>
-					<div class="stats-column">Cost</div>
-					<div class="stats-column">Limit</div>
-					<div class="stats-column">Attack Range</div>
-					<div class="stats-column">Movement Range</div>
-				</div>
+				<p>Ships:</p>
+				<ul>
+					<li><b>Caravel:</b> A small, maneuverable sailing ship with lateen sails, capable of basic attacking and defending and the most movement range of all naval units. 6 movement</li>
+					<li><b>Galley:</b> Large warship with powerful cannons, but slower and less sea-worthy. (limit 1) 4 movement, 3 attack range* (diminishing accuracy)</li>
+					<li><b>Freighter:</b> A large, oar-powered ship primarily for transporting troops. 5 movement, +3 transport, -attack, -defend (limit 3)<br>
+						Freighters can transport up to 3 land units of any type.<br>
+						Freighters can not attack or defend other ships or coastal buildings, but they can defend themselves like normal ships.
+						<p><b>Loading and unloading freighters:</b><br>
+							Loading knights onto a freighter is considered 1 movement that counts against each knight’s movement range<br>
+							If a freighter is adjacent to a developed hex, units can be built directly on the ship. This is way to load units onto your freighters for free.<br>
+							Archers loaded onto a freighter can attack coastal hexes or enemy ships. The combination of a freighter loaded with 3 archers is a powerful weapon.
+						</p>
+					</li>
+				</ul>
 
-				<div class="stats-row">
-					<div class="stats-column">Knight</div> <!-- Unit -->
-					<div class="stats-column">1</div> <!-- Cost -->
-					<div class="stats-column">2/turn</div> <!-- Limit -->
-					<div class="stats-column"></div> <!-- Attack  Range -->
-					<div class="stats-column">3</div> <!-- Movement Range -->
-				</div>
-				<div class="stats-row">
-					<div class="stats-column">Archer</div> <!-- Unit -->
-					<div class="stats-column">2</div> <!-- Cost -->
-					<div class="stats-column">2/turn</div> <!-- Limit -->
-					<div class="stats-column">3</div> <!-- Attack  Range -->
-					<div class="stats-column">2</div> <!-- Movement Range -->
-				</div>
-				<div class="stats-row">
-					<div class="stats-column">Cavalry</div> <!-- Unit -->
-					<div class="stats-column">3</div> <!-- Cost -->
-					<div class="stats-column">2/turn</div> <!-- Limit -->
-					<div class="stats-column"></div> <!-- Attack  Range -->
-					<div class="stats-column">4</div> <!-- Movement Range -->
-				</div>
+				<p>Knights:</p>
+				<ul>
+					<li><b>Infantry:</b> 3 movement</li>
+					<li><b>Archer:</b> 2 movement, 3 attack range* (diminishing accuracy)</li>
+					<li><b>Cavalry:</b> 4 movement</li>
+				</ul>
 
-				<div class="stats-row">
-					<div class="stats-column">-</div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-				</div>
+				<p><b>Building Units:</b>
+					At the beginning of each round, every player receives 6 gold.<br>
+					On a player's turn he may only build <b>2 knights or 2 ships or 1 knight and 1 ship.</b> (unless he has built a castle, in which case his production capacity increases to 3)<br>
+					Built land units are placed on or adjacent to any developed hex.<br>
+					Built ships are placed on any sea hex adjacent to a player's coastal development (in order to build ships, players must have an encampment, fort or castle on the coast)<br>
+					Building units must respect maximum occupancy rule.
+				</p>
 
-				<div class="stats-row">
-					<div class="stats-column">Caravel</div> <!-- Unit -->
-					<div class="stats-column">1</div> <!-- Cost -->
-					<div class="stats-column">2/turn</div> <!-- Limit -->
-					<div class="stats-column"></div> <!-- Attack  Range -->
-					<div class="stats-column">6</div> <!-- Movement Range -->
-				</div>
-				<div class="stats-row">
-					<div class="stats-column">Freighter</div> <!-- Unit -->
-					<div class="stats-column">2</div> <!-- Cost -->
-					<div class="stats-column">3</div> <!-- Limit -->
-					<div class="stats-column">NA</div> <!-- Attack  Range -->
-					<div class="stats-column">5</div> <!-- Movement Range -->
-				</div>
-				<div class="stats-row">
-					<div class="stats-column">Galley</div> <!-- Unit -->
-					<div class="stats-column">3</div> <!-- Cost -->
-					<div class="stats-column">1</div> <!-- Limit -->
-					<div class="stats-column">3</div> <!-- Attack  Range -->
-					<div class="stats-column">4</div> <!-- Movement Range -->
-				</div>
+				<p><b>Activating Units:</b>
+					At the beginning of each round, every player receives 6 silver.<br>
+					Each player, on his turn, may spend silver to activate units and execute actions with those units.<br>
+					Activating a unit costs the same as building costs, but must be paid in silver.<br>
+					Each activated unit can execute <b>2 actions</b>.<br>
+					Once the player has resolved each unit's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all units to their upright position.<br>
+					Each action must be unique. A player may not attack twice or move twice.<br>
+					Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute all its actions immediately or execute some and forfeit the others. The one exception to this rule is freighters. Units can embark and disembark from a freighter on the same turn movement. Likewise, a freighter may pick up units during its movement.
+				</p>
 
-				<div class="stats-row">
-					<div class="stats-column">-</div> <!-- Unit -->
-					<div class="stats-column"></div> <!-- Cost -->
-					<div class="stats-column"></div> <!-- Limit -->
-					<div class="stats-column"></div> <!-- Attack  Range -->
-					<div class="stats-column"></div> <!-- Movement Range -->
-				</div>
+				<p><b>Unit Actions:</b></p>
+				<ul>
+					<li>Movement</li>
+					<li>Attack</li>
+				</ul>
+				<p>
+					<b>Movement:</b> Players may move units through hexes occupied by their own units, but must respect maximum occupancy rule, and only end movement in an eligible hex (see <a href="occupancy">Maximum Occupancy</a>).<br>
+					During the build phase, units may pass through but not end their movement in hexes occupied by another player.<br>
+					During the attack phase, movement into a hex occupied by another player initiates a battle.<br>
+				</p>
+				<p>
+					<b>Attack:</b> There are 2 types of attack:<br>
+					<ol>
+						<li><b>Close Combat:</b><br>
+						Units can attack opponents in the same or adjacent hexes.<br>
+						To resolve close combat attacks, both players involved roll a number of dice equal to the cost of the unit participating in the battle. Compare only each player's highest die, and the greater value wins the battle. Ties must be re-rolled.
+						</li>
+						<li><b>Ranged:</b><br>
+						Archers, Artillery and Galleys are capable of ranged attacks.<br>
+						To resolve a ranged attack, the attacker rolls a number of dice equal to the cost of the unit. If any die result is 1, 2 or 3 the attack is successful.<br>
+						Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.<br>
+						</li>
+					</ol>
+				</p>
 
-				<div class="stats-row">
-					<div class="stats-column">Wall</div>
-					<div class="stats-column">1</div>
-					<div class="stats-column">∞</div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-				</div>
-				<div class="stats-row">
-					<div class="stats-column">Camp</div>
-					<div class="stats-column">1</div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-				</div>
-				<div class="stats-row">
-					<div class="stats-column">Fort</div>
-					<div class="stats-column">2</div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-				</div>
-				<div class="stats-row">
-					<div class="stats-column">Castle</div>
-					<div class="stats-column">3</div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-				</div>
+				<p>
+					<b>Artillery:</b>
+					Artillery units must be fired by a knight on the same hex.<br>
+					Firing artillery expends the knight's attack action.<br>
+					Artillery can be moved by any knight, up to the same movement range as the unit.<br>
+					Artillery can be seized by an opponent if no knight is defending it.
+				</p>
 
-				<div class="stats-row">
-					<div class="stats-column">-</div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-					<div class="stats-column"></div>
-				</div>
+				<p>
+					<b>Results of an attack:</b><br>
+					<b>Retreat:</b> If the defender wins, the attacker must retreat any units he moved onto the hex where the battle took place, back to where they began their movement. Units that attacked from adjacent hexes may remain where they are.<br>
+					<b>Land Victory:</b> If the attacker wins a land battle, the defeated unit is captured. Place the piece on the victor's nearest developed hex. This knight is now considered a prisoner.<br>
+					<b>Rescue:</b> If an opponent manages to seize a developed hex with prisoners on it, prisoners belonging to him are immediately freed and can now take actions. Any prisoners belonging to other players become the prisoners of the hex's new owner.<br>
+					<b>Sea Victory:</b> If the attacker wins at sea, the victor sinks the loser's ship. Remove it from the board, and places it in an area near him designated as his ship graveyard.<br>
+					<b>Occupation:</b> The attacker may move his victorious unit onto the hex that was attacked if no enemy units remain.
+				</p>
 
-				<div class="stats-row">
-					<div class="stats-column">Artillery</div> <!-- Unit -->
-					<div class="stats-column">2</div> <!-- Cost -->
-					<div class="stats-column">1</div> <!-- Limit -->
-					<div class="stats-column">3</div> <!-- Attack  Range -->
-					<div class="stats-column"></div> <!-- Movement Range -->
+				<p>
+					<b>Additional Unit Actions:</b> The following actions may be performed by knights and ships and do not count towards each units 2 action limit:
+					<ul>
+						<li><b>Breach:</b> See <a href="#walls">Walls</a> section below.</li>
+						<li><b>Defend:</b> Weaker units may defend stronger units or developments if they are located on a hex adjacent to both the attacker and the unit they are defending. See diagram.</li>
+						<li><b>Build:</b> Players may build on any hex that is occupied by or adjacent to one of their units or already developed hexes. Building does not count as an action, however a player can not interrupt a unit's movement to build. Building must occur before or after a unit's movement. Building may not occur during a player's <a href="#retaliation">Retaliation</a></li>
+						<li><b>Seize:</b> Players may seize opponent developments and artillery if they are located on or adjacent to any hex occupied by one of their units and it is undefended.<br>
+						If the development is defended, the attacking player must first defeat all defenders.<br>
+						To seize a development, a player removes it from the board and replaces it with an equivalent development of their own color. He may then move the seizing unit onto the hex if he wishes, and it does not violate max occupancy.</li>
+						<li><b>Discharge and Recruit:</b> Once per turn a player may discharge any land unit, remove it from the board, recruit a new unit of the same type, and place it on or adjacent to any developed hex.</li>
+					</ul>
+				</p>
+			</div>
+
+		<h3 id="retaliation" class="section-header" onclick="toggle('retaliation');">
+			<span class="toggler">+</span> Retaliation
+		</h3>
+			<div class="retaliation section">
+				<p>
+				When a player is attacked by the active player, and loses a battle or a development is seized, he may then Retaliate.<br>
+				Retaliation occurs immediately after the active player's activated unit has expended all its actions.<br>
+				Then the player who lost the battle receives 1 silver token, and may activate 1 unit of his choice (provided he can afford the activation cost), and execute actions with that unit.<br>
+				<b>Restrictions:</b><br>
+				The retaliating player may not build during retaliation.<br>
+				The retaliating player may not seize any developments that were seized by the active player on his current turn.<br>
+				Battles won by a retaliating player do not trigger additional retaliations.<br>
+				</p>
+			</div>
+
+		<h3 id="tactics" class="section-header" onclick="toggle('tactics');">
+			<span class="toggler">+</span> Tactics
+		</h3>
+			<div class="tactics section">
+				<ul>
+					<li><b>Flanking:</b> The attacker may add 1 additional die for attacking from a flank, 2 for attacking from a rear flank, and 3 for attacking from the rear.<br>
+					<b>Feint:</b> The 'front' of a hex is determined by the direction of the first attack. Subsequent attacks may utilize Flanking advantage. See diagram.</li>
+					<li><b>Attrition:</b> The attacker may add 2 additional dice for attacking the same hex from the same direction 3 times.</li>
+					<li><b>Surrender:</b> If a player is able to surround enemy units, and cut off all escape routes, then the defender must immediately surrender and all units are captured.<br>
+					Units must be surrounded on all adjacent sea and land hexes.<br>
+					Surrounded units must be unable to move or build in any direction. This means that an adjacent hex occupied by the same player's units at maximum occupancy is not eligible to move into, unless there are available hexes beyond the occupied hex (players can still move through hexes at max occupancy). Thus it is possible for a player's own units to block escape routes.<br>
+					See diagram.
+					</li>
+				</ul>
+			</div>
+
+		<h3 id="artillery" class="section-header" onclick="toggle('artillery');">
+			<span class="toggler">+</span> Artillery
+		</h3>
+			<div class="artillery section">
+				<p>Artillery are cannons mounted on small chariots. Artillery require a knight on the same hex to be used (as an action).<br>
+				Artillery can be moved by any knight.<br>
+				Note that although artillery are an extremely powerful weapon, they are a double edged sword because an opponent can seize your artillery and then use it against you. If an opponent defeats all knights on the hex where an artillery is located, he may occupy the hex and use the artillery for himself.</p>
+			</div>
+
+		<h3 id="walls" class="section-header" onclick="toggle('walls');">
+			<span class="toggler">+</span> Walls
+		</h3>
+			<div class="walls section">
+				<p>Walls are a great way to defend yourself from attack, however they are not guaranteed to protect you.</p>
+				<p>Walls may be built on any edge of a player's occupied or built hexes</p>
+	      <p>Once per a player's turn, he may deconstruct an existing wall and rebuild it in a new location at no cost</p>
+	      <p>Units may not attack or move through opponent walls, however a player's own knights may move freely or attack through his own walls</p>
+	      <p><b>Breaching a Wall</b>
+		      <ul>
+			      <li>Players may attempt to breach an opponent's wall if he has a unit occupying an adjacent hex.</li>
+			      <li>To breach, roll a number of dice equal to the unit's cost. If the result of any die is a 1, 2 or 3 the breach is successful</li>
+			      <li>Attrition also applies to breaching. Upon the third attempt to breach, 2 additional dice may be added.</li>
+			      <li>Upon successful breach of a wall, it is removed from the board.</li>
+			      <li>Breaching does not count as a unit action.</li>
+			      <li>Breaching may be attempted more than once if the player has more than one knight on adjacent hexes who have not exhausted their actions.</li>
+			      <li>Ships may attempt to breach coastal walls</li>
+			    </ul>
+				</p>
+			</div>
+
+		<h3 id="castles" class="section-header" onclick="toggle('castles');">
+			<span class="toggler">+</span> Castles
+		</h3>
+			<div class="castles section">
+				<p>Players who have built a castle may increase their production of combat units to 3 per turn.</p>
+			</div>
+
+		<h3 id="stats" class="section-header" onclick="toggle('stats');">
+			<span class="toggler">+</span> Stats
+		</h3>
+			<div class="stats section">
+				<div class="stats-table">
+					<div class="stats-row stats-row-header">
+						<div class="stats-column">Unit</div>
+						<div class="stats-column">Cost</div>
+						<div class="stats-column">Limit</div>
+						<div class="stats-column">Attack Range</div>
+						<div class="stats-column">Movement Range</div>
+					</div>
+
+					<div class="stats-row">
+						<div class="stats-column">Knight</div> <!-- Unit -->
+						<div class="stats-column">1</div> <!-- Cost -->
+						<div class="stats-column">2/turn</div> <!-- Limit -->
+						<div class="stats-column"></div> <!-- Attack  Range -->
+						<div class="stats-column">3</div> <!-- Movement Range -->
+					</div>
+					<div class="stats-row">
+						<div class="stats-column">Archer</div> <!-- Unit -->
+						<div class="stats-column">2</div> <!-- Cost -->
+						<div class="stats-column">2/turn</div> <!-- Limit -->
+						<div class="stats-column">3</div> <!-- Attack  Range -->
+						<div class="stats-column">2</div> <!-- Movement Range -->
+					</div>
+					<div class="stats-row">
+						<div class="stats-column">Cavalry</div> <!-- Unit -->
+						<div class="stats-column">3</div> <!-- Cost -->
+						<div class="stats-column">2/turn</div> <!-- Limit -->
+						<div class="stats-column"></div> <!-- Attack  Range -->
+						<div class="stats-column">4</div> <!-- Movement Range -->
+					</div>
+
+					<div class="stats-row">
+						<div class="stats-column">-</div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+					</div>
+
+					<div class="stats-row">
+						<div class="stats-column">Caravel</div> <!-- Unit -->
+						<div class="stats-column">1</div> <!-- Cost -->
+						<div class="stats-column">2/turn</div> <!-- Limit -->
+						<div class="stats-column"></div> <!-- Attack  Range -->
+						<div class="stats-column">6</div> <!-- Movement Range -->
+					</div>
+					<div class="stats-row">
+						<div class="stats-column">Freighter</div> <!-- Unit -->
+						<div class="stats-column">2</div> <!-- Cost -->
+						<div class="stats-column">3</div> <!-- Limit -->
+						<div class="stats-column">NA</div> <!-- Attack  Range -->
+						<div class="stats-column">5</div> <!-- Movement Range -->
+					</div>
+					<div class="stats-row">
+						<div class="stats-column">Galley</div> <!-- Unit -->
+						<div class="stats-column">3</div> <!-- Cost -->
+						<div class="stats-column">1</div> <!-- Limit -->
+						<div class="stats-column">3</div> <!-- Attack  Range -->
+						<div class="stats-column">4</div> <!-- Movement Range -->
+					</div>
+
+					<div class="stats-row">
+						<div class="stats-column">-</div> <!-- Unit -->
+						<div class="stats-column"></div> <!-- Cost -->
+						<div class="stats-column"></div> <!-- Limit -->
+						<div class="stats-column"></div> <!-- Attack  Range -->
+						<div class="stats-column"></div> <!-- Movement Range -->
+					</div>
+
+					<div class="stats-row">
+						<div class="stats-column">Wall</div>
+						<div class="stats-column">1</div>
+						<div class="stats-column">∞</div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+					</div>
+					<div class="stats-row">
+						<div class="stats-column">Camp</div>
+						<div class="stats-column">1</div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+					</div>
+					<div class="stats-row">
+						<div class="stats-column">Fort</div>
+						<div class="stats-column">2</div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+					</div>
+					<div class="stats-row">
+						<div class="stats-column">Castle</div>
+						<div class="stats-column">3</div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+					</div>
+
+					<div class="stats-row">
+						<div class="stats-column">-</div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+						<div class="stats-column"></div>
+					</div>
+
+					<div class="stats-row">
+						<div class="stats-column">Artillery</div> <!-- Unit -->
+						<div class="stats-column">2</div> <!-- Cost -->
+						<div class="stats-column">1</div> <!-- Limit -->
+						<div class="stats-column">3</div> <!-- Attack  Range -->
+						<div class="stats-column"></div> <!-- Movement Range -->
+					</div>
 				</div>
 			</div>
 
 	</body>
+	<script>
+		function toggle(selector) {
+			var section =	document.querySelector('.' + selector)
+			var toggler = document.querySelector('#' + selector + ' .toggler')
+			var isExpanded = toggler.innerText === '-'
+			section.style.display = isExpanded ? 'none' : 'block'
+			toggler.innerText = isExpanded ? '+' : '-'
+		}
+
+		function capitalize(string) {
+	    return string.charAt(0).toUpperCase() + string.slice(1)
+		}
+
+		var contents = document.querySelector('#contents')
+		var sections = document.querySelectorAll('.section-header')
+		sections.forEach(function(section) {
+			var li = document.createElement('li')
+			li.innerHTML = '<a href="#' + section.id + '">' + capitalize(section.id) + '</a>'
+			contents.appendChild(li)
+		})
+	</script>
 </html>
