@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>⚔ Conquest 0.92</title>
+		<title>⚔ Vigtavl 0.93</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
 		<meta name="description" description="Robert Carter Mills">
@@ -47,8 +47,8 @@
 		}
 	</style>
 	<body>
-		<h1>Conquest ⚔ v0.92</h1>
-			<p>For the glory of your country! New islands have been discovered across the Emerald Sea and you have been ordered by your King to claim the land for your country. However, you are not the only one who hopes to discover riches on foreign soil. Gather your knights and set sail. Conquest is a game of colonization and medieval combat.</p>
+		<h1>Vigtavl ⚔ v0.93</h1>
+			<p>Vigtavl is an Old Norse compound of vig (battle) and tavl (table or board). It is a simple game of medieval strategy and combat.</p>
 
 		<ol id="contents">
 		</ol>
@@ -57,7 +57,7 @@
 			<span class="toggler">+</span> Objective
 		</h3>
 			<div class="objective section">
-				<p>The objective of Conquest is to be the player with the most victory tokens at the end of the game. Victory tokens are claimed in the following ways:</p>
+				<p>The objective of the game is to be the player with the most victory tokens at the end of the game. Victory tokens are claimed in the following ways:</p>
 				<p><b>Anytime - Multiple possible</b></p>
 				<ol>
 					<li><b>Conquer:</b> For each development that you sieze from another player collect a number of victory tokens equal to the value of that development.</li>
@@ -76,7 +76,7 @@
 					<ol>
 						<li><b>General:</b> 3 tokens for the player with the most prisoners.</li>
 						<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships.</li>
-						<li><b>Emperor:</b> 3 tokens for the player with the most claimed hexes. Claimed hexes are occupied, developed or enclosed in a Citadel.</li>
+						<li><b>Builder:</b> 3 tokens for the player with the most developments.</li>
 					</ol>
 			</div>
 
@@ -153,7 +153,8 @@
 			<div class="silver section">
 				<p>
 					At the beginning of each player's turn he receives 6 silver.<br>
-					Silver is used to activate units.
+					Silver is used to activate units.<br>
+					Players must spend all silver on their turn or forfeit any unused.
 				</p>
 			</div>
 
@@ -164,7 +165,7 @@
 				<p>The geography of the map is important to consider in developing your military tactics and strategies:</p>
 				<ul>
 					<li><b>Mountains:</b> Steep, rocky and treacherous, mountain hexes can not be occupied or built on.</li>
-					<li><b>Plains:</b> This is where all building and land battles will take place.</li>
+					<li><b>Land:</b> This is where all building and land battles will take place.</li>
 					<li><b>Sea:</b> Sea hexes are where your naval maneuvering and battles will take place.</li>
 				</ul>
 			</div>
@@ -182,7 +183,8 @@
 			<span class="toggler">+</span> Occupancy
 		</h3>
 			<div class="occupancy section">
-				<p>Each hex on the map may be occupied by only 3 or less units. Encampments count as 1 	unit towards a hex's occupancy. Forts and artillery count 2 and castles count 3.<br>
+				<p>Each hex on the map may be occupied by only 3 or less units.<br>
+				Encampments count as 1 	unit towards a hex's occupancy. Forts and artillery count 2 and castles count 3.<br>
 				Prisoners do not count toward occupancy.
 				</p>
 			</div>
@@ -196,8 +198,8 @@
 				<p>Ships:</p>
 				<ul>
 					<li><b>Caravel:</b> A small, maneuverable sailing ship with lateen sails, capable of basic attacking and defending and the most movement range of all naval units. 6 movement</li>
-					<li><b>Galley:</b> Large warship with powerful cannons, but slower and less sea-worthy. (limit 1) 4 movement, 3 attack range* (diminishing accuracy)</li>
-					<li><b>Freighter:</b> A large, oar-powered ship primarily for transporting troops. 5 movement, +3 transport, -attack, -defend (limit 3)<br>
+					<li><b>Galleon:</b> Large warship with powerful cannons, but slower and less sea-worthy. build limit 1, 4 movement, 3 attack range* (diminishing accuracy)</li>
+					<li><b>Freighter:</b> A large, oar-powered ship primarily for transporting troops. 5 movement, +3 transport, -attack, -defend, build limit 3<br>
 						Freighters can transport up to 3 land units of any type.<br>
 						Freighters can not attack or defend other ships or coastal buildings, but they can defend themselves like normal ships.
 						<p><b>Loading and unloading freighters:</b><br>
@@ -252,6 +254,8 @@
 						</li>
 						<li><b>Ranged:</b><br>
 						Archers, Artillery and Galleys are capable of ranged attacks.<br>
+						Ranged attacks can only extend in straight lines perpendicular to the center of each hex edge. Diagram - todo<br>
+						Ranged attacks are blocked by mountains and walls.<br>
 						To resolve a ranged attack, the attacker rolls a number of dice equal to the cost of the unit. If any die result is 1, 2 or 3 the attack is successful.<br>
 						Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.<br>
 						</li>
@@ -283,7 +287,10 @@
 						<li><b>Build:</b> Players may build on any hex that is occupied by or adjacent to one of their units or already developed hexes. Building does not count as an action, however a player can not interrupt a unit's movement to build. Building must occur before or after a unit's movement. Building may not occur during a player's <a href="#retaliation">Retaliation</a></li>
 						<li><b>Seize:</b> Players may seize opponent developments and artillery if they are located on or adjacent to any hex occupied by one of their units and it is undefended.<br>
 						If the development is defended, the attacking player must first defeat all defenders.<br>
-						To seize a development, a player removes it from the board and replaces it with an equivalent development of their own color. He may then move the seizing unit onto the hex if he wishes, and it does not violate max occupancy.</li>
+						To seize a development, a player removes it from the board and replaces it with an equivalent development of their own color. He may then move the seizing unit onto the hex if he wishes, and it does not violate max occupancy.<br>
+						<b>Seizing an opponent's last development:</b> Players are not eliminated if all of their developments are seized. In the event an opponent seizes another player's last development, the victor receives 3 victory tokens in addition to the value of the development.<br>
+						If a player has no developments on the map, he may not capture any opponent units until he builds a development on which to hold prisoners.<br>
+						<b>Seizing Walls:</b> Any walls on hexes that are seized by an opponent also change ownership only if there are no adjacent hexes occupied by the original owner of the wall. This is not an all or none condition. It is possible that some walls could be converted and others not. Diagram - todo</li>
 						<li><b>Discharge and Recruit:</b> Once per turn a player may discharge any land unit, remove it from the board, recruit a new unit of the same type, and place it on or adjacent to any developed hex.</li>
 					</ul>
 				</p>
@@ -317,6 +324,8 @@
 					Surrounded units must be unable to move or build in any direction. This means that an adjacent hex occupied by the same player's units at maximum occupancy is not eligible to move into, unless there are available hexes beyond the occupied hex (players can still move through hexes at max occupancy). Thus it is possible for a player's own units to block escape routes.<br>
 					See diagram.
 					</li>
+					<li><b>Overwhelm:</b> If tactical advantages increase the number of attack dice to 6 or more, the enemy is overwhelmed and surrenders before the battle.<br>
+					Example- todo</li>
 				</ul>
 			</div>
 
