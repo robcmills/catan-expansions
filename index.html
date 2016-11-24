@@ -28,6 +28,14 @@
 			cursor: pointer;
 		}
 
+		.diagram {
+			max-width: 90%;
+			margin: 10px;
+		}
+		img {
+			max-width: 100%;
+		}
+
 		.stats-table {
 			max-width: 100%;
 			overflow: auto;
@@ -87,21 +95,14 @@
 				<ol>
 					<li><b>Build the Map:</b><br>
 						The size and geography of the map have a great effect on the game experience. Players are encouraged to be creative, and build the map however they like. However the following are some guidelines that help ensure an even distribution and balanced layout, as well as some recommended examples for new players.<br>
-						<b>Random Setup:</b>
-						<ol>
-							<li>Build the frame according to the number of players. See diagrams.</li>
-							<li>
-								Gather the correct number of each hex type.<br>
-								<b>2 players:</b>  3 deserts, 9 forrests, 9 mountains, 18 plains, 6 reefs, 16 sea hexes<br>
-								<b>4 players:</b> 154 hexes total
-							</li>
-							<li>Shuffle all the hexes face down</li>
-							<li>Beginning at one corner of the map, begin drawing random hexes and turning them over to reveal them and place them along the outer-most edge of the map.</li>
-							<li>If a revealed hex is a sea hex, place the next hex inwards toward the center of the map. If the next hex is terrain, continue placing along the outer edge, but if another sea hex is drawn, continue placing inwards toward the center.<li>
-							<li>If a mountain, forrest, desert or reef hex is drawn and is to be placed adjacent to a hex of the same type, put that hex aside and draw another until you get a different type of hex. Then place the hexes that were set aside.</li>
-							<li>Repeat this pattern until the outer ring has been filled and then continue on to building inner rings until the map is filled.</li>
-							<li>You may want to make a few adjustments if key hexes get clumped together in the same area of the map. Especially forrests and reefs and mountains should be relatively evenly distributed across the map. Feel free to swap a few hexes until it looks balanced.</li>
-						</ol>
+						<b>Size:</b><br>
+						2 players - 6 hex edges<br>
+						3 players - 7 hex edges<br>
+						4 players - 8 hex edges<br>
+						<div class="diagram">
+							<img src='img/diagram-map-sizes.png' />
+						</div>
+					</li>
 
 					<li><b>Starting Units:</b> Each player begins the game with the following units:<br>
 						3 soldiers, 2 archers, 1 cavalry<br>
