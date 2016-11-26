@@ -83,8 +83,8 @@
 
 				<p><b>Anytime - Once per game per player</b></p>
 					<ol>
-						<li><b>Citadel:</b> 1 token per hex for completely enclosing one or more hexes with walls. Players do not have to build walls on edges bordering mountain hexes.</li>
-						<li><b>Complex:</b> 3 tokens for building a Military Complex, which is defined as building a Castle, Fort, and Encampment on adjacent hexes.</li>
+						<li><b>Citadel:</b> 1 token for completely enclosing one or more hexes with walls. Players do not have to build walls on edges bordering mountain hexes.</li>
+						<li><b>Complex:</b> 3 tokens for building a Military Complex, which is defined as building a Castle, Fort, and Encampment.</li>
 						<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more. Mountains may be used to connect walls but do not count towards length.</li>
 					</ol>
 
@@ -108,7 +108,7 @@
 						3 players - 7 hex edges<br>
 						4 players - 8 hex edges<br>
 						<div class="diagram">
-							<img src='img/diagram-map-sizes.png' />
+							<img src='img/diagram-map-sizes-transparent.png' />
 						</div>
 						2 player map example:
 						<div class="diagram">
@@ -132,10 +132,10 @@
 			<span class="toggler">+</span> Phases
 		</h3>
 			<div class="phases section">
-				<p>The game consists of 3 phases that are 2 rounds each.</p>
+				<p>The game consists of 3 phases that are 3 rounds each.</p>
 				<ul>
-					<li><b>Phase 1 - Landfall:</b>
-						Each player in turn sequentially places one of any of his ships on any sea hex, until all players have placed all units.<br>
+					<li><b>Phase 1 - Landfall:</b><br>
+						Each player in turn sequentially places his starting ships two at a time on any sea hex, until all players have placed all units.<br>
 						Placement Restrictions:
 						<ul>
 							<li>Placing on a hex already occupied by another player is prohibited.</li>
@@ -143,8 +143,16 @@
 							<li>Placing respects maximum occupancy rule. No more than 3 units may occupy the same hex.</li>
 						</ul>
 					</li>
-					<li><b>Phase 2 - Build:</b>	Players may build developments, additional units, and activate and maneuver units around the map. No attack actions are allowed.</li>
-					<li><b>Phase 3 - Battle:</b> All actions allowed in the build phase are also allowed in the battle phase. Additionally attack actions are allowed.</li>
+					<li><b>Phase 2 - Build:</b><br>
+					Players may activate and maneuver their starting units around the map, but no attack actions are allowed.<br>
+					Players may build encampments, forts, castles and walls.<br>
+					Players may not build combat units.<br>
+					</li>
+					<li><b>Phase 3 - Battle:</b><br>
+					Attack actions are allowed.<br>
+					Players may build combat units and artillery.<br>
+					Players may not build encampments, forts, castles nor walls.<br>
+					</li>
 				</ul>
 			</div>
 
@@ -156,8 +164,8 @@
 					<li>Collect 6 gold and 6 silver</li>
 					<li>Do one of the following:
 						<ul>
-							<li>build a development (pay gold) or</li>
-    					<li>build a combat unit (pay gold) (respecting build limit) or</li>
+							<li>build a development (build phase only) (pay gold) or</li>
+    					<li>build a combat unit (battle phase only) (respecting build limit) (pay gold) or</li>
     					<li>activate a unit (pay silver)</li>
     				</ul>
     			</li>
@@ -166,7 +174,7 @@
 
 				<b>Activation Summary:</b>
 					<ol>
-						<li>Pay activation cost in silver (same as build cost)</li>
+						<li>Pay activation cost in silver (unit value)</li>
 						<li>Execute all unit actions (max 2 primary actions)</li>
 						<li>Resolve any triggered Retaliation (defeated opponent activates 1 unit)</li>
 					</ol>
@@ -248,10 +256,22 @@
 						Archers on a longship can attack coastal hexes or enemy ships.<br>
 						Archers on a longship can defend it from attacking ships.<br>
 						Infantry and cavalry on a longship can not defend it from other ships.<br>
-						<b>Loading and unloading longships:</b><br>
-						Loading knights onto a longship from adjacent hexes is considered a secondary action that does not count against each knight’s movement.<br>
-						Longships may pick up and or drop off land units at any point before or during its movement.<br>
 						If a longship is adjacent to a developed hex, units can be built directly on the ship.<br>
+						<b>Embarking and Disembarking longships:</b><br>
+						Loading and unloading knights from a longship to adjacent hexes is a secondary action.<br>
+						Longships may pick up and or drop off land units at any point before or during its movement.<br>
+						<div class="diagram">
+							<p><b>1.</b> The longship is activated and embarks an adjacent infantry and cavalry:</p>
+							<img src='img/diagram-longship-embarking-disembarking1.png' />
+						</div>
+						<div class="diagram">
+							<p><b>2.</b> The longship moves 3 hexes and embarks an additional infantry:</p>
+							<img src='img/diagram-longship-embarking-disembarking2.png' />
+						</div>
+						<div class="diagram">
+							<p><b>3.</b> The longship completes its movement and disembarks all units:</p>
+							<img src='img/diagram-longship-embarking-disembarking3.png' />
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -273,7 +293,7 @@
 			<div class="building-units section">
 				<p><b>Building Units:</b>
 					At the beginning of each round, every player receives 6 gold.<br>
-					On a player's turn he may only build <b>2 knights or 2 ships or 1 knight and 1 ship.</b> (unless he has built a castle, in which case his production capacity increases to 3)<br>
+					During the attack phase, on a player's turn he may build no more than 3 units.<br>
 					Built land units are placed on or adjacent to any developed hex.<br>
 					Built ships are placed on any sea hex adjacent to a player's coastal development (in order to build ships, players must have an encampment, fort or castle on the coast)<br>
 					Building units must respect maximum occupancy rule.
@@ -287,7 +307,7 @@
 				<p>
 					At the beginning of each round, every player receives 6 silver.<br>
 					Each player, on his turn, may spend silver to activate units and execute actions with those units.<br>
-					Activating a unit costs the value of the unit, but must be paid in silver.<br>
+					Activating a unit costs the value of the unit and must be paid in silver.<br>
 					Each activated unit can execute <b>2 primary actions</b>.<br>
 					Once the player has resolved a unit's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all units to their upright position.<br>
 					Each action must be unique. A player may not attack twice or move twice.<br>
@@ -305,7 +325,8 @@
 				</ul>
 				<p>
 					<b>Movement:</b><br>
-					Players may move units through hexes occupied by their own units, but must respect maximum occupancy rule, and only end movement in an eligible hex (see <a href="occupancy">Maximum Occupancy</a>).<br>
+					Units may move in any direction or combination of directions, up to a number of hexes equal to their movement range.<br>
+					Units may move through hexes occupied by their own units, but must respect maximum occupancy rule and only end movement in an eligible hex (see <a href="occupancy">Maximum Occupancy</a>).<br>
 					During the build phase, units may pass through but not end their movement in hexes occupied by another player.<br>
 					During the attack phase, movement into a hex occupied by another player initiates a battle.<br>
 				</p>
@@ -318,11 +339,17 @@
 						</li>
 						<li><b>Ranged:</b><br>
 						Archers, Artillery and Galleons are capable of ranged attacks.<br>
-						Ranged attacks can only extend in straight lines perpendicular to the center of each hex edge. Diagram - todo<br>
+						Ranged attacks can only extend in straight lines perpendicular to the center of each hex edge.<br>
+						<div class="diagram">
+							<img src='img/diagram-ranged-attack-straight.png' />
+						</div>
 						Ranged attacks are blocked by mountains and walls.<br>
-						Ranged attacks can not target a hex if a closer hex in the same line of sight is occupied by opponent units. Diagram.<br>
+						Ranged attacks can not target a hex if a closer hex in the same line of sight is occupied by opponent units.<br>
+						<div class="diagram">
+							<img src='img/diagram-ranged-attack-block.png' />
+						</div>
 						To resolve a ranged attack, the attacker rolls a number of dice equal to the value of the unit. If any die result is 1, 2 or 3 the attack is successful.<br>
-						Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.<br>
+						Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.
 						</li>
 					</ul>
 				</p>
@@ -438,7 +465,7 @@
 			</div>
 
 		<h3 id="discharge-recruit" class="section-header" onclick="toggle('discharge-recruit');">
-			<span class="toggler">+</span> Discharge Recruit
+			<span class="toggler">+</span> Discharge and Recruit
 		</h3>
 			<div class="discharge-recruit section">
 				<p>
@@ -446,39 +473,16 @@
 				</p>
 			</div>
 
-		<h3 id="building" class="section-header" onclick="toggle('building');">
-			<span class="toggler">+</span> Building
+		<h3 id="walls" class="section-header" onclick="toggle('walls');">
+			<span class="toggler">+</span> Walls
 		</h3>
-			<div class="building section">
-				<p>Players on their turn may build the following:</p>
-				<ul>
-					<li>Units</li>
-					<li>Walls</li>
-					<li>Encampments</li>
-					<li>Forts</li>
-					<li>Castles</li>
-					<li>Artillery</li>
-				</ul>
-
-				<p><b>Units:</b> Players must have at least one encampment, fort or castle built before they are able to build combat units. The number of units a player can build on a single turn is determined by their most valuable building. If a player has built only an encampment then he may only build 1 combat unit. If he has built a fort, 2 combat units, and a castle, 3 combat units. No player may ever build more than 3 units on a turn.</p>
-
-				<p><b>Walls:</b>
-					Walls are a great way to defend yourself from attack, however they are not guaranteed to protect you.<br>
-					Walls may be built on any edge of a player's occupied or built hexes<br>
-		      <b>Rebuild:</b> Once per a player's turn, he may deconstruct an existing wall and rebuild it in a new location at no cost<br>
+			<div class="walls section">
+				<p>
+					Walls may be built on any edge of a player's occupied or developed hexes<br>
 		      Units may not attack or move through opponent walls, however a player's own knights may move freely or attack through his own walls<br>
-				</p>
-
-				<p><b>Artillery:</b>
-					Artillery require a knight on the same hex to be used (as an action).<br>
-					Artillery can be moved by any knight.<br>
-					Players can seize opponent artillery in the same way as seizing buildings.
+		      <b>Rebuild:</b> Once per a player's turn, he may deconstruct an existing wall and rebuild it in a new location at no cost<br>
 				</p>
 			</div>
-
-			<!--
-					<li><b>Build:</b> Players may build on any hex that is occupied by or adjacent to one of their units or already developed hexes. Building does not count as an action, however a player can not interrupt a unit's movement to build. Building must occur before or after a unit's movement. Building may not occur during a player's <a href="#retaliation">Retaliation</a></li>
-				-->
 
 		<h3 id="artillery" class="section-header" onclick="toggle('artillery');">
 			<span class="toggler">+</span> Artillery
