@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>⚔ Vigtavl 0.93</title>
+		<title>⚔ Vigtavl 0.94</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
 		<meta name="description" description="Robert Carter Mills">
@@ -63,7 +63,7 @@
 		<div class="vigtavl">
 			<img src="img/vigtavl-logo.png" />
 		</div>
-		<h1>Vigtavl ⚔ v0.93</h1>
+		<h1>Vigtavl ⚔ v0.94</h1>
 			<p>Vigtavl is a game of medieval combat.</p>
 
 		<ol id="contents">
@@ -76,17 +76,10 @@
 				<p>The objective of the game is to be the player with the most victory tokens at the end of the game. Victory tokens are claimed in the following ways:</p>
 				<p><b>Anytime - Multiple possible</b></p>
 				<ol>
-					<li><b>Battle:</b> For each combat unit that you defeat in battle collect a number of victory tokens equal to the value of that unit.</li>
-					<li><b>Conquer:</b> For each development that you sieze from another player collect a number of victory tokens equal to the value of that development.</li>
-					<li><b>Rescue:</b> For each prisoner that you free collect a number of victory tokens equal to the value of that unit.</li>
+					<li><b>Battle:</b> For each Combat Unit that you defeat in battle collect a number of victory tokens equal to its value.</li>
+					<li><b>Conquer:</b> For each Building that you sieze from another player collect a number of victory tokens equal to its value.</li>
+					<li><b>Rescue:</b> For each prisoner that you free collect a number of victory tokens equal to its value.</li>
 				</ol>
-
-				<p><b>Anytime - Once per game per player</b></p>
-					<ol>
-						<li><b>Citadel:</b> 1 token for completely enclosing one or more hexes with walls. Players do not have to build walls on edges bordering mountain hexes.</li>
-						<li><b>Complex:</b> 3 tokens for building a Military Complex, which is defined as building a Castle, Fort, and Encampment.</li>
-						<li><b>Great Wall:</b> 1 token for building a wall of length 5 or more. Mountains may be used to connect walls but do not count towards length.</li>
-					</ol>
 
 				<p><b>Once at the end (if a tie exists both players receive tokens) (counted as total combined values)</b></p>
 					<ol>
@@ -114,12 +107,18 @@
 						<div class="diagram">
 							<img src='img/diagram-2-player-map-example.png' />
 						</div>
+						3 player map example:
+						<div class="diagram">
+							<img src='img/diagram-setup-3-player-islands.png' />
+						</div>
 					</li>
 
 					<li><b>Starting Units:</b> Each player begins the game with the following units:<br>
 						3 soldiers, 2 archers, 1 cavalry<br>
 						3 caravels, 2 freighters, 1 galleon<br>
-						Each player must load his 2 freighters with 3 land units each.
+						3 villages, 2 towns, 1 castle<br>
+						6 walls<br>
+						1 artillery<br>
 					</li>
 
 					<li><b>Prevailing Winds:</b> Determine the direction of prevailing by flipping the Prevailing Winds Token. Place it in the center of the map.</li>
@@ -132,26 +131,17 @@
 			<span class="toggler">+</span> Phases
 		</h3>
 			<div class="phases section">
-				<p>The game consists of 3 phases that are 3 rounds each.</p>
+				<p>The game consists of 2 phases.</p>
 				<ul>
-					<li><b>Phase 1 - Landfall:</b><br>
-						Each player in turn sequentially places his starting ships two at a time on any sea hex, until all players have placed all units.<br>
-						Placement Restrictions:
-						<ul>
-							<li>Placing on a hex already occupied by another player is prohibited.</li>
-							<li>Placing on a land hex is prohibited. All land units remain loaded on the freighters.</li>
-							<li>Placing respects maximum occupancy rule. No more than 3 units may occupy the same hex.</li>
-						</ul>
+					<li><b>Phase 1 - Build:</b><br>
+					Divide the map equally among all players. Diagram<br>
+					All players simultaneously place all their starting units in their portion of the map.<br>
+					A placed unit may be re-placed at any time until the end of the phase (as a reaction to opponent placement) however a unit may only be re-placed up to 3 times.
 					</li>
-					<li><b>Phase 2 - Build:</b><br>
-					Players may activate and maneuver their starting units around the map, but no attack actions are allowed.<br>
-					Players may build encampments, forts, castles and walls.<br>
-					Players may not build combat units.<br>
-					</li>
-					<li><b>Phase 3 - Battle:</b><br>
-					Attack actions are allowed.<br>
-					Players may build combat units and artillery.<br>
-					Players may not build encampments, forts, castles nor walls.<br>
+					<li><b>Phase 2 - Battle:</b><br>
+					Turn order is sequential in the opposite direction of Prevailing Winds.
+					Players may Recruit combat units and Activate units in any order.<br>
+					Players may not build additional villages, towns, castles nor walls. See <a href="#artillery">Artillery</a> section for special rules<br>
 					</li>
 				</ul>
 			</div>
@@ -161,12 +151,11 @@
 		</h3>
 			<div class="turn section">
 				<ol>
-					<li>Collect 6 gold and 6 silver</li>
+					<li>Collect 3 gold and 5 silver</li>
 					<li>Do one of the following:
 						<ul>
-							<li>build a development (build phase only) (pay gold) or</li>
-    					<li>build a combat unit (battle phase only) (respecting build limit) (pay gold) or</li>
-    					<li>activate a unit (pay silver)</li>
+    					<li>Recruit a new unit (pay gold) or</li>
+    					<li>Activate a unit (pay silver)</li>
     				</ul>
     			</li>
     			<li>Repeat step 2 until player has no more gold or silver or voluntarily ends his turn and forfeits any remaining gold and silver.</li>
@@ -175,8 +164,8 @@
 				<b>Activation Summary:</b>
 					<ol>
 						<li>Pay activation cost in silver (unit value)</li>
-						<li>Execute all unit actions (max 2 primary actions)</li>
-						<li>Resolve any triggered Retaliation (defeated opponent activates 1 unit)</li>
+						<li>Execute all unit actions</li>
+						<li>Resolve any triggered Retaliation</li>
 					</ol>
 			</div>
 
@@ -185,8 +174,8 @@
 		</h3>
 			<div class="gold section">
 				<p>
-					At the beginning of each player's turn he receives 6 gold.<br>
-					Gold is used to build developments, combat units, walls and artillery.<br>
+					At the beginning of each player's turn he receives 3 gold.<br>
+					Gold is used to Recruit new combat units.<br>
 					Players must spend all gold on their turn or forfeit any unused.
 				</p>
 			</div>
@@ -196,8 +185,8 @@
 		</h3>
 			<div class="silver section">
 				<p>
-					At the beginning of each player's turn he receives 6 silver.<br>
-					Silver is used to activate units.<br>
+					At the beginning of each player's turn he receives 5 silver.<br>
+					Silver is used to Activate combat units.<br>
 					Players must spend all silver on their turn or forfeit any unused.
 				</p>
 			</div>
@@ -238,7 +227,7 @@
 		</h3>
 			<div class="occupancy section">
 				<p>Each hex on the map may be occupied by only 3 or less units.<br>
-				Encampments count as 1 	unit towards a hex's occupancy. Forts and artillery count 2 and castles count 3.<br>
+				Developments do not count toward occupancy.<br>
 				Prisoners do not count toward occupancy.
 				</p>
 			</div>
@@ -287,16 +276,15 @@
 				</ul>
 			</div>
 
-		<h3 id="building-units" class="section-header" onclick="toggle('building-units');">
-			<span class="toggler">+</span> Building Units
+		<h3 id="recruiting-units" class="section-header" onclick="toggle('recruiting-units');">
+			<span class="toggler">+</span> Recruiting Units
 		</h3>
-			<div class="building-units section">
-				<p><b>Building Units:</b>
-					At the beginning of each round, every player receives 6 gold.<br>
-					During the attack phase, on a player's turn he may build no more than 3 units.<br>
-					Built land units are placed on or adjacent to any developed hex.<br>
-					Built ships are placed on any sea hex adjacent to a player's coastal development (in order to build ships, players must have an encampment, fort or castle on the coast)<br>
-					Building units must respect maximum occupancy rule.
+			<div class="recruiting-units section">
+				<p>
+					New Units are Recruited simply by paying their value in Gold.<br>
+					Recruited land units are placed on or adjacent to any developed hex.<br>
+					Recruited ships are placed on any sea hex adjacent to any of a player's coastal developments (in order to Recruit new ships, players must have an village, town or castle on the coast)<br>
+					When placing Recruited units players must respect <a href="#occupancy">maximum occupancy rule</a>.
 				</p>
 			</div>
 
@@ -305,13 +293,12 @@
 		</h3>
 			<div class="activating-units section">
 				<p>
-					At the beginning of each round, every player receives 6 silver.<br>
-					Each player, on his turn, may spend silver to activate units and execute actions with those units.<br>
-					Activating a unit costs the value of the unit and must be paid in silver.<br>
-					Each activated unit can execute <b>2 primary actions</b>.<br>
-					Once the player has resolved a unit's actions, lay the piece on its side to denote that it has completed its actions. At the end of the turn, reset all units to their upright position.<br>
+					Units are Activated simply by paying their value in Silver.<br>
+					An activated unit can execute <b>3 primary actions</b>.<br>
+					Once the player has resolved a unit's actions, lay the piece on its side to denote that it has completed its actions. Units can only be activated once per turn. At the end of the turn, reset all units to their upright position.<br>
 					Each action must be unique. A player may not attack twice or move twice.<br>
-					Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute all its actions immediately or execute some and forfeit the others.
+					Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute all its actions immediately or execute some and forfeit the others.<br>
+					Players may not Activate more than one unit simultaneously, however there is no limit to the number of units they can Activate sequentially on their turn (provided they have enough Silver).
 				</p>
 			</div>
 
@@ -320,18 +307,30 @@
 		</h3>
 			<div class="primary-actions section">
 				<ul>
-					<li>Movement</li>
-					<li>Attack</li>
+					<li><a href="#movement">Movement</a></li>
+					<li><a href="#attack">Attack</a></li>
+					<li><a href="#breaching">Breach</a></li>
+					<li><a href="#seizing">Seize</a></li>
 				</ul>
+			</div>
+
+		<h3 id="movement" class="section-header" onclick="toggle('movement');">
+			<span class="toggler">+</span> Movement
+		</h3>
+			<div class="movement section">
 				<p>
-					<b>Movement:</b><br>
 					Units may move in any direction or combination of directions, up to a number of hexes equal to their movement range.<br>
-					Units may move through hexes occupied by their own units, but must respect maximum occupancy rule and only end movement in an eligible hex (see <a href="occupancy">Maximum Occupancy</a>).<br>
-					During the build phase, units may pass through but not end their movement in hexes occupied by another player.<br>
-					During the attack phase, movement into a hex occupied by another player initiates a battle.<br>
+					Units may move through hexes occupied by their own units, but must respect <a href="#occupancy">maximum occupancy</a> rule and only end movement in an eligible hex.<br>
+					Movement into a hex occupied by another player initiates a battle.<br>
 				</p>
+			</div>
+
+		<h3 id="attack" class="section-header" onclick="toggle('attack');">
+			<span class="toggler">+</span> Attack
+		</h3>
+			<div class="attack section">
 				<p>
-					<b>Attack:</b> There are 2 types of attack:<br>
+					There are 2 types of attack:<br>
 					<ul>
 						<li><b>Close Combat:</b><br>
 						Units can attack opponents in the same or adjacent hexes.<br>
@@ -352,6 +351,7 @@
 						Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.
 						</li>
 					</ul>
+					<b>Restrictions:</b> The Active player may not attack the same player more than 3 times per turn.
 				</p>
 			</div>
 
@@ -363,16 +363,21 @@
 					<li>
 						<b>Flanking:</b> The attacker may add 1 additional die for attacking from a flank, 2 for attacking from a rear flank, and 3 for attacking from the rear.<br>
 						<b>Feint:</b> The 'front' of a hex is determined by the direction of the first attack. Subsequent attacks may utilize Flanking advantage.<br>
-						Diagram
+						<div class="diagram">
+							<p><b>1.</b> White to play</p>
+							<img src='img/diagram-flanking1.png' />
+						</div>
+						<div class="diagram">
+							<p><b>2.</b> White infantry attacks cavalry. White rolls 1 black attack die for value of infantry vs 3 defending white dice for value of cavalry. White fails to capture.</p>
+							<img src='img/diagram-flanking2.png' />
+						</div>
+						<div class="diagram">
+							<p><b>3.</b> White infantry moves and attacks cavalry from rear flank. White rolls 1 black attack die for infantry value plus 2 attack dice for rear flank advantage.</p>
+							<img src='img/diagram-flanking3.png' />
+						</div>
 					</li>
 					<li>
 						<b>Attrition:</b> The attacker may add 2 additional dice for attacking the same hex from the same direction 3 times.
-					</li>
-					<li>
-						<b>Surrender:</b> If a player is able to surround enemy units, and cut off all escape routes, then the defender must immediately surrender and all units are captured.<br>
-						Units must be surrounded on all adjacent sea and land hexes.<br>
-						Surrounded units must be unable to move or build in any direction. This means that an adjacent hex occupied by the same player's units at maximum occupancy is not eligible to move into, unless there are available hexes beyond the occupied hex (players can still move through hexes at max occupancy). Thus it is possible for a player's own units to block escape routes.<br>
-						Diagram
 					</li>
 					<li>
 						<b>Overwhelm:</b> If tactical advantages increase the number of attack dice to 6 or more, the enemy is overwhelmed and surrenders before the battle.<br>
@@ -402,28 +407,11 @@
 				<p>
 				When a player is attacked by the active player, and loses a battle or a development is seized, he may then Retaliate.<br>
 				Retaliation occurs immediately after the active player's activated unit has expended all its actions.<br>
-				Then the player who lost the battle receives 1 silver token, and may activate 1 unit of his choice (provided he can afford the activation cost), and execute actions with that unit.<br>
+				Then the player who lost the battle receives his choice of gold or silver or combination thereof a number of tokens equal to the value of the unit lost in battle or the seized development, and may then Recruit 1 unit and Activate 1 unit of his choice (provided he can afford the cost).<br>
+				The Activated unit does not have to be the Recruited unit, nor does the Recruited unit have to be Activated.<br>
 				<b>Restrictions:</b><br>
-				The retaliating player may not build during retaliation.<br>
 				The retaliating player may not seize any developments that were seized by the active player on his current turn.<br>
 				Battles won by a retaliating player do not trigger additional retaliations.<br>
-				</p>
-			</div>
-
-		<h3 id="secondary-actions" class="section-header" onclick="toggle('secondary-actions');">
-			<span class="toggler">+</span> Secondary Actions
-		</h3>
-			<div class="secondary-actions section">
-				<p>
-					The following actions may be performed by activated knights and ships in addition to their 2 primary actions:
-					<ul>
-						<li><a href="#breaching">Breach</a></li>
-						<li><a href="#defending">Defend</a></li>
-						<li><a href="#building">Build</a></li>
-						<li><a href="#rebuilding">Rebuild</a></li>
-						<li><a href="#seizing">Seize</a></li>
-						<li><a href="#discharge-recruit">Discharge and Recruit</a></li>
-					</ul>
 				</p>
 			</div>
 
@@ -432,11 +420,43 @@
 		</h3>
 			<div class="breaching section">
 				<p>
-		      Units occupying a hex adjacent to an opponent wall may attempt to breach.<br>
-		      To breach, roll a number of dice equal to the unit's value. If the result of any die is a 1, 2 or 3 the breach is successful<br>
+		      Activated Units occupying a hex adjacent to an opponent wall may expend a primary Action and attempt to Breach.<br>
+		      To breach, roll a number of dice equal to the unit's value. If the result of any die is a 5 or 6 the breach is successful<br>
 		      <a href="#attrition">Attrition</a> applies to breaching. Upon the third attempt to breach a wall enclosing the same hex or citadel, 2 additional dice may be added.<br>
 		      Upon successful breach of a wall, it is removed from the board.<br>
 		      Ships may attempt to breach coastal walls.<br>
+				</p>
+			</div>
+
+		<h3 id="seizing" class="section-header" onclick="toggle('seizing');">
+			<span class="toggler">+</span> Seizing
+		</h3>
+			<div class="seizing section">
+				<p>
+					Players may use an activated unit action to seize opponent developments and artillery if they are located on or adjacent to any hex occupied by one of their units and it is undefended and it has not already changed hands during the active turn. Diagram.<br>
+					If the development is defended, the attacking player must first defeat all defenders.<br>
+					To seize a development, a player removes it from the board and replaces it with an equivalent development of their own color. He may then move the seizing unit onto the hex if he wishes, and it does not violate max occupancy.<br>
+					Seizing an opponents buildings rewards players with victory tokens, however seizing back buildings previously owned by the player does not award tokens.<br>
+					<b>Seizing an opponent's last development:</b> Players are not eliminated if all of their developments are seized. In the event an opponent seizes another player's last development, the victor receives 3 victory tokens in addition to the value of the development.<br>
+					<b>Seizing Walls:</b> Any walls on hexes that are seized by an opponent also change ownership only if there are no adjacent hexes occupied by the original owner of the wall. This is not an all or none condition. It is possible that some walls could be converted and others not. Diagram<br>
+					<b>Restrictions:</b><br>
+					The Active player may not Seize more than 3 value of buildings of any one player in a single turn.<br>
+					Each Building may only be seized once per turn. To keep track, place a token underneath a building after it is seized the first time per turn, and then remove it at the end of the turn.
+				</p>
+			</div>
+
+		<h3 id="secondary-actions" class="section-header" onclick="toggle('secondary-actions');">
+			<span class="toggler">+</span> Secondary Actions
+		</h3>
+			<div class="secondary-actions section">
+				<p>
+					The following actions may be performed by knights and ships in addition to their primary actions:
+					<ul>
+						<li><a href="#defending">Defend</a></li>
+						<li><a href="#building">Build</a></li>
+						<li><a href="#rebuilding">Rebuild</a></li>
+						<li><a href="#discharge-recruit">Discharge and Recruit</a></li>
+					</ul>
 				</p>
 			</div>
 
@@ -447,20 +467,6 @@
 				<p>
 					Units may defend a development if	they are located on a hex adjacent to both the attacker and the unit they are defending. Diagram.<br>
 					Units may defend other units only if they are of higher value.<br>
-				</p>
-			</div>
-
-		<h3 id="seizing" class="section-header" onclick="toggle('seizing');">
-			<span class="toggler">+</span> Seizing
-		</h3>
-			<div class="seizing section">
-				<p>
-					Players may seize opponent developments and artillery if they are located on or adjacent to any hex occupied by one of their units and it is undefended. Diagram.<br>
-					If the development is defended, the attacking player must first defeat all defenders.<br>
-					To seize a development, a player removes it from the board and replaces it with an equivalent development of their own color. He may then move the seizing unit onto the hex if he wishes, and it does not violate max occupancy.<br>
-					Seizing an opponents buildings rewards players with victory tokens, however seizing back buildings previously owned by the player does not award tokens.<br>
-					<b>Seizing an opponent's last development:</b> Players are not eliminated if all of their developments are seized. In the event an opponent seizes another player's last development, the victor receives 3 victory tokens in addition to the value of the development.<br>
-					<b>Seizing Walls:</b> Any walls on hexes that are seized by an opponent also change ownership only if there are no adjacent hexes occupied by the original owner of the wall. This is not an all or none condition. It is possible that some walls could be converted and others not. Diagram</li>
 				</p>
 			</div>
 
@@ -478,9 +484,7 @@
 		</h3>
 			<div class="walls section">
 				<p>
-					Walls may be built on any edge of a player's occupied or developed hexes<br>
 		      Units may not attack or move through opponent walls, however a player's own knights may move freely or attack through his own walls<br>
-		      <b>Rebuild:</b> Once per a player's turn, he may deconstruct an existing wall and rebuild it in a new location at no cost<br>
 				</p>
 			</div>
 
@@ -492,7 +496,8 @@
 					Artillery units must be fired by a knight on the same hex.<br>
 					Firing artillery expends the knight's attack action.<br>
 					Artillery can be moved by any knight, up to the same movement range as the unit.<br>
-					Artillery can be seized by an opponent if no knight is defending it.
+					Artillery can be seized by an opponent if no knight is defending it.<br>
+					Artillery is more effective at breaching. A roll of 3, 4, 5 or 6 is a successful breach.
 				</p>
 			</div>
 
