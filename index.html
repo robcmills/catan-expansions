@@ -4,7 +4,7 @@
 		<title>⚔ Vigtavl 0.94</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
-		<meta name="description" description="Robert Carter Mills">
+		<meta name="description" description="A game of medieval combat">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	</head>
@@ -64,10 +64,15 @@
 			<img src="img/vigtavl-logo.png" />
 		</div>
 		<h1>Vigtavl ⚔ v0.94</h1>
-			<p>Vigtavl is a game of medieval combat.</p>
+			<p>A game of medieval combat.</p>
 
-		<ol id="contents">
-		</ol>
+		<h3 id="table-of-contents" class="section-header" onclick="toggle('table-of-contents');">
+			<span class="toggler">+</span> Table of Contents
+		</h3>
+			<div class="table-of-contents section">
+				<ol id="contents">
+				</ol>
+			</div>
 
 		<h3 id="objective" class="section-header" onclick="toggle('objective');">
 			<span class="toggler">+</span> Objective
@@ -77,15 +82,15 @@
 				<p><b>Anytime - Multiple possible</b></p>
 				<ol>
 					<li><b>Battle:</b> For each Combat Unit that you defeat in battle collect a number of victory tokens equal to its value.</li>
-					<li><b>Conquer:</b> For each Building that you sieze from another player collect a number of victory tokens equal to its value.</li>
+					<li><b>Seize:</b> For each Building that you sieze from another player collect a number of victory tokens equal to its value.</li>
 					<li><b>Rescue:</b> For each prisoner that you free collect a number of victory tokens equal to its value.</li>
 				</ol>
 
-				<p><b>Once at the end (if a tie exists both players receive tokens) (counted as total combined values)</b></p>
+				<p><b>Once at the end (if a tie exists both players receive tokens)</b></p>
 					<ol>
-						<li><b>General:</b> 3 tokens for the player with the most prisoners.</li>
-						<li><b>Admiral:</b> 3 tokens for the player with the most sunken ships.</li>
-						<li><b>Builder:</b> 3 tokens for the player with the most developments.</li>
+						<li><b>General:</b> 3 tokens for the player with the most value of prisoners.</li>
+						<li><b>Admiral:</b> 3 tokens for the player with the most value of sunken ships.</li>
+						<li><b>Emperor:</b> 3 tokens for the player with the most value of buildings.</li>
 					</ol>
 			</div>
 
@@ -96,6 +101,8 @@
 				<ol>
 					<li><b>Build the Map:</b><br>
 						The size and geography of the map have a great effect on the game experience. Players are encouraged to be creative, and build the map however they like. However the following are some guidelines that help ensure an even distribution and balanced layout, as well as some recommended examples for new players.<br>
+						<b>Mountains:</b> Mountains can be used to great effect defensively, and can greatly increase the potential size of a player's citadel. It is very important that the number of mountains on the map be balanced and spread out. Too many mountains in one area will make that area too defensible and unless all players have access to a similar configuration of mountains, it could easily be too advantageous to a single player.<br>
+						<b>Border:</b> Any land hexes adjacent to the edge of the map are equivalent to being bordered by mountains, since opponents can not attack from the deep sea beyond the edge of the map. Additionally, these hexes tend to be the furthest away from all other players, making them very defensible. To ensure a well balanced map, the border hexes on each edge of the map should be mostly, if not all, sea hexes.
 						<b>Size:</b><br>
 						2 players - 6 hex edges<br>
 						3 players - 7 hex edges<br>
@@ -116,12 +123,14 @@
 					<li><b>Starting Units:</b> Each player begins the game with the following units:<br>
 						3 soldiers, 2 archers, 1 cavalry<br>
 						3 caravels, 2 freighters, 1 galleon<br>
-						3 villages, 2 towns, 1 castle<br>
-						6 walls<br>
+						3 camps, 2 forts, 1 castle<br>
+						9 walls<br>
 						1 artillery<br>
 					</li>
 
 					<li><b>Prevailing Winds:</b> Determine the direction of prevailing by flipping the Prevailing Winds Token. Place it in the center of the map.</li>
+
+					<li><b>Turn Order:</b> Randomly determine which player will go first. Turn order is the opposite direction of Prevailing Winds for the remainder of the game.</li>
 
 					<li>You are now ready to begin the game.</li>
 				</ol>
@@ -134,16 +143,25 @@
 				<p>The game consists of 2 phases.</p>
 				<ul>
 					<li><b>Phase 1 - Build:</b><br>
-					Divide the map equally among all players. Diagram<br>
-					All players simultaneously place all their starting units in their portion of the map.<br>
-					A placed unit may be re-placed at any time until the end of the phase (as a reaction to opponent placement) however a unit may only be re-placed up to 3 times.
+					In turn order, players place their starting units on the map, one at a time.<br>
+					Continue until all starting units have been placed.
 					</li>
 					<li><b>Phase 2 - Battle:</b><br>
-					Turn order is sequential in the opposite direction of Prevailing Winds.
-					Players may Recruit combat units and Activate units in any order.<br>
-					Players may not build additional villages, towns, castles nor walls. See <a href="#artillery">Artillery</a> section for special rules<br>
+					Players may Recruit new combat units and / or Activate existing units.<br>
+					Players may not build additional camps, forts, castles nor walls.<br>
+					See <a href="#artillery">Artillery</a> section for special rules<br>
 					</li>
 				</ul>
+			</div>
+
+		<h3 id="round" class="section-header" onclick="toggle('round');">
+			<span class="toggler">+</span> Round Summary
+		</h3>
+			<div class="phases round">
+				<p>
+					A round is defined as one revolution of player turns around the table.<br>
+					At the beginning of each Round every player resets to 3 gold and 5 silver. Any un-spent gold and silver remaining from the previous round is discarded.<br>
+				</p>
 			</div>
 
 		<h3 id="turn" class="section-header" onclick="toggle('turn');">
@@ -151,22 +169,15 @@
 		</h3>
 			<div class="turn section">
 				<ol>
-					<li>Collect 3 gold and 5 silver</li>
-					<li>Do one of the following:
+					<li>In any order, do one of the following:
 						<ul>
-    					<li>Recruit a new unit (pay gold) or</li>
-    					<li>Activate a unit (pay silver)</li>
+    					<li><a href="#recruiting-units">Recruit</a> a new unit (pay gold) or</li>
+    					<li><a href="#activating-units">Activate</a> a unit (pay silver)</li>
     				</ul>
     			</li>
-    			<li>Repeat step 2 until player has no more gold or silver or voluntarily ends his turn and forfeits any remaining gold and silver.</li>
+    			<li>Repeat until player has no more gold or silver or voluntarily ends his turn.</li>
+					<li>Resolve any triggered Retaliation</li>
     		</ol>
-
-				<b>Activation Summary:</b>
-					<ol>
-						<li>Pay activation cost in silver (unit value)</li>
-						<li>Execute all unit actions</li>
-						<li>Resolve any triggered Retaliation</li>
-					</ol>
 			</div>
 
 		<h3 id="gold" class="section-header" onclick="toggle('gold');">
@@ -174,9 +185,7 @@
 		</h3>
 			<div class="gold section">
 				<p>
-					At the beginning of each player's turn he receives 3 gold.<br>
 					Gold is used to Recruit new combat units.<br>
-					Players must spend all gold on their turn or forfeit any unused.
 				</p>
 			</div>
 
@@ -185,9 +194,7 @@
 		</h3>
 			<div class="silver section">
 				<p>
-					At the beginning of each player's turn he receives 5 silver.<br>
 					Silver is used to Activate combat units.<br>
-					Players must spend all silver on their turn or forfeit any unused.
 				</p>
 			</div>
 
@@ -283,7 +290,7 @@
 				<p>
 					New Units are Recruited simply by paying their value in Gold.<br>
 					Recruited land units are placed on or adjacent to any developed hex.<br>
-					Recruited ships are placed on any sea hex adjacent to any of a player's coastal developments (in order to Recruit new ships, players must have an village, town or castle on the coast)<br>
+					Recruited ships are placed on any sea hex adjacent to any of a player's coastal developments (in order to Recruit new ships, players must have a camp, fort or castle on the coast)<br>
 					When placing Recruited units players must respect <a href="#occupancy">maximum occupancy rule</a>.
 				</p>
 			</div>
@@ -295,8 +302,9 @@
 				<p>
 					Units are Activated simply by paying their value in Silver.<br>
 					An activated unit can execute <b>3 primary actions</b>.<br>
-					Once the player has resolved a unit's actions, lay the piece on its side to denote that it has completed its actions. Units can only be activated once per turn. At the end of the turn, reset all units to their upright position.<br>
-					Each action must be unique. A player may not attack twice or move twice.<br>
+					Once the player has resolved a unit's actions, lay the piece on its side to denote that it has completed its actions.<br>
+					Units can only be activated once per turn. At the end of the turn, reset all units to their upright position.<br>
+					Each action must be unique. For example, a player may not attack thrice.<br>
 					Activation and subsequent actions can occur at any point in a player's turn, but once a unit is activated the player must execute all its actions immediately or execute some and forfeit the others.<br>
 					Players may not Activate more than one unit simultaneously, however there is no limit to the number of units they can Activate sequentially on their turn (provided they have enough Silver).
 				</p>
@@ -320,7 +328,7 @@
 			<div class="movement section">
 				<p>
 					Units may move in any direction or combination of directions, up to a number of hexes equal to their movement range.<br>
-					Units may move through hexes occupied by their own units, but must respect <a href="#occupancy">maximum occupancy</a> rule and only end movement in an eligible hex.<br>
+					Units may move <em>through</em> hexes occupied by their own units or hexes at max occupancy, but must respect <a href="#occupancy">maximum occupancy</a> rule and only <em>end</em> movement in an eligible hex.<br>
 					Movement into a hex occupied by another player initiates a battle.<br>
 				</p>
 			</div>
@@ -348,10 +356,12 @@
 							<img src='img/diagram-ranged-attack-block.png' />
 						</div>
 						To resolve a ranged attack, the attacker rolls a number of dice equal to the value of the unit. If any die result is 1, 2 or 3 the attack is successful.<br>
-						Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 scores a hit. At range 3, only a 1 scores a hit.
+						Ranged attack accuracy decreases with range. For attacks at range 2, only a die roll of 1 or 2 is successful. At range 3, only a 1 is successful.
 						</li>
 					</ul>
-					<b>Restrictions:</b> The Active player may not attack the same player more than 3 times per turn.
+					<b>Restrictions:</b>
+					The Active player can not attack the same player more than 3 times per turn.<br>
+					Each player can not be attacked more than 6 times per round.
 				</p>
 			</div>
 
@@ -391,12 +401,14 @@
 		</h3>
 			<div class="attack-results section">
 				<p>
-					<b>Retreat:</b> If the defender wins, the attacker must retreat any units he moved onto the hex where the battle took place, back to where they began their movement. If the unit is unable to retreat to where they began their movement (due to prevailing winds) then the attacking unit will be captured by the defender. Diagram.<br>
-					Units that attacked from adjacent hexes may remain where they are.<br>
 					<b>Land Victory:</b> If the attacker wins a land battle, the defeated unit is captured. Place the captured piece on the victor's nearest developed hex. This knight is now considered a prisoner.<br>
-					<b>Rescue:</b> If an opponent manages to seize a developed hex with prisoners on it, prisoners belonging to him are immediately freed and can now take actions. Any prisoners belonging to other players become the prisoners of the hex's new owner.<br>
-					<b>Sea Victory:</b> If the attacker wins at sea, the victor sinks the loser's ship. Remove it from the board, and places it in an area near him designated as his ship graveyard.<br>
-					<b>Occupation:</b> The attacker may move his victorious unit onto the hex that was attacked if no enemy units remain.
+					<b>Rescue:</b> If an opponent manages to seize a developed hex with prisoners on it, prisoners belonging to him are freed and can now be Activated. Any prisoners belonging to other players become the prisoners of the hex's new owner.<br>
+					<b>Sea Victory:</b> If the attacker wins at sea, the victor sinks the loser's ship. Remove it from the board and place it in an area near him designated as his ship graveyard.<br>
+					<b>Sinking a Longship loaded with Units:</b> If a longship loaded with units (that are not archers) is defeated in Naval battle, the victor captures all units aboard and sinks the longship. If archers are aboard, they must be defeated (and captured) prior to sinking the longship.<br>
+					<b>Occupation:</b> The attacker may optionally move his victorious unit onto the hex that was attacked if no enemy units remain.
+					<b>Defender Wins:</b> If the defender wins, Units that attacked from adjacent hexes may remain where they are and no further action is taken.<br>
+					<b>Retreat:</b> If the attacker and defender are on the same hex, and the defender wins the battle, the attacker must retreat his unit back to where it began movement.<br>
+					<b>Edge Case:</b> If the unit is unable to retreat (due to prevailing winds) then the attacking unit will be captured by the defender. Diagram.<br>
 				</p>
 			</div>
 
@@ -406,7 +418,7 @@
 			<div class="retaliation section">
 				<p>
 				When a player is attacked by the active player, and loses a battle or a development is seized, he may then Retaliate.<br>
-				Retaliation occurs immediately after the active player's activated unit has expended all its actions.<br>
+				Retaliation occurs immediately after the active player has ended his turn.<br>
 				Then the player who lost the battle receives his choice of gold or silver or combination thereof a number of tokens equal to the value of the unit lost in battle or the seized development, and may then Recruit 1 unit and Activate 1 unit of his choice (provided he can afford the cost).<br>
 				The Activated unit does not have to be the Recruited unit, nor does the Recruited unit have to be Activated.<br>
 				<b>Restrictions:</b><br>
