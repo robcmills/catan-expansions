@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>⚔ Vigtavl 0.94</title>
+		<title>⚔ VigTavl 0.9.5</title>
 		<meta charset="utf-8">
 		<meta name="author" description="robcmills">
 		<meta name="description" description="A game of medieval combat">
@@ -12,6 +12,10 @@
 		html, body {
 			background-color: #e1c5a2;
 		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		body {
+			margin: 12px auto;
+			max-width: 800px;
 		}
 
 		.vigtavl {
@@ -73,17 +77,9 @@
 	<body>
 		<div class="vigtavl">
 			<img src="img/vigtavl-logo.png" />
-			<h1>Vigtavl ⚔ v0.94</h1>
+			<h1>VigTavl ⚔ v0.9.5</h1>
 			<p>A game of medieval combat.</p>
 		</div>
-
-		<h3 id="table-of-contents" class="section-header" onclick="toggle('table-of-contents');">
-			<span class="toggler">+</span> Table of Contents
-		</h3>
-			<div class="table-of-contents section">
-				<ol id="contents">
-				</ol>
-			</div>
 
 		<h3 id="objective" class="section-header" onclick="toggle('objective');">
 			<span class="toggler">+</span> Objective
@@ -648,6 +644,23 @@
 						<div class="stats-column"></div> <!-- Movement Range -->
 					</div>
 				</div>
+			</div>
+
+		<h3 id="gallery" class="section-header" onclick="toggle('gallery');">
+			<span class="toggler">+</span> Gallery
+		</h3>
+			<div class="gallery section">
+				<div class="diagram">
+					<img src='img/diagram-map-sizes-transparent.png' />
+				</div>
+			</div>
+
+		<h3 id="table-of-contents" class="section-header" onclick="toggle('table-of-contents');">
+			<span class="toggler">+</span> Table of Contents
+		</h3>
+			<div class="table-of-contents section">
+				<ol id="contents">
+				</ol>
 			</div>
 
 	</body>
